@@ -24,30 +24,30 @@ Oskari.clazz.define("Oskari.catalogue.bundle.metadatacatalogue.MetadataCatalogue
 
 		"scripts" : [{
             "type": "text/javascript",
-            "src": "../../../../bundles/catalogue/bundle/metadatacatalogue/service/MetadataOptionService.js"
+            "src": "../../../../bundles/catalogue/metadatacatalogue/service/MetadataOptionService.js"
         }, {
             "type": "text/javascript",
-            "src": "../../../../bundles/catalogue/bundle/metadatacatalogue/service/MetadataSearchService.js"
+            "src": "../../../../bundles/catalogue/metadatacatalogue/service/MetadataSearchService.js"
         }, {
 			"type" : "text/javascript",
-			"src" : "../../../../bundles/catalogue/bundle/metadatacatalogue/instance.js"
+			"src" : "../../../../bundles/catalogue/metadatacatalogue/instance.js"
 		}, {
 			"type" : "text/css",
-			"src" : "../../../../resources/catalogue/bundle/metadatacatalogue/css/style.css"
+			"src" : "../../../../bundles/catalogue/metadatacatalogue/resources/css/style.css"
 		}], 
 		"locales" : [  
 		{
 			"lang" : "fi",
 			"type" : "text/javascript",
-			"src" : "../../../../bundles/catalogue/bundle/metadatacatalogue/locale/fi.js"
+			"src" : "../../../../bundles/catalogue/metadatacatalogue/locale/fi.js"
 		},{
 			"lang" : "en",
 			"type" : "text/javascript",
-			"src" : "../../../../bundles/catalogue/bundle/metadatacatalogue/locale/en.js"
+			"src" : "../../../../bundles/catalogue/metadatacatalogue/locale/en.js"
 		},{
 			"lang" : "sv",
 			"type" : "text/javascript",
-			"src" : "../../../../bundles/catalogue/bundle/metadatacatalogue/locale/sv.js"
+			"src" : "../../../../bundles/catalogue/metadatacatalogue/locale/sv.js"
 		}],
 		"resources" : []
 	},

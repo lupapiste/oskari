@@ -35,7 +35,7 @@ Oskari.clazz.define("Oskari.mapframework.bundle.oskariui.OskariUIBundle", functi
 		"scripts" : [
 		{
 			"type" : "text/javascript",
-			"src" : "../../../../bundles/framework/bundle/oskariui/jquery-ui-1.9.1.custom.min.js"
+			"src" : "../../../../bundles/framework/oskariui/jquery-ui-1.9.1.custom.min.js"
 		}, {
 			"type" : "text/javascript",
 			"src" : "../../../../libraries/jquery/plugins/jquery.base64.min.js"
@@ -50,10 +50,10 @@ Oskari.clazz.define("Oskari.mapframework.bundle.oskariui.OskariUIBundle", functi
 			"src" : "../../../../libraries/lodash/2.3.0/lodash.js"
 		},{
 			"type" : "text/javascript",
-			"src" : "../../../../bundles/framework/bundle/oskariui/DomManager.js"
+			"src" : "../../../../bundles/framework/oskariui/DomManager.js"
 		}, {
 			"type" : "text/javascript",
-			"src" : "../../../../bundles/framework/bundle/oskariui/Layout.js"
+			"src" : "../../../../bundles/framework/oskariui/Layout.js"
 		}/*, {
 			"type" : "text/css",
 			"src" : "../../../../resources/framework/bundle/oskariui/css/layout-grid.css"

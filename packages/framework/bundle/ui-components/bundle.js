@@ -32,134 +32,134 @@ Oskari.clazz.define("Oskari.userinterface.bundle.ui.ComponentsBundle", function(
          */
         "scripts" : [{
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/divmanazer/component/Accordion.js"
+            "src" : "../../../../bundles/framework/divmanazer/component/Accordion.js"
         }, {
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/divmanazer/component/AccordionPanel.js"
+            "src" : "../../../../bundles/framework/divmanazer/component/AccordionPanel.js"
         }, {
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/divmanazer/component/TabContainer.js"
+            "src" : "../../../../bundles/framework/divmanazer/component/TabContainer.js"
         }, {
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/divmanazer/component/TabDropdownContainer.js"
+            "src" : "../../../../bundles/framework/divmanazer/component/TabDropdownContainer.js"
         }, {
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/divmanazer/component/TabPanel.js"
+            "src" : "../../../../bundles/framework/divmanazer/component/TabPanel.js"
         }, {
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/divmanazer/component/Badge.js"
+            "src" : "../../../../bundles/framework/divmanazer/component/Badge.js"
         }, {
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/divmanazer/component/Alert.js"
+            "src" : "../../../../bundles/framework/divmanazer/component/Alert.js"
         }, {
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/divmanazer/component/Popup.js"
+            "src" : "../../../../bundles/framework/divmanazer/component/Popup.js"
         }, {
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/divmanazer/component/Overlay.js"
+            "src" : "../../../../bundles/framework/divmanazer/component/Overlay.js"
         }, {
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/divmanazer/component/Button.js"
+            "src" : "../../../../bundles/framework/divmanazer/component/Button.js"
         }, {
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/divmanazer/component/Form.js"
+            "src" : "../../../../bundles/framework/divmanazer/component/Form.js"
         }, {
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/divmanazer/component/UIHelper.js"
+            "src" : "../../../../bundles/framework/divmanazer/component/UIHelper.js"
         }, {
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/divmanazer/component/FormInput.js"
+            "src" : "../../../../bundles/framework/divmanazer/component/FormInput.js"
         }, {
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/divmanazer/component/Popover.js"
+            "src" : "../../../../bundles/framework/divmanazer/component/Popover.js"
         }, {
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/divmanazer/component/Grid.js"
+            "src" : "../../../../bundles/framework/divmanazer/component/Grid.js"
         }, {
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/divmanazer/component/GridModel.js"
+            "src" : "../../../../bundles/framework/divmanazer/component/GridModel.js"
         }, {
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/divmanazer/component/ProgressSpinner.js"
+            "src" : "../../../../bundles/framework/divmanazer/component/ProgressSpinner.js"
         }, {
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/divmanazer/component/VisualizationForm.js"
+            "src" : "../../../../bundles/framework/divmanazer/component/VisualizationForm.js"
         }, {
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/divmanazer/component/visualization-form/AreaForm.js"
+            "src" : "../../../../bundles/framework/divmanazer/component/visualization-form/AreaForm.js"
         }, {
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/divmanazer/component/visualization-form/LineForm.js"
+            "src" : "../../../../bundles/framework/divmanazer/component/visualization-form/LineForm.js"
         }, {
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/divmanazer/component/visualization-form/DotForm.js"
+            "src" : "../../../../bundles/framework/divmanazer/component/visualization-form/DotForm.js"
         }, {
             "type" : "text/javascript",
             "src" : "../../../../libraries/jquery/plugins/jquery-placeholder/jquery.placeholder.js"
         }, {
             "type" : "text/css",
-            "src" : "../../../../resources/framework/bundle/divmanazer/css/visualizationform.css"
+            "src" : "../../../../bundles/framework/resources/divmanazer/css/visualizationform.css"
         }, {
             "type" : "text/css",
-            "src" : "../../../../resources/framework/bundle/divmanazer/css/divman.css"
+            "src" : "../../../../bundles/framework/resources/divmanazer/css/divman.css"
         }, {
             "type" : "text/css",
-            "src" : "../../../../resources/framework/bundle/divmanazer/css/accordion.css"
+            "src" : "../../../../bundles/framework/resources/divmanazer/css/accordion.css"
         }, {
             "type" : "text/css",
-            "src" : "../../../../resources/framework/bundle/divmanazer/css/tab.css"
+            "src" : "../../../../bundles/framework/resources/divmanazer/css/tab.css"
         }, {
             "type" : "text/css",
-            "src" : "../../../../resources/framework/bundle/divmanazer/css/modal.css"
+            "src" : "../../../../bundles/framework/resources/divmanazer/css/modal.css"
         }, {
             "type" : "text/css",
-            "src" : "../../../../resources/framework/bundle/divmanazer/css/badge.css"
+            "src" : "../../../../bundles/framework/resources/divmanazer/css/badge.css"
         }, {
             "type" : "text/css",
-            "src" : "../../../../resources/framework/bundle/divmanazer/css/alert.css"
+            "src" : "../../../../bundles/framework/resources/divmanazer/css/alert.css"
         }, {
             "type" : "text/css",
-            "src" : "../../../../resources/framework/bundle/divmanazer/css/forminput.css"
+            "src" : "../../../../bundles/framework/resources/divmanazer/css/forminput.css"
         }, {
             "type" : "text/css",
-            "src" : "../../../../resources/framework/bundle/divmanazer/css/grid.css"
+            "src" : "../../../../bundles/framework/resources/divmanazer/css/grid.css"
         }, {
             "type" : "text/css",
-            "src" : "../../../../resources/framework/bundle/divmanazer/css/popup.css"
+            "src" : "../../../../bundles/framework/resources/divmanazer/css/popup.css"
         }, {
             "type" : "text/css",
-            "src" : "../../../../resources/framework/bundle/divmanazer/css/button.css"
+            "src" : "../../../../bundles/framework/resources/divmanazer/css/button.css"
         }, {
             "type" : "text/css",
-            "src" : "../../../../resources/framework/bundle/divmanazer/css/overlay.css"
+            "src" : "../../../../bundles/framework/resources/divmanazer/css/overlay.css"
         }, {
             "type" : "text/css",
-            "src" : "../../../../resources/framework/bundle/divmanazer/css/popover.css"
+            "src" : "../../../../bundles/framework/resources/divmanazer/css/popover.css"
         }],
         "locales" : [{
             "lang" : "fi",
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/divmanazer/locale/fi.js"
+            "src" : "../../../../bundles/framework/divmanazer/resources/locale/fi.js"
         }, {
             "lang" : "sv",
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/divmanazer/locale/sv.js"
+            "src" : "../../../../bundles/framework/divmanazer/resources/locale/sv.js"
         }, {
             "lang" : "en",
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/divmanazer/locale/en.js"
+            "src" : "../../../../bundles/framework/divmanazer/resources/locale/en.js"
         }, {
             "lang" : "cs",
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/divmanazer/locale/cs.js"
+            "src" : "../../../../bundles/framework/divmanazer/resources/locale/cs.js"
         }, {
             "lang" : "de",
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/divmanazer/locale/de.js"
+            "src" : "../../../../bundles/framework/divmanazer/resources/locale/de.js"
         }, {
             "lang" : "es",
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/divmanazer/locale/es.js"
+            "src" : "../../../../bundles/framework/divmanazer/resources/locale/es.js"
         }]
     },
     "bundle" : {

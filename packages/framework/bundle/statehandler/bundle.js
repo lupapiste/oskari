@@ -21,34 +21,34 @@ Oskari.clazz.define("Oskari.mapframework.bundle.statehandler.StateHandlerBundle"
         "scripts" : [
 		{
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/statehandler/instance.js"
+            "src" : "../../../../bundles/framework/statehandler/instance.js"
         },{
             "type" : "text/javascript",
             "src" : "../../../../libraries/jquery/plugins/jquery.cookie.js"
         },{
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/statehandler/state-methods.js"
+            "src" : "../../../../bundles/framework/statehandler/state-methods.js"
         },{
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/statehandler/plugin/Plugin.js"
+            "src" : "../../../../bundles/framework/statehandler/plugin/Plugin.js"
         },{
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/statehandler/plugin/SaveViewPlugin.js"
+            "src" : "../../../../bundles/framework/statehandler/plugin/SaveViewPlugin.js"
         },{
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/statehandler/request/SetStateRequest.js"
+            "src" : "../../../../bundles/framework/statehandler/request/SetStateRequest.js"
         },{
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/statehandler/request/SetStateRequestHandler.js"
+            "src" : "../../../../bundles/framework/statehandler/request/SetStateRequestHandler.js"
         },{
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/statehandler/event/StateSavedEvent.js"
+            "src" : "../../../../bundles/framework/statehandler/event/StateSavedEvent.js"
         },{
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/statehandler/request/SaveStateRequest.js"
+            "src" : "../../../../bundles/framework/statehandler/request/SaveStateRequest.js"
         },{
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/statehandler/request/SaveStateRequestHandler.js"
+            "src" : "../../../../bundles/framework/statehandler/request/SaveStateRequestHandler.js"
         }
         ]
     },

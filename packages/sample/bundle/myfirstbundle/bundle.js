@@ -29,7 +29,7 @@ function() {
 
 		"scripts" : [{
 			"type" : "text/javascript",
-			"src" : "../../../../bundles/sample/bundle/" + 
+			"src" : "../../../../bundles/sample/" + 
 			        "myfirstbundle/instance.js"
 		}]
 	},

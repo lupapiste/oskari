@@ -21,7 +21,7 @@ Oskari.clazz.define("Oskari.mapframework.bundle.publishedstatehandler.PublishedS
         "scripts" : [
 		{
             "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/bundle/publishedstatehandler/instance.js"
+            "src" : "../../../../bundles/framework/publishedstatehandler/instance.js"
         }
         ]
     },

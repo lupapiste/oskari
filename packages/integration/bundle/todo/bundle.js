@@ -57,15 +57,15 @@ Oskari.clazz.define("Oskari.integration.bundle.todo.ToDoBundle", function() {
         "locales" : [{
             "lang" : "fi",
             "type" : "text/javascript",
-            "src" : "../../../../bundles/integration/bundle/todo/locale/fi.js"
+            "src" : "../../../../bundles/integration/bundle/todo/resources/locale/fi.js"
         }, {
             "lang" : "en",
             "type" : "text/javascript",
-            "src" : "../../../../bundles/integration/bundle/todo/locale/en.js"
+            "src" : "../../../../bundles/integration/bundle/todo/resourceslocale/en.js"
         }, {
             "lang" : "sv",
             "type" : "text/javascript",
-            "src" : "../../../../bundles/integration/bundle/todo/locale/sv.js"
+            "src" : "../../../../bundles/integration/bundle/todo/locale/resources/sv.js"
         }],
         "resources" : []
     },
