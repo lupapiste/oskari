@@ -29,9 +29,6 @@ Oskari.clazz.define("Oskari.lupapiste.bundle.myplaces2.MyPlacesBundle", function
 		}, {
 			"type" : "text/javascript",
 			"src" : "../../../../bundles/lupapiste/lupapiste-myplaces2/event/MyPlaceSelectedEvent.js"
-		}, {
-			"type" : "text/javascript",
-			"src" : "../../../../bundles/lupapiste/lupapiste-myplaces2/event/ActiveDrawingEvent.js"
 		},
 		/* model */
 		{

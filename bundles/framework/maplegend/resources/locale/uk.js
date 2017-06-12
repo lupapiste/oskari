@@ -4,7 +4,7 @@ Oskari.registerLocalization(
     "key": "maplegend",
     "value": {
         "title": "Умовні знаки",
-        "desc": ""
+        "desc": "",
+        "noLegendsText": "No map legends available"
     }
-}
-);
+});

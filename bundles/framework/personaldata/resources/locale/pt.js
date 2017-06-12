@@ -5,7 +5,8 @@ Oskari.registerLocalization(
     "value": {
         "title": "Os meus dados",
         "desc": "Os meus dados",
-        "notLoggedIn": "Pode guardar vistas e procurar cartas que tenha embutido em outros sítios web em Os meus dados. <a href='/web/pt/login'>Log in</a>",
+        "notLoggedIn": "Pode guardar vistas e procurar cartas que tenha embutido em outros sítios web em Os meus dados.",
+        "notLoggedInText": "NOT TRANSLATED.",
         "tabs": {
             "myviews": {
                 "title": "As minhas vistas",
@@ -17,8 +18,8 @@ Oskari.registerLocalization(
                     "name": "Nome",
                     "description": "Descrição",
                     "publish": "Publicada",
-                    "edit": "NOT TRANSLATED",
-                    "delete": "NOT TRANSLATED"
+                    "edit": "",
+                    "delete": ""
                 },
                 "popup": {
                     "edit": "Editar informação da vista",
@@ -59,7 +60,7 @@ Oskari.registerLocalization(
             "publishedmaps": {
                 "title": "Cartas embutidas",
                 "show": "Mostrar na carta",
-                "getHTML": "NOT TRANSLATED",
+                "getHTML": "",
                 "edit": "Editar",
                 "publish": "Pubicar carta",
                 "unpublish": "Despublicar carta",
@@ -68,13 +69,13 @@ Oskari.registerLocalization(
                     "name": "Nome",
                     "domain": "Definições da carta",
                     "publish": "Estado",
-                    "show": "NOT TRANSLATED",
-                    "html": "NOT TRANSLATED",
-                    "edit": "NOT TRANSLATED",
-                    "delete": "NOT TRANSLATED"
+                    "show": "",
+                    "html": "",
+                    "edit": "",
+                    "delete": ""
                 },
                 "published": {
-                    "desc": "NOT TRANSLATED"
+                    "desc": ""
                 },
                 "popup": {
                     "edit": "Alterar nome da carta",
@@ -130,5 +131,4 @@ Oskari.registerLocalization(
             "no": "Não"
         }
     }
-}
-);
+});

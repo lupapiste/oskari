@@ -23,31 +23,52 @@ Oskari.clazz.define("Oskari.mapframework.bundle.search.SearchBundle", function (
 
         "scripts": [{
             "type": "text/javascript",
-            "src": "../../../../bundles/framework/search/service/searchservice.js"
-        }, {
-            "type": "text/javascript",
             "src": "../../../../bundles/framework/search/instance.js"
         }, {
             "type": "text/javascript",
             "src": "../../../../bundles/framework/search/Flyout.js"
         }, {
             "type": "text/javascript",
+            "src": "../../../../bundles/framework/search/view/DefaultSearchView.js"
+        }, {
+            "type": "text/javascript",
             "src": "../../../../bundles/framework/search/Tile.js"
         }, {
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/search/event/TabChangedEvent.js"
+        },  {
             "type": "text/javascript",
             "src": "../../../../bundles/framework/search/request/AddTabRequest.js"
         }, {
             "type": "text/javascript",
             "src": "../../../../bundles/framework/search/request/AddTabRequestHandler.js"
         }, {
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/search/request/AddSearchResultActionRequest.js"
+        }, {
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/search/request/RemoveSearchResultActionRequest.js"
+        }, {
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/search/request/SearchResultActionRequestHandler.js"
+        },  {
+            "type": "text/javascript",
+            "src": "../../../../bundles/service/search/searchservice.js"
+        }, {
+            "type": "text/javascript",
+            "src": "../../../../bundles/service/search/event/SearchResultEvent.js"
+        },{
+            "type": "text/javascript",
+            "src": "../../../../bundles/service/search/request/SearchRequest.js"
+        },{
             "type": "text/css",
-            "src": "../../../../bundles/framework/resources/search/css/style.css"
+            "src": "../../../../bundles/framework/search/resources/css/style.css"
         }],
 
         "locales": [{
-            "lang": "am",
+            "lang": "hy",
             "type": "text/javascript",
-            "src": "../../../../bundles/framework/search/resources/locale/am.js"
+            "src": "../../../../bundles/framework/search/resources/locale/hy.js"
         }, {
             "lang": "bg",
             "type": "text/javascript",
@@ -81,6 +102,10 @@ Oskari.clazz.define("Oskari.mapframework.bundle.search.SearchBundle", function (
             "type": "text/javascript",
             "src": "../../../../bundles/framework/search/resources/locale/fi.js"
         }, {
+            "lang": "fr",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/search/resources/locale/fr.js"
+        }, {
             "lang": "hr",
             "type": "text/javascript",
             "src": "../../../../bundles/framework/search/resources/locale/hr.js"
@@ -89,13 +114,29 @@ Oskari.clazz.define("Oskari.mapframework.bundle.search.SearchBundle", function (
             "type": "text/javascript",
             "src": "../../../../bundles/framework/search/resources/locale/hu.js"
         }, {
+            "lang": "is",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/search/resources/locale/is.js"
+        }, {
+            "lang": "it",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/search/resources/locale/it.js"
+        }, {
             "lang": "lv",
             "type": "text/javascript",
             "src": "../../../../bundles/framework/search/resources/locale/lv.js"
         }, {
+            "lang": "nb",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/search/resources/locale/nb.js"
+        }, {
             "lang": "nl",
             "type": "text/javascript",
             "src": "../../../../bundles/framework/search/resources/locale/nl.js"
+        }, {
+            "lang": "nn",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/search/resources/locale/nn.js"
         }, {
             "lang": "pl",
             "type": "text/javascript",
@@ -109,9 +150,9 @@ Oskari.clazz.define("Oskari.mapframework.bundle.search.SearchBundle", function (
             "type": "text/javascript",
             "src": "../../../../bundles/framework/search/resources/locale/ro.js"
         }, {
-            "lang": "rs",
+            "lang": "sr",
             "type": "text/javascript",
-            "src": "../../../../bundles/framework/search/resources/locale/rs.js"
+            "src": "../../../../bundles/framework/search/resources/locale/sr.js"
         }, {
             "lang": "sl",
             "type": "text/javascript",

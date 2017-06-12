@@ -10,19 +10,19 @@ Oskari.registerLocalization(
             "generic": "Системна грешка| Моля, опитайте по - късно",
             "loadFailed": "Грешка при зареждането на картните слоеве| Презаредете страницата в браузъра Ви и изберете картни слоеве",
             "noResults": "Търсенето не върна резултати",
-            "noResultsForKeyword": "NOT TRANSLATED",
-            "minChars": "NOT TRANSLATED"
+            "noResultsForKeyword": "",
+            "minChars": ""
         },
         "loading": "Зареждане...",
         "filter": {
             "text": "Търсене на картни слоеве",
-            "keywordsTitle": "NOT TRANSLATED",
-            "shortDescription": "NOT TRANSLATED",
-            "description": "NOT TRANSLATED",
+            "keywordsTitle": "",
+            "shortDescription": "",
+            "description": "",
             "inspire": "По тема",
             "organization": "По доставчици на данни",
             "published": "Потребители",
-            "didYouMean": "NOT TRANSLATED"
+            "didYouMean": ""
         },
         "published": {
             "organization": "Публикуван картен слой",
@@ -36,31 +36,49 @@ Oskari.registerLocalization(
         "backendStatus": {
             "OK": {
                 "tooltip": "В момента картният слой е достъпен",
-                "iconClass": "NOT TRANSLATED"
+                "iconClass": "backendstatus-ok"
             },
             "DOWN": {
                 "tooltip": "В момента картният слой е недостъпен",
-                "iconClass": "NOT TRANSLATED"
+                "iconClass": "backendstatus-down"
+            },
+            "ERROR": {
+                "tooltip": "В момента картният слой е недостъпен",
+                "iconClass": "backendstatus-error"
             },
             "MAINTENANCE": {
                 "tooltip": "Картният слой периодично може да е недостъпен през следващите няколко дни",
-                "iconClass": "NOT TRANSLATED"
+                "iconClass": "backendstatus-maintenance"
             },
             "UNKNOWN": {
                 "tooltip": "",
-                "iconClass": "NOT TRANSLATED"
+                "iconClass": "backendstatus-unknown"
+            },
+            "UNSTABLE": {
+                "tooltip": "",
+                "iconClass": "backendstatus-unstable"
             }
         },
         "buttons": {
-            "ok": "NOT TRANSLATED"
+            "ok": ""
         },
         "types": {
-            "syn": "NOT TRANSLATED",
-            "lk": "NOT TRANSLATED",
-            "vk": "NOT TRANSLATED",
-            "ak": "NOT TRANSLATED",
-            "yk": "NOT TRANSLATED"
+            "syn": "",
+            "lk": "",
+            "vk": "",
+            "ak": "",
+            "yk": ""
+        },
+        "layerFilter": {
+            "buttons": {
+                "newest": "Newest",
+                "stats": "Vector layers"
+            },
+            "tooltips": {
+                "newest": "Show ## newest map layers",
+                "stats": "Show only vector layers",
+                "remove": "Remove filter"
+            }
         }
     }
-}
-);
+});

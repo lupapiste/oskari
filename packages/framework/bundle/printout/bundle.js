@@ -58,14 +58,17 @@ Oskari.clazz.define("Oskari.mapframework.bundle.printout.PrintoutBundle", functi
             "type": "text/javascript",
             "src": "../../../../bundles/framework/printout/event/PrintWithoutUIEvent.js"
         }, {
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/printout/event/PrintCanceledEvent.js"
+        }, {
             "type": "text/css",
-            "src": "../../../../bundles/framework/resources/printout/css/style.css"
+            "src": "../../../../bundles/framework/printout/resources/css/style.css"
         }],
 
         "locales": [{
-            "lang": "am",
+            "lang": "hy",
             "type": "text/javascript",
-            "src": "../../../../bundles/framework/printout/resources/locale/am.js"
+            "src": "../../../../bundles/framework/printout/resources/locale/hy.js"
         }, {
             "lang": "bg",
             "type": "text/javascript",
@@ -99,9 +102,9 @@ Oskari.clazz.define("Oskari.mapframework.bundle.printout.PrintoutBundle", functi
             "type": "text/javascript",
             "src": "../../../../bundles/framework/printout/resources/locale/fi.js"
         }, {
-            "lang": "gr",
+            "lang": "el",
             "type": "text/javascript",
-            "src": "../../../../bundles/framework/printout/resources/locale/gr.js"
+            "src": "../../../../bundles/framework/printout/resources/locale/el.js"
         }, {
             "lang": "hr",
             "type": "text/javascript",
@@ -131,9 +134,9 @@ Oskari.clazz.define("Oskari.mapframework.bundle.printout.PrintoutBundle", functi
             "type": "text/javascript",
             "src": "../../../../bundles/framework/printout/resources/locale/ro.js"
         }, {
-            "lang": "rs",
+            "lang": "sr",
             "type": "text/javascript",
-            "src": "../../../../bundles/framework/printout/resources/locale/rs.js"
+            "src": "../../../../bundles/framework/printout/resources/locale/sr.js"
         }, {
             "lang": "sl",
             "type": "text/javascript",
@@ -154,7 +157,27 @@ Oskari.clazz.define("Oskari.mapframework.bundle.printout.PrintoutBundle", functi
             "lang": "uk",
             "type": "text/javascript",
             "src": "../../../../bundles/framework/printout/resources/locale/uk.js"
-        }]
+        }, {
+            "lang": "is",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/printout/resources/locale/is.js"
+        }, {
+            "lang": "it",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/printout/resources/locale/it.js"
+        }, {
+            "lang": "nb",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/printout/resources/locale/nb.js"
+        }, {
+            "lang": "fr",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/printout/resources/locale/fr.js"
+          }, {
+              "lang": "nn",
+              "type": "text/javascript",
+              "src": "../../../../bundles/framework/printout/resources/locale/nn.js"
+          }]
     },
     "bundle": {
         "manifest": {

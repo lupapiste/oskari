@@ -40,6 +40,38 @@ Oskari.clazz.define("Oskari.mapframework.bundle.mapmyplaces.MapMyPlacesBundle", 
                 "type": "text/javascript",
                 "src": "../../../../bundles/framework/mapmyplaces/resources/locale/fi.js"
             }, {
+                "lang": "fr",
+                "type": "text/javascript",
+                "src": "../../../../bundles/framework/mapmyplaces/resources/locale/fr.js"
+            }, {
+                "lang": "is",
+                "type": "text/javascript",
+                "src": "../../../../bundles/framework/mapmyplaces/resources/locale/is.js"
+            }, {
+                "lang": "it",
+                "type": "text/javascript",
+                "src": "../../../../bundles/framework/mapmyplaces/resources/locale/it.js"
+            }, {
+                "lang": "nb",
+                "type": "text/javascript",
+                "src": "../../../../bundles/framework/mapmyplaces/resources/locale/nb.js"
+            }, {
+                "lang": "nl",
+                "type": "text/javascript",
+                "src": "../../../../bundles/framework/mapmyplaces/resources/locale/nl.js"
+            }, {
+                "lang": "nn",
+                "type": "text/javascript",
+                "src": "../../../../bundles/framework/mapmyplaces/resources/locale/nn.js"
+            }, {
+                "lang": "sl",
+                "type": "text/javascript",
+                "src": "../../../../bundles/framework/mapmyplaces/resources/locale/sl.js"
+            }, {
+                "lang": "sk",
+                "type": "text/javascript",
+                "src": "../../../../bundles/framework/mapmyplaces/resources/locale/sk.js"
+            }, {
                 "lang": "sv",
                 "type": "text/javascript",
                 "src": "../../../../bundles/framework/mapmyplaces/resources/locale/sv.js"
@@ -47,6 +79,14 @@ Oskari.clazz.define("Oskari.mapframework.bundle.mapmyplaces.MapMyPlacesBundle", 
                 "lang": "en",
                 "type": "text/javascript",
                 "src": "../../../../bundles/framework/mapmyplaces/resources/locale/en.js"
+            }, {
+                "lang": "es",
+                "type": "text/javascript",
+                "src": "../../../../bundles/framework/mapmyplaces/resources/locale/es.js"
+            }, {
+                "lang": "et",
+                "type": "text/javascript",
+                "src": "../../../../bundles/framework/mapmyplaces/resources/locale/et.js"
             }]
         },
         "bundle": {

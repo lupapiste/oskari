@@ -44,21 +44,18 @@ Oskari.clazz.define("Oskari.mapframework.bundle.userguide.UserGuideBundle", func
             "src": "../../../../bundles/framework/userguide/request/ShowUserGuideRequestHandler.js"
         }, {
             "type": "text/javascript",
-            "src": "../../../../bundles/framework/userguide/service/UserGuideService.js"
-        }, {
-            "type": "text/javascript",
-            "src": "../../../../bundles/framework/userguide/Tile.js"
-        }, {
-            "type": "text/javascript",
             "src": "../../../../bundles/framework/userguide/Flyout.js"
         }, {
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/userguide/SimpleFlyout.js"
+        }, {
             "type": "text/css",
-            "src": "../../../../bundles/framework/resources/userguide/css/style.css"
+            "src": "../../../../bundles/framework/userguide/resources/css/style.css"
         }],
         "locales": [{
-            "lang": "am",
+            "lang": "hy",
             "type": "text/javascript",
-            "src": "../../../../bundles/framework/userguide/resources/locale/am.js"
+            "src": "../../../../bundles/framework/userguide/resources/locale/hy.js"
         }, {
             "lang": "cs",
             "type": "text/javascript",
@@ -88,9 +85,13 @@ Oskari.clazz.define("Oskari.mapframework.bundle.userguide.UserGuideBundle", func
             "type": "text/javascript",
             "src": "../../../../bundles/framework/userguide/resources/locale/fi.js"
         }, {
-            "lang": "gr",
+            "lang": "fr",
             "type": "text/javascript",
-            "src": "../../../../bundles/framework/userguide/resources/locale/gr.js"
+            "src": "../../../../bundles/framework/userguide/resources/locale/fr.js"
+        }, {
+            "lang": "el",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/userguide/resources/locale/el.js"
         }, {
             "lang": "hr",
             "type": "text/javascript",
@@ -100,13 +101,29 @@ Oskari.clazz.define("Oskari.mapframework.bundle.userguide.UserGuideBundle", func
             "type": "text/javascript",
             "src": "../../../../bundles/framework/userguide/resources/locale/hu.js"
         }, {
+            "lang": "is",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/userguide/resources/locale/is.js"
+        }, {
+            "lang": "it",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/userguide/resources/locale/it.js"
+        }, {
             "lang": "lv",
             "type": "text/javascript",
             "src": "../../../../bundles/framework/userguide/resources/locale/lv.js"
         }, {
+            "lang": "nb",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/userguide/resources/locale/nb.js"
+        }, {
             "lang": "nl",
             "type": "text/javascript",
             "src": "../../../../bundles/framework/userguide/resources/locale/nl.js"
+        }, {
+            "lang": "nn",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/userguide/resources/locale/nn.js"
         }, {
             "lang": "pl",
             "type": "text/javascript",
@@ -115,6 +132,10 @@ Oskari.clazz.define("Oskari.mapframework.bundle.userguide.UserGuideBundle", func
             "lang": "pt",
             "type": "text/javascript",
             "src": "../../../../bundles/framework/userguide/resources/locale/pt.js"
+        }, {
+            "lang": "ro",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/userguide/resources/locale/ro.js"
         }, {
             "lang": "sl",
             "type": "text/javascript",
@@ -127,6 +148,10 @@ Oskari.clazz.define("Oskari.mapframework.bundle.userguide.UserGuideBundle", func
             "lang": "sq",
             "type": "text/javascript",
             "src": "../../../../bundles/framework/userguide/resources/locale/sq.js"
+        }, {
+            "lang": "sr",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/userguide/resources/locale/sr.js"
         }, {
             "lang": "sv",
             "type": "text/javascript",

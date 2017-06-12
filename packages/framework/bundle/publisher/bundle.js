@@ -1,4 +1,4 @@
-// /**
+/**
  * @class Oskari.mapframework.bundle.publisher.PublisherBundle
  *
  * Definition for bundle. See source for details.
@@ -68,7 +68,7 @@ Oskari.clazz.define("Oskari.mapframework.bundle.publisher.PublisherBundle", func
             "src": "../../../../bundles/framework/publisher/view/PublisherLayoutForm.js"
         }, {
             "type": "text/css",
-            "src": "../../../../resources/framework/publisher/css/style.css"
+            "src": "../../../../bundles/framework/publisher/resources/css/style.css"
         }, {
             "type": "text/javascript",
             "src": "../../../../bundles/framework/publisher/request/PublishMapEditorRequest.js"
@@ -78,9 +78,9 @@ Oskari.clazz.define("Oskari.mapframework.bundle.publisher.PublisherBundle", func
         }],
 
         "locales": [{
-            "lang": "am",
+            "lang": "hy",
             "type": "text/javascript",
-            "src": "../../../../bundles/framework/publisher/resources/locale/am.js"
+            "src": "../../../../bundles/framework/publisher/resources/locale/hy.js"
         }, {
             "lang": "bg",
             "type": "text/javascript",
@@ -114,9 +114,13 @@ Oskari.clazz.define("Oskari.mapframework.bundle.publisher.PublisherBundle", func
             "type": "text/javascript",
             "src": "../../../../bundles/framework/publisher/resources/locale/fi.js"
         }, {
-            "lang": "gr",
+            "lang": "fr",
             "type": "text/javascript",
-            "src": "../../../../bundles/framework/publisher/resources/locale/gr.js"
+            "src": "../../../../bundles/framework/publisher/resources/locale/fr.js"
+        }, {
+            "lang": "el",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/publisher/resources/locale/el.js"
         }, {
             "lang": "hr",
             "type": "text/javascript",
@@ -125,14 +129,30 @@ Oskari.clazz.define("Oskari.mapframework.bundle.publisher.PublisherBundle", func
             "lang": "hu",
             "type": "text/javascript",
             "src": "../../../../bundles/framework/publisher/resources/locale/hu.js"
+        },{
+            "lang" : "it",
+            "type" : "text/javascript",
+            "src": "../../../../bundles/framework/publisher/resources/locale/it.js"
+        },{
+            "lang" : "is",
+            "type" : "text/javascript",
+            "src": "../../../../bundles/framework/publisher/resources/locale/is.js"
         }, {
             "lang": "lv",
             "type": "text/javascript",
             "src": "../../../../bundles/framework/publisher/resources/locale/lv.js"
         }, {
+            "lang": "nb",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/publisher/resources/locale/nb.js"
+        }, {
             "lang": "nl",
             "type": "text/javascript",
             "src": "../../../../bundles/framework/publisher/resources/locale/nl.js"
+        }, {
+            "lang": "nn",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/publisher/resources/locale/nn.js"
         }, {
             "lang": "pl",
             "type": "text/javascript",
@@ -146,9 +166,9 @@ Oskari.clazz.define("Oskari.mapframework.bundle.publisher.PublisherBundle", func
             "type": "text/javascript",
             "src": "../../../../bundles/framework/publisher/resources/locale/ro.js"
         }, {
-            "lang": "rs",
+            "lang": "sr",
             "type": "text/javascript",
-            "src": "../../../../bundles/framework/publisher/resources/locale/rs.js"
+            "src": "../../../../bundles/framework/publisher/resources/locale/sr.js"
         }, {
             "lang": "sl",
             "type": "text/javascript",

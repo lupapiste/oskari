@@ -132,19 +132,8 @@ Oskari.clazz.define("Oskari.userinterface.bundle.bootstrap.UserInterfaceBundle",
         }, {
             "type" : "text/javascript",
             "src" : "../../../../bundles/framework/divmanazer/extension/DefaultLayout.js"
-        },  {
-            "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/divmanazer/extension/EnhancedTile.js"
-        }, {
-            "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/divmanazer/extension/EnhancedFlyout.js"
-        }, {
-            "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/divmanazer/extension/EnhancedExtension.js"
-        }, {
-            "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/divmanazer/extension/EnhancedView.js"
-        }, {
+        },
+        {
             "type" : "text/css",
             "src" : "../../../../bundles/bootstrap/divmanazer/resources/css/divman.css"
         }, {
@@ -158,7 +147,7 @@ Oskari.clazz.define("Oskari.userinterface.bundle.bootstrap.UserInterfaceBundle",
             "src" : "../../../../bundles/framework/divmanazer/resources/css/modal.css"
         }, {
             "type" : "text/css",
-            "src" : "../../../../bundles/framework/divmanazer/resoures/css/badge.css"
+            "src" : "../../../../bundles/framework/divmanazer/resources/css/badge.css"
         }, {
             "type" : "text/css",
             "src" : "../../../../bundles/framework/divmanazer/resources/css/alert.css"
@@ -179,11 +168,8 @@ Oskari.clazz.define("Oskari.userinterface.bundle.bootstrap.UserInterfaceBundle",
             "src" : "../../../../bundles/framework/divmanazer/resources/css/overlay.css"
         }, {
             "type" : "text/css",
-            "src" : "../../../../resources/framework//divmanazer/resources/css/popover.css"
-        }/*, {
-         "type" : "text/javascript",
-         "src" : "../../../../resources/framework/bundle/divmanazer/js/jquery.event.drag-1.5.min.js"
-         }*/]
+            "src" : "../../../../bundles/framework/divmanazer/resources/css/popover.css"
+        }]
     },
     "bundle" : {
         /**

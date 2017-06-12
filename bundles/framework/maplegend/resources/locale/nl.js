@@ -1,8 +1,11 @@
-Oskari.registerLocalization({
+Oskari.registerLocalization(
+{
     "lang": "nl",
     "key": "maplegend",
     "value": {
         "title": "Legenda's",
-        "desc": ""
+        "desc": "",
+        "noLegendsText": "Geen kaart legenda beschikbaar",
+        "invalidLegendUrl": ""
     }
 });

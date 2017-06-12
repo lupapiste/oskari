@@ -6,7 +6,8 @@ Oskari.registerLocalization(
         "title": "Ndihmë",
         "desc": "",
         "flyout": {
-            "title": "Udhëzues i përdoruesit Oskari"
+            "title": "Udhëzues i përdoruesit Oskari",
+            "loadingtxt": ""
         },
         "tile": {
             "title": "Harta udhëzuese të përdoruesit"
@@ -16,9 +17,7 @@ Oskari.registerLocalization(
             "generic": "Dështoi ngarkimi i udhëzuesit të përdoruesit. Ju lutem provoni më vonë."
         },
         "help": {
-            "tags": "NOT TRANSLATED",
-            "contentPart": "NOT TRANSLATED"
+            "tags": ""
         }
     }
-}
-);
+});

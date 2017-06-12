@@ -6,6 +6,7 @@ Oskari.registerLocalization(
         "title": "Saját adatok",
         "desc": "Saját adatok",
         "notLoggedIn": "Mentheti a térképnézeteket és kereshet a beágyazott térképek között a \"Saját adatok\"-ban.",
+        "notLoggedInText": "NOT TRANSLATED.",
         "tabs": {
             "myviews": {
                 "title": "Saját térképnézetek",
@@ -17,8 +18,8 @@ Oskari.registerLocalization(
                     "name": "Név",
                     "description": "Leírás",
                     "publish": "Közzétett",
-                    "edit": "NOT TRANSLATED",
-                    "delete": "NOT TRANSLATED"
+                    "edit": "",
+                    "delete": ""
                 },
                 "popup": {
                     "edit": "A nézet adatainak szerkesztése",
@@ -59,7 +60,7 @@ Oskari.registerLocalization(
             "publishedmaps": {
                 "title": "Beágyazott térképek",
                 "show": "Mutasd a térképen",
-                "getHTML": "NOT TRANSLATED",
+                "getHTML": "",
                 "edit": "Szerkesztés",
                 "publish": "Térkép közzététele",
                 "unpublish": "Térkép-közzététel visszavonása",
@@ -68,13 +69,13 @@ Oskari.registerLocalization(
                     "name": "Név",
                     "domain": "Térkép-beállítások",
                     "publish": "Állapot",
-                    "show": "NOT TRANSLATED",
-                    "html": "NOT TRANSLATED",
-                    "edit": "NOT TRANSLATED",
-                    "delete": "NOT TRANSLATED"
+                    "show": "",
+                    "html": "",
+                    "edit": "",
+                    "delete": ""
                 },
                 "published": {
-                    "desc": "NOT TRANSLATED"
+                    "desc": ""
                 },
                 "popup": {
                     "edit": "Térképnév megváltoztatása",
@@ -122,7 +123,7 @@ Oskari.registerLocalization(
                 "changeInfo": "A fiók adataitainak megváltoztatása",
                 "changePassword": "Jelszó módosítása",
                 "removeAccount": "Fiók törlése",
-                "changeInfoUrl": "NOT TRANSLATED"
+                "changeInfoUrl": ""
             }
         },
         "button": {
@@ -130,5 +131,4 @@ Oskari.registerLocalization(
             "no": "Nem"
         }
     }
-}
-);
+});

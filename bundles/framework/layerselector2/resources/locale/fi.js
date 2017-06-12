@@ -1,53 +1,63 @@
-Oskari.registerLocalization({
+Oskari.registerLocalization(
+{
     "lang": "fi",
     "key": "LayerSelector",
     "value": {
         "title": "Karttatasot",
         "desc": "",
         "errors": {
-            "title": "Virhe!",
-            "generic": "Järjestelmässä tapahtui virhe. Yritä uudelleen myöhemmin.",
-            "loadFailed": "Karttatasojen latauksessa tapahtui virhe. Lataa sivu selaimeesi uudelleen ja valitse karttatasot.",
-            "noResults": "Haulla ei löytynyt yhtään tulosta.",
-            "noResultsForKeyword": "Karttatasoja ei löydy tällä avainsanalla.",
-            "minChars": "Kirjoita ainakin 4 merkkiä."
+            "title": "Virhe",
+            "generic": "Järjestelmässä tapahtui virhe.",
+            "loadFailed": "Karttatasojen lataaminen epäonnistui. Päivitä sivu selaimessasi ja valitse karttatasot uudelleen.",
+            "noResults": "Hakutuloksia ei löytynyt. Tarkista hakusana ja yritä uudelleen.",
+            "noResultsForKeyword": "Karttatasoja ei löytynyt. Tarkista hakusana ja yritä uudelleen.",
+            "minChars": "Antamasi hakusana on liian lyhyt. Hakusanassa on oltava vähintään neljä merkkiä."
         },
         "loading": "Haetaan...",
         "filter": {
             "text": "Hae karttatasoja",
-            "keywordsTitle": "Avainsanat:",
-            "shortDescription": "Hae karttasoa nimeen, tiedontuottajaan ja avainsanaan perustuen.",
-            "description": "Voit hakea karttatasoja kirjoittamalla osan karttatason nimestä, tiedontuottajan nimestä tai karttatasoa kuvailevasta avainsanasta. Avainsanahaku käynnistyy, kun vähintään 4 merkkiä on kirjoitettu hakukenttään.",
+            "keywordsTitle": "Avainsanat",
+            "shortDescription": "Hae karttatasoa karttatason nimen, tiedontuottajan nimen tai avainsanan perusteella.",
+            "description": "Voit hakea karttatasoa karttatason nimen, tiedontuottajan nimen tai avainsanan perusteella. Voit kirjoittaa nimen kokonaan tai vain osan nimestä. Hakusanassa on oltava vähintään neljä merkkiä.",
             "inspire": "Aiheittain",
             "organization": "Tiedontuottajittain",
             "published": "Käyttäjät",
             "didYouMean": "Tarkoititko:"
         },
         "published": {
-            "organization": "Julkaistu taso",
-            "inspire": "Julkaistu taso"
+            "organization": "Julkaistu karttataso",
+            "inspire": "Julkaistu karttataso"
         },
         "tooltip": {
             "type-base": "Taustakartta",
             "type-wms": "Karttataso",
-            "type-wfs": "Tietotuote"
+            "type-wfs": "Tietotuote",
+            "type-wfs-manual": "Päivitä kohdetiedot kartalla klikkaamalla Kohdetiedot- tai Päivitä-painiketta karttanäkymässä."
         },
         "backendStatus": {
             "OK": {
-                "tooltip": "Karttataso on saatavilla tällä hetkellä.",
+                "tooltip": "Karttataso on käytettävissä tällä hetkellä.",
                 "iconClass": "backendstatus-ok"
             },
             "DOWN": {
-                "tooltip": "Karttataso ei ole saatavilla tällä hetkellä.",
+                "tooltip": "Karttataso ei tällä hetkellä käytettävissä.",
                 "iconClass": "backendstatus-down"
             },
+            "ERROR": {
+                "tooltip": "Karttataso ei tällä hetkellä käytettävissä.",
+                "iconClass": "backendstatus-error"
+            },
             "MAINTENANCE": {
-                "tooltip": "Karttatason saatavuudessa on tiedossa käyttökatkoja lähipäivinä.",
+                "tooltip": "Karttataso voi olla ajoittain poissa käytöstä lähipäivinä.",
                 "iconClass": "backendstatus-maintenance"
             },
             "UNKNOWN": {
                 "tooltip": "",
-                "iconClass": "backendstatus-ok"
+                "iconClass": "backendstatus-unknown"
+            },
+            "UNSTABLE": {
+                "tooltip": "",
+                "iconClass": "backendstatus-unstable"
             }
         },
         "buttons": {
@@ -59,6 +69,17 @@ Oskari.registerLocalization({
             "vk": "Vieruskäsite",
             "ak": "Alakäsite",
             "yk": "Yläkäsite"
+        },
+        "layerFilter": {
+            "buttons": {
+                "newest": "Uusimmat",
+                "stats": "Vektoritasot"
+            },
+            "tooltips": {
+                "newest": "Näytä ## uusinta karttatasoa",
+                "stats": "Näytä vain vektoritasot",
+                "remove": "Poista suodatus"
+            }
         }
     }
 });

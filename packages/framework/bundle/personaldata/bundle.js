@@ -31,6 +31,9 @@ Oskari.clazz.define("Oskari.mapframework.bundle.personaldata.PersonalDataBundle"
             "src": "../../../../bundles/framework/personaldata/Tile.js"
         }, {
             "type": "text/javascript",
+            "src": "../../../../bundles/framework/personaldata/events/PersonaldataLoadedEvent.js"
+        },{
+            "type": "text/javascript",
             "src": "../../../../bundles/framework/personaldata/MyViewsTab.js"
         }, {
             "type": "text/javascript",
@@ -49,16 +52,13 @@ Oskari.clazz.define("Oskari.mapframework.bundle.personaldata.PersonalDataBundle"
             "src": "../../../../bundles/framework/personaldata/request/AddTabRequestHandler.js"
         }, {
             "type": "text/css",
-            "src": "../../../../bundles/framework/resources/personaldata/css/personaldata.css"
-        }, {
-            "type": "text/javascript",
-            "src": "../../../../bundles/framework/myplaces2/MyPlacesTab.js"
+            "src": "../../../../bundles/framework/personaldata/resources/css/personaldata.css"
         }],
 
         "locales": [{
-            "lang": "am",
+            "lang": "hy",
             "type": "text/javascript",
-            "src": "../../../../bundles/framework/personaldata/resources/locale/am.js"
+            "src": "../../../../bundles/framework/personaldata/resources/locale/hy.js"
         }, {
             "lang": "bg",
             "type": "text/javascript",
@@ -92,13 +92,17 @@ Oskari.clazz.define("Oskari.mapframework.bundle.personaldata.PersonalDataBundle"
             "type": "text/javascript",
             "src": "../../../../bundles/framework/personaldata/resources/locale/fi.js"
         }, {
-            "lang": "ge",
+            "lang": "fr",
             "type": "text/javascript",
-            "src": "../../../../bundles/framework/personaldata/resources/locale/ge.js"
+            "src": "../../../../bundles/framework/personaldata/resources/locale/fr.js"
         }, {
-            "lang": "gr",
+            "lang": "ka",
             "type": "text/javascript",
-            "src": "../../../../bundles/framework/personaldata/resources/locale/gr.js"
+            "src": "../../../../bundles/framework/personaldata/resources/locale/ka.js"
+        }, {
+            "lang": "el",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/personaldata/resources/locale/el.js"
         }, {
             "lang": "hr",
             "type": "text/javascript",
@@ -107,14 +111,30 @@ Oskari.clazz.define("Oskari.mapframework.bundle.personaldata.PersonalDataBundle"
             "lang": "hu",
             "type": "text/javascript",
             "src": "../../../../bundles/framework/personaldata/resources/locale/hu.js"
+        },{
+            "lang" : "is",
+            "type" : "text/javascript",
+            "src" : "../../../../bundles/framework/personaldata/resources/locale/is.js"
+        },{
+            "lang" : "it",
+            "type" : "text/javascript",
+            "src" : "../../../../bundles/framework/personaldata/resources/locale/it.js"
         }, {
             "lang": "lv",
             "type": "text/javascript",
             "src": "../../../../bundles/framework/personaldata/resources/locale/lv.js"
         }, {
+            "lang": "nb",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/personaldata/resources/locale/nb.js"
+        }, {
             "lang": "nl",
             "type": "text/javascript",
             "src": "../../../../bundles/framework/personaldata/resources/locale/nl.js"
+        }, {
+            "lang": "nn",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/personaldata/resources/locale/nn.js"
         }, {
             "lang": "pl",
             "type": "text/javascript",
@@ -128,9 +148,9 @@ Oskari.clazz.define("Oskari.mapframework.bundle.personaldata.PersonalDataBundle"
             "type": "text/javascript",
             "src": "../../../../bundles/framework/personaldata/resources/locale/ro.js"
         }, {
-            "lang": "rs",
+            "lang": "sr",
             "type": "text/javascript",
-            "src": "../../../../bundles/framework/personaldata/resources/locale/rs.js"
+            "src": "../../../../bundles/framework/personaldata/resources/locale/sr.js"
         }, {
             "lang": "sl",
             "type": "text/javascript",

@@ -1,25 +1,26 @@
-Oskari.registerLocalization({
+Oskari.registerLocalization(
+{
     "lang": "en",
     "key": "LayerSelector",
     "value": {
-        "title": "Map layers",
+        "title": "Map Layers",
         "desc": "",
         "errors": {
-            "title": "Error!",
-            "generic": "System error. Please try again later.",
-            "loadFailed": "Error loading map layers. Reload the page in your browser and select map layers.",
-            "noResults": "The search returned no results.",
-            "noResultsForKeyword": "The search returned no keywords.",
-            "minChars": "Minimum length is 4 characters."
+            "title": "Error",
+            "generic": "The system error occurred.",
+            "loadFailed": "The map layers could not be loaded. Reload the webpage in your browser and select map layers again.",
+            "noResults": "No search results could be found. Please check the search term.",
+            "noResultsForKeyword": "No map layers could be found. Please check the search term.",
+            "minChars": "The search term is too short. Type at least four characters."
         },
         "loading": "Searching...",
         "filter": {
-            "text": "Search map layers",
-            "keywordsTitle": "Keywords:",
-            "shortDescription": "Search map layers by name, producer or keyword.",
-            "description": "You can search map layers by writing a part of the name, producer or keyword of the layer. Keyword search starts when at 4 least characters has been written.",
-            "inspire": "By theme",
-            "organization": "By data providers",
+            "text": "Search map layers.",
+            "keywordsTitle": "Keywords",
+            "shortDescription": "Search map layers by map layer name, data producer name or keyword.",
+            "description": "Search map layers by map layer name, data producer name or keyword. You can type a whole term or a part of it. The search term must be at least four characters long.",
+            "inspire": "By Theme",
+            "organization": "By Data Provider",
             "published": "Users",
             "didYouMean": "Did you mean:"
         },
@@ -29,8 +30,9 @@ Oskari.registerLocalization({
         },
         "tooltip": {
             "type-base": "Background map",
-            "type-wms": "Map layer",
-            "type-wfs": "Data product"
+            "type-wms": "Map layer (WMS, WMTS)",
+            "type-wfs": "Data product (WFS)",
+            "type-wfs-manual": "Refresh feature data by clicking 'Feature Data' or 'Refresh' button in the map window."
         },
         "backendStatus": {
             "OK": {
@@ -38,16 +40,24 @@ Oskari.registerLocalization({
                 "iconClass": "backendstatus-ok"
             },
             "DOWN": {
-                "tooltip": "The map layer is currently unavailable.",
+                "tooltip": "The map layer is not currently available.",
                 "iconClass": "backendstatus-down"
             },
+            "ERROR": {
+                "tooltip": "The map layer is not currently available.",
+                "iconClass": "backendstatus-error"
+            },
             "MAINTENANCE": {
-                "tooltip": "The map layer may be periodically unavailable during the next few days.",
+                "tooltip": "The map layer may be periodically not available during the next few days.",
                 "iconClass": "backendstatus-maintenance"
             },
             "UNKNOWN": {
                 "tooltip": "",
-                "iconClass": "backendstatus-ok"
+                "iconClass": "backendstatus-unknown"
+            },
+            "UNSTABLE": {
+                "tooltip": "",
+                "iconClass": "backendstatus-unstable"
             }
         },
         "buttons": {
@@ -59,6 +69,17 @@ Oskari.registerLocalization({
             "vk": "Coordinate concept",
             "ak": "Subordinate concept",
             "yk": "Superordinate concept"
+        },
+        "layerFilter": {
+            "buttons": {
+                "newest": "Newest",
+                "stats": "Vector layers"
+            },
+            "tooltips": {
+                "newest": "Show ## newest map layers",
+                "stats": "Show only vector layers",
+                "remove": "Remove filter"
+            }
         }
     }
 });

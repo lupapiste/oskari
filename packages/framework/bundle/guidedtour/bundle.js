@@ -35,7 +35,7 @@ Oskari.clazz.define(
                 "src": "../../../../libraries/jquery/plugins/jquery.cookie.js"
             }, {
                 "type": "text/css",
-                "src": "../../../../bundles/framework/guidedtour/css/style.css"
+                "src": "../../../../bundles/framework/guidedtour/resources/css/style.css"
             }],
             "locales": [{
                 "lang": "bg",
@@ -70,13 +70,13 @@ Oskari.clazz.define(
                 "type": "text/javascript",
                 "src": "../../../../bundles/framework/guidedtour/resources/locale/fi.js"
             }, {
-                "lang": "ge",
+                "lang": "ka",
                 "type": "text/javascript",
-                "src": "../../../../bundles/framework/guidedtour/resources/locale/ge.js"
+                "src": "../../../../bundles/framework/guidedtour/resources/locale/ka.js"
             }, {
-                "lang": "gr",
+                "lang": "el",
                 "type": "text/javascript",
-                "src": "../../../../bundles/framework/guidedtour/resources/locale/gr.js"
+                "src": "../../../../bundles/framework/guidedtour/resources/locale/el.js"
             }, {
                 "lang": "hr",
                 "type": "text/javascript",
@@ -106,9 +106,9 @@ Oskari.clazz.define(
                 "type": "text/javascript",
                 "src": "../../../../bundles/framework/guidedtour/resources/locale/ro.js"
             }, {
-                "lang": "rs",
+                "lang": "sr",
                 "type": "text/javascript",
-                "src": "../../../../bundles/framework/guidedtour/resources/locale/rs.js"
+                "src": "../../../../bundles/framework/guidedtour/resources/locale/sr.js"
             }, {
                 "lang": "sl",
                 "type": "text/javascript",

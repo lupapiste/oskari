@@ -46,20 +46,11 @@ function() {
 			"src" : "../../../../bundles/lupapiste/lupakartta/request/AddMarkerRequestHandler.js"
 		}, {
 			"type" : "text/javascript",
-			"src" : "../../../../bundles/lupapiste/lupakartta/event/PlaceSaved.js"
+			"src" : "../../../../libraries/OpenLayers/OpenLayers_Control_TileStitchPrinter.js"
 		}, {
-      "type" : "text/javascript",
-      "src" : "../../../../bundles/lupapiste/lupakartta/event/FeaturesAdded.js"
-    }, {
-      "type" : "text/javascript",
-      "src" : "../../../../libraries/jsts/javascript.util.js"
-    }, {
-      "type" : "text/javascript",
-      "src" : "../../../../libraries/jsts/jsts.js"
-    }, {
-      "type" : "text/css",
-      "src" : "../../../../resources/lupapiste/lupakartta/css/lupakartta.css"      
-  }]
+			"type" : "text/javascript",
+			"src" : "../../../../bundles/lupapiste/lupakartta/plugin/Print.js"
+		}]
 	},
 	"bundle" : {
 		"manifest" : {

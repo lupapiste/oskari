@@ -5,16 +5,15 @@ Oskari.registerLocalization(
     "value": {
         "title": "Søg efter placering",
         "desc": "",
-        "contentErrorMsg": "NOT TRANSLATED",
+        "invalid_characters": "",
         "searchDescription": "Søg efter navn, adresse eller matrikelnummer",
-        "searchButton": "Søg",
         "searchResultCount": "Søgningen gav følgende",
         "searchResultCount2": "resultater",
         "searchResultDescriptionMoreResults": "Uddyb søgning for at reducere antallet af resultater",
         "searchResultDescriptionOrdering": "Du kan også bestille resultater i tabellen herunder ved at klikke på kolonneoverskrifterne",
         "searchResults": "Resultater:",
         "searchResultsDescription": "søgeresultater",
-        "searchservice_search_alert_title": "Fejl:",
+        "searchservice_search_alert_title": "Fejl",
         "searchservice_search_not_found_anything_text": "Søgningen gav ingen resultater.",
         "too_short": "Dit søgeord er for kort.",
         "cannot_be_empty": "Søgefeltet må ikke være tomt",
@@ -29,5 +28,4 @@ Oskari.registerLocalization(
             "title": "Søgeresultater"
         }
     }
-}
-);
+});

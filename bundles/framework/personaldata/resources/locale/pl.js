@@ -1,10 +1,12 @@
-Oskari.registerLocalization({
+Oskari.registerLocalization(
+{
     "lang": "pl",
     "key": "PersonalData",
     "value": {
         "title": "Moje dane",
         "desc": "Moje dane",
-        "notLoggedIn": "Możesz zapisać widoki mapy i przeglądać mapy , któe abudowałeś na innych stronach w Moje dane. <a href='/web/pl/login'>Log in</a>",
+        "notLoggedIn": "Możesz zapisać widoki mapy i przeglądać mapy , któe abudowałeś na innych stronach w Moje dane.",
+        "notLoggedInText": "NOT TRANSLATED.",
         "tabs": {
             "myviews": {
                 "title": "Moje widoki mapy",
@@ -58,7 +60,7 @@ Oskari.registerLocalization({
             "publishedmaps": {
                 "title": "Wbudowane mapy",
                 "show": "Pokaż na mapie",
-                "getHTML": "NOT TRANSLATED",
+                "getHTML": "",
                 "edit": "Edytuj",
                 "publish": "Publikuj mapę",
                 "unpublish": "Cofnij publikację mapy",
@@ -67,13 +69,13 @@ Oskari.registerLocalization({
                     "name": "Nazwa",
                     "domain": "Ustawienia mapy",
                     "publish": "Status",
-                    "show": "NOT TRANSLATED",
+                    "show": "",
                     "html": " ",
                     "edit": " ",
                     "delete": " "
                 },
                 "published": {
-                    "desc": "NOT TRANSLATED"
+                    "desc": ""
                 },
                 "popup": {
                     "edit": "Zmień nazwę mapy",

@@ -6,7 +6,8 @@ Oskari.registerLocalization(
         "title": "Palīdzība",
         "desc": "",
         "flyout": {
-            "title": "\"Oskari\" lietotāja rokasgrāmata"
+            "title": "\"Oskari\" lietotāja rokasgrāmata",
+            "loadingtxt": "<p>Loading the guide...</p>"
         },
         "tile": {
             "title": "Kartes lietotāja rokasgrāmata"
@@ -15,10 +16,14 @@ Oskari.registerLocalization(
             "title": "Kļūda!",
             "generic": "Lietotāja rokasgrāmatu atvērt neizdevās. Lūdzu mēģiniet vēlāk."
         },
+        "tabs": [
+            {
+                "title": "Map window",
+                "tags": "map window,user guide"
+            }
+        ],
         "help": {
-            "tags": "NOT TRANSLATED",
-            "contentPart": "NOT TRANSLATED"
+            "tags": "map window,user guide"
         }
     }
-}
-);
+});

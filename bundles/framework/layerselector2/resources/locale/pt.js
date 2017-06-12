@@ -11,18 +11,18 @@ Oskari.registerLocalization(
             "loadFailed": "Erro no carregamento de camadas| Recarregue a página e selecione camadas",
             "noResults": "A pesquisa é vazia",
             "noResultsForKeyword": "A pesquisa é vazia.",
-            "minChars": "NOT TRANSLATED"
+            "minChars": ""
         },
         "loading": "A carregar...",
         "filter": {
             "text": "Pesquisa por camadas",
-            "keywordsTitle": "NOT TRANSLATED",
-            "shortDescription": "NOT TRANSLATED",
-            "description": "NOT TRANSLATED",
+            "keywordsTitle": "",
+            "shortDescription": "",
+            "description": "",
             "inspire": "Por tema",
             "organization": "Por fornecedores",
             "published": "Utilizadores",
-            "didYouMean": "NOT TRANSLATED"
+            "didYouMean": ""
         },
         "published": {
             "organization": "Camada publicada",
@@ -36,31 +36,49 @@ Oskari.registerLocalization(
         "backendStatus": {
             "OK": {
                 "tooltip": "A camada está disponível",
-                "iconClass": "NOT TRANSLATED"
+                "iconClass": "backendstatus-ok"
             },
             "DOWN": {
                 "tooltip": "A camada não está disponível",
-                "iconClass": "NOT TRANSLATED"
+                "iconClass": "backendstatus-down"
+            },
+            "ERROR": {
+                "tooltip": "A camada não está disponível",
+                "iconClass": "backendstatus-error"
             },
             "MAINTENANCE": {
                 "tooltip": "A camada pode não estar disponível por alguns momentos nos próximos dias",
-                "iconClass": "NOT TRANSLATED"
+                "iconClass": "backendstatus-maintenance"
             },
             "UNKNOWN": {
                 "tooltip": "",
-                "iconClass": "NOT TRANSLATED"
+                "iconClass": "backendstatus-unknown"
+            },
+            "UNSTABLE": {
+                "tooltip": "",
+                "iconClass": "backendstatus-unstable"
             }
         },
         "buttons": {
             "ok": "OK"
         },
         "types": {
-            "syn": "NOT TRANSLATED",
-            "lk": "NOT TRANSLATED",
-            "vk": "NOT TRANSLATED",
-            "ak": "NOT TRANSLATED",
-            "yk": "NOT TRANSLATED"
+            "syn": "",
+            "lk": "",
+            "vk": "",
+            "ak": "",
+            "yk": ""
+        },
+        "layerFilter": {
+            "buttons": {
+                "newest": "Newest",
+                "stats": "Vector layers"
+            },
+            "tooltips": {
+                "newest": "Show ## newest map layers",
+                "stats": "Show only vector layers",
+                "remove": "Remove filter"
+            }
         }
     }
-}
-);
+});

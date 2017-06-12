@@ -1,104 +1,106 @@
-Oskari.registerLocalization({
+Oskari.registerLocalization(
+{
     "lang": "fi",
     "key": "Publisher",
     "value": {
-        "title": "Julkaise kartta",
-        "flyouttitle": "Siirry julkaisemaan",
+        "title": "Karttajulkaisu",
+        "flyouttitle": "Karttajulkaisu",
         "desc": "",
         "published": {
-            "title": "Kartta julkaistu",
-            "desc": "Voit liittää kartan internet-sivustollesi lisäämällä sinne alla olevan HTML-koodin:"
+            "title": "Upotettu kartta on tallennettu",
+            "desc": "Upotettu kartta on tallennettu. Julkaise se verkkosivuillasi kopioimalla alla oleva koodi verkkosivustosi html-koodiin:"
         },
         "edit": {
             "popup": {
-                "title": "Muokataan julkaisua",
-                "msg": "Päivitetään aiemmin julkaistun kartan tietoja"
+                "title": "Avataan upotettua karttaa…",
+                "msg": "Päivitetään upotetun kartan tietoja…"
             }
         },
         "BasicView": {
             "title": "Julkaise kartta",
-            "titleEdit": "Muokkaa julkaisua",
+            "titleEdit": "Muokkaa karttaa",
             "domain": {
-                "title": "Julkaisupaikka",
-                "label": "Sivusto, jolla kartta julkaistaan",
-                "placeholder": "ilman http- tai www-etuliitteitä",
-                "tooltip": "Kirjoita sivuston www-osoite eli domain-nimi ilman http- ja www-etuliitteitä tai alasivun osoitetta. Esimerkiksi omakotisivu.com."
+                "title": "Perustiedot",
+                "label": "Verkkosivuston osoite (ilman http- ja www-etuliitteitä)",
+                "placeholder": "Sivuston osoite",
+                "tooltip": "Kirjoita verkkosivuston URL-osoite ilman etuliitettä tai alasivun osoitetta. Esimerkiksi: kotisivu.fi."
             },
             "name": {
-                "label": "Kartan nimi",
-                "placeholder": "pakollinen",
-                "tooltip": "Anna kartalle kuvaileva nimi. Huomioi käyttöliittymän kieli."
+                "label": "Kartan nimi (pakollinen tieto)",
+                "placeholder": "Kartan nimi",
+                "tooltip": "Anna kartalle nimi. Ota huomioon kartalla käytössä oleva kieli."
             },
             "language": {
                 "label": "Kieli",
                 "options": {
-                    "fi": "Suomi",
-                    "sv": "Ruotsi",
-                    "en": "Englanti"
+                    "fi": "suomi",
+                    "sv": "ruotsi",
+                    "en": "englanti"
                 },
-                "tooltip": "Valitse kartan käyttöliittymän ja aineiston kieli."
+                "tooltip": "Valitse kartalla käytettävä kieli. Valinta vaikuttaa käyttöliittymään ja teksteihin kartalla."
             },
             "size": {
-                "label": "Koko",
-                "tooltip": "Valitse tai määrittele kartalle koko, jossa haluat esittää sen sivuillasi. Näet vaikutuksen esikatselukartassa."
+                "label": "Kartan koko",
+                "tooltip": "Valitse kartan koko. Leveyden on oltava vähintään 30 pikseliä ja korkeuden vähintään 20 pikseliä. Erota desimaalit pilkulla. Näet muutokset esikatselukartassa."
             },
             "tools": {
-                "label": "Näytettävät työkalut",
-                "tooltip": "Valitse kartalla näytettävät työkalut. Näet niiden sijoittelun esikatselukartassa.",
+                "label": "Kartalla näytettävät työkalut",
+                "tooltip": "Valitse kartalla käytettävissä olevat työkalut. Tarkista asettelu esikatselukartasta.",
                 "ScaleBarPlugin": "Mittakaavajana",
                 "IndexMapPlugin": "Indeksikartta",
-                "PanButtons": "Panorointitoiminto",
+                "PanButtons": "Kartan liikuttaminen nuolipainikkeilla",
                 "Portti2Zoombar": "Mittakaavasäädin",
-                "ControlsPlugin": "Kartan liikuttaminen",
+                "MyLocationPlugin": "Käyttäjän sijaintiin keskittäminen",
+                "ControlsPlugin": "Kartan liikuttaminen hiirellä raahaamalla",
                 "SearchPlugin": "Osoite- ja paikannimihaku",
-                "FeaturedataPlugin": "Kohdetiedot",
+                "FeaturedataPlugin": "Kohdetietotaulukko",
                 "GetInfoPlugin": "Kohdetietojen kyselytyökalu",
                 "PublisherToolbarPlugin": "Karttatyökalut",
-                "selectDrawLayer" : "Valitse piirtotaso"
+                "selectDrawLayer": "Valitse tallennustaso"
             },
             "toolbarToolNames": {
-                "history_back": "Siirry taaksepäin",
-                "history_forward": "Siirry eteenpäin",
-                "measureline": "Mittaa etäisyyttä",
-                "measurearea": "Mittaa aluetta",
-                "drawTools" : "Piirtotyökalut",
-                "point" : "Salli pisteet",
-                "line" : "Salli viivat",
-                "area" : "Salli alueet"
+                "history_back": "Siirtyminen edelliseen näkymään",
+                "history_forward": "Siirtyminen seuraavaan näkymään",
+                "measureline": "Matkan mittaus",
+                "measurearea": "Pinta-alan mittaus",
+                "drawTools": "Omien kohteiden lisäys",
+                "point": "Salli pistekohteet",
+                "line": "Salli viivakohteet",
+                "area": "Salli aluekohteet"
             },
             "toollayout": {
-                "label": "Työkalujen asettelu",
-                "tooltip": "Valitse kartalla näytettävien työkalujen asettelu",
+                "label": "Työkalujen asettelu kartalla",
+                "tooltip": "Valitse, miten työkalut asetellaan kartalle.",
                 "lefthanded": "Vasenkätinen",
                 "righthanded": "Oikeakätinen",
-                "userlayout" : "Oma asettelu",
-                "usereditmode": "Muokkaustila päälle",
-                "usereditmodeoff": "Poistu muokkaustilasta"
+                "userlayout": "Oma asettelu",
+                "usereditmode": "Muokkaa asettelua",
+                "usereditmodeoff": "Lopeta muokkaus"
             },
             "data": {
-                "label":                "Tilastot",
-                "tooltip":              "Näytä karttaan liittyvä taulukko.",
-                "grid":                 "Näytä tilastotaulukko",
-                "allowClassification":  "Salli luokittelu"
+                "label": "Teemakartat",
+                "tooltip": "Näytä teemakartat kartalla.",
+                "grid": "Näytä teemakartan tiedot taulukossa",
+                "allowClassification": "Salli luokittelu"
             },
             "layout": {
                 "label": "Ulkoasu",
                 "fields": {
                     "colours": {
                         "label": "Värimaailma",
-                        "placeholder": "Valitse värimaailma",
-                        "buttonLabel": "Vaihda",
-                        "light_grey": "Vaalean harmaa",
-                        "dark_grey": "Tumman harmaa",
+                        "placeholder": "Värimaailma",
+                        "buttonLabel": "Valitse",
+                        "light_grey": "Vaaleanharmaa",
+                        "dark_grey": "Tummanharmaa",
                         "blue": "Sininen",
                         "red": "Punainen",
                         "green": "Vihreä",
                         "yellow": "Keltainen",
                         "custom": "Omat värit",
                         "customLabels": {
-                            "bgLabel": "Tunnisteen tausta",
-                            "titleLabel": "Tunnisteen teksti",
-                            "headerLabel": "Otsikon teksti",
+                            "bgLabel": "Otsikon tausta",
+                            "titleLabel": "Otsikon teksti",
+                            "headerLabel": "Oman kohteen nimi",
                             "iconLabel": "Ikoni",
                             "iconCloseLabel": "Tumma",
                             "iconCloseWhiteLabel": "Vaalea"
@@ -114,96 +116,96 @@ Oskari.registerLocalization({
                         "rounded-light": "Pyöristetty (vaalea)",
                         "sharp-dark": "Kulmikas (tumma)",
                         "sharp-light": "Kulmikas (vaalea)",
-                        "3d-dark": "3D (tumma)",
-                        "3d-light": "3D (vaalea)"
+                        "3d-dark": "Kolmiulotteinen (tumma)",
+                        "3d-light": "Kolmiulotteinen (vaalea)"
                     }
                 },
                 "popup": {
-                    "title": "Värimaailman valinta",
+                    "title": "Valitse värimaailma",
                     "close": "Sulje",
                     "gfiDialog": {
                         "title": "Kohteen tiedot",
                         "featureName": "Esikatselu",
-                        "featureDesc": "Värimaailman valinta vaikuttaa ainoastaan kohdetietolaatikon ja karttatasovalikon väritykseen"
+                        "featureDesc": "Värimaailma vaikuttaa kohdetietojen, omien kohteiden tietojen ja karttatasolaatikon väreihin."
                     }
                 }
             },
             "layers": {
-                "add": "Lisää taso",
-                "label": "Karttatasot",
+                "add": "Luo kohteille uusi tallennustaso",
+                "label": "Näytettävät karttatasot",
+                "addselect": "Lisää tallennustaso näytettäviin karttatasoihin",
                 "defaultLayer": "(Oletusvalinta)",
                 "useAsDefaultLayer": "Käytä oletuksena"
             },
             "myplaces": {
-                "label": "Omat tasot"
+                "label": "Omat karttatasot"
             },
             "sizes": {
                 "small": "Pieni",
                 "medium": "Keskikokoinen",
                 "large": "Suuri",
+                "fill": "Tilan täyttävä",
                 "custom": "Määritä oma koko",
                 "width": "leveys",
-                "height": "korkeus"
+                "height": "korkeus",
+                "separator": "x"
             },
             "buttons": {
                 "save": "Tallenna",
                 "saveNew": "Tallenna uusi",
                 "ok": "OK",
-                "replace": "Korvaa",
+                "replace": "Päivitä",
                 "cancel": "Peruuta",
                 "add": "Lisää karttataso"
             },
             "confirm": {
                 "replace": {
-                    "title": "Haluatko korvata julkaisun?",
-                    "msg": "Korvaamalla muutokset näkyvät suoraan julkaisemassasi kartassa. Sinun ei tarvitse lisätä koodia verkkosivuillesi uudelleen."
+                    "title": "Haluatko päivittää upotetun kartan?",
+                    "msg": "Päivitykset näkyvät välittömästi upotetussa kartassa. Sinun ei tarvitse muuttaa html-koodia."
                 }
             },
             "layerselection": {
-                "label": "Näytä karttatasot valikossa",
-                "info": "Valitse karttapohjat. Voit tehdä oletusvalinnan esikatselunäkymästä.",
-                "tooltip": "Karttapohja näkyy kartan alimmaisena kerroksena. Kun valitset karttatasoja karttapohjaksi, vain yksi valituista tasoista näkyy kerralla ja käyttäjä voi vaihdella niiden välillä. Oletusvalinnan voit tehdä esikatselukartassa.",
-                "promote": "Haluatko näyttää myös ilmakuvia?"
+                "label": "Näytä kartalla karttatasovalikko",
+                "info": "Valitse taustakarttoina näytettävät karttatasot. Oletusvalinnan voit tehdä esikatselukartassa.",
+                "tooltip": "Taustakarttataso näkyy karttanäkymässä alimmaisena. Jos valitset useampia karttatasoja taustakarttatasoksi, kartalla näkyy kerralla vain yksi taustakarttataso. Käyttäjä voi halutessaan vaihtaa taustakarttatasoa. Oletusvalinnan voit tehdä esikatselukartassa."
             },
-            "preview": "Julkaistavan kartan esikatselu",
+            "preview": "Kartan esikatselu",
             "location": "Sijainti ja mittakaavataso",
             "zoomlevel": "Mittakaavataso",
             "help": "Ohje",
             "error": {
-                "title": "Virhe!",
-                "size": "Virhe kokomäärityksissä",
-                "domain": "Sivusto on pakollinen tieto",
-                "domainStart": "Anna sivusto ilman http- tai www-etuliitteitä",
-                "name": "Nimi on pakollinen tieto",
-                "nohelp": "Ohjetta ei löytynyt",
-                "saveFailed": "Kartan julkaisu epäonnistui. Yritä myöhemmin uudelleen.",
-                "nameIllegalCharacters": "Nimessä on luvattomia merkkejä. Sallittuja merkkejä ovat kaikki suomen kielen aakkoset, numerot sekä välilyönti ja yhdysmerkki.",
-                "domainIllegalCharacters": "Sivuston nimessä on luvattomia merkkejä. Sallittuja merkkejä ovat kaikki suomen kielen aakkoset, numerot sekä välilyönti ja yhdysmerkki."
+                "title": "Virhe",
+                "size": "Kartan koko on virheellinen. Leveyden on oltava vähintään 30 pikseliä ja korkeuden vähintään 20 pikseliä. Desimaalierottimena on piste.",
+                "domain": "Verkkosivuston osoite on pakollinen tieto. Anna sivuston osoite ja yritä uudelleen.",
+                "domainStart": "Verkkosivuston osoite on väärässä muodossa. Anna osoite ilman http- tai www-etuliitteitä ja yritä uudelleen.",
+                "name": "Kartan nimi on pakollinen tieto. Anna kartalle nimi ja yritä uudelleen.",
+                "nohelp": "Ohjetta ei löytynyt.",
+                "saveFailed": "Kartan tallennus epäonnistui.",
+                "nameIllegalCharacters": "Kartan nimessä on kiellettyjä merkkejä. Sallittuja merkkejä ovat aakkoset (a-ö, A-Ö), numerot (0-9), välilyönti ja yhdysmerkki (-). Poista kielletyt merkit ja yritä uudelleen.",
+                "domainIllegalCharacters": "Verkkosivuston osoitteessa on kiellettyjä merkkejä. Sallittuja merkkejä ovat aakkoset (a-z, A-Z), numerot (0-9) sekä yhdysviiva (-), alaviiva (_), piste (.), huutomerkki (!), aaltoviiva (~), asteriski (*), puolilainausmerkki (') ja sulut ()."
             }
         },
         "NotLoggedView": {
-            "text": "Voit käyttää julkaisutoimintoa kirjauduttuasi palveluun.",
+            "text": "Tervetuloa julkaisemaan upotettuja karttoja verkkosivuillasi. Kirjaudu sisään tai rekisteröidy ensin.",
             "signup": "Kirjaudu sisään",
-            "signupUrl": "/web/fi/login",
-            "register": "Rekisteröidy",
-            "registerUrl": "/web/fi/login?p_p_id=58&p_p_lifecycle=1&p_p_state=maximized&p_p_mode=view&p_p_col_id=column-1&p_p_col_count=1&saveLastPath=0&_58_struts_action=%2Flogin%2Fcreate_account"
+            "register": "Rekisteröidy"
         },
         "StartView": {
-            "text": "Voit julkaista tässä tekemäsi karttanäkymän osana esim. omaa tai yrityksesi sivustoa.",
-            "touLink": "Näytä karttajulkaisun käyttöehdot",
-            "layerlist_title": "Julkaistavissa olevat karttatasot",
-            "layerlist_empty": "Valitsemiasi karttatasoja ei voida julkaista. Valitut karttatasot -valikosta näet, voiko karttatason julkaista.",
-            "layerlist_denied": "Ei julkaistavissa",
-            "denied_tooltip": "Kartta-aineistojen tuottajat eivät ole antaneet näille aineistoilleen julkaisuoikeutta muissa verkkopalveluissa. Tarkista julkaisuoikeus Valitut karttatasot -valikosta ennen julkaisua.",
-            "myPlacesDisclaimer": "Huom. Olet julkaisemassa omaa karttatasoa.",
+            "text": "Tervetuloa julkaisemaan upotettuja karttoja verkkosivuillasi.",
+            "touLink": "Näytä käyttöehdot",
+            "layerlist_title": "Avoinna olevat karttatasot, jotka ovat julkaistavissa",
+            "layerlist_empty": "Avoinna olevat karttatasot eivät ole julkaistavissa. Tarkista Valitut tasot -valikosta, mitkä karttatasot ovat julkaistavissa.",
+            "layerlist_denied": "Avoinna olevat karttatasot, jotka eivät ole julkaistavissa",
+            "denied_tooltip": "Karttatasot eivät ole julkaistavissa upotetussa kartassa. Tiedontuottaja ei ole antanut lupaa julkaista karttatasoa muissa verkkopalveluissa. Tarkista karttatason julkaisuoikeudet Valitut tasot -valikosta.",
+            "myPlacesDisclaimer": "HUOM! Jos käytät karttatasoa karttajulkaisussa, karttatasosta tulee julkinen.",
             "buttons": {
                 "continue": "Jatka",
-                "continueAndAccept": "Hyväksy ehdot ja jatka",
+                "continueAndAccept": "Hyväksy ja jatka",
                 "cancel": "Peruuta",
                 "close": "Sulje"
             },
             "tou": {
-                "notfound": "Käyttöehtoja ei löytynyt",
+                "notfound": "Käyttöehtoja ei löytynyt.",
                 "reject": "Hylkää",
                 "accept": "Hyväksy"
             }
@@ -211,13 +213,15 @@ Oskari.registerLocalization({
         "layer": {
             "show": "Näytä",
             "hide": "Piilota",
-            "hidden": "Karttataso on tilapäisesti piilotettu.",
-            "selectAsBaselayer": "Valitse pohjakartaksi",
-            "rights": {
-                "can_be_published_map_user": {
-                    "label": "Julkaistavissa",
-                    "tooltip": "Karttatason voi julkaista upotetussa karttaikkunassa. Viikoittainen käyttömäärä voi olla rajoitettu."
-                }
+            "hidden": "Karttataso on piilotettu tilapäisesti.",
+            "selectAsBaselayer": "Taustakarttataso"
+        },
+        "layerFilter": {
+            "buttons": {
+                "publishable": "Julkaistavissa"
+            },
+            "tooltips": {
+                "publishable": "Näytä vain julkaistavissa olevat karttatasot"
             }
         }
     }

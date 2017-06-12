@@ -1,11 +1,13 @@
-Oskari.registerLocalization({
+Oskari.registerLocalization(
+{
     "lang": "pl",
     "key": "userinterface.UserGuide",
     "value": {
         "title": "Pomoc",
         "desc": "",
         "flyout": {
-            "title": "Oskari instrukcja użytkownika"
+            "title": "Oskari instrukcja użytkownika",
+            "loadingtxt": ""
         },
         "tile": {
             "title": "Instrukcja korzystania z mapy"
@@ -15,8 +17,7 @@ Oskari.registerLocalization({
             "generic": "Pobranie instrukcji użytkownika nie powiodło się. Spróbuj ponownie później."
         },
         "help": {
-            "tags": "map window,user guide",
-            "contentPart": "body"
+            "tags": "map window,user guide"
         }
     }
 });

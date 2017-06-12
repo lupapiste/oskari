@@ -9,20 +9,20 @@ Oskari.registerLocalization(
             "title": "Napaka!",
             "generic": "Sistemska napaka! Prosim poskusi kasneje.",
             "loadFailed": "Napaka v nalaganju slojev karte. Osveži stran v brskalniku in izberi sloje karte.",
-            "noResults": "Iskanje ni vrnilo rezultatov.",
-            "noResultsForKeyword": "NOT TRANSLATED",
-            "minChars": "NOT TRANSLATED"
+            "noResults": "Iskanje ni vrnilo rezultatov. Preveri iskalni niz.",
+            "noResultsForKeyword": "Za to ključno besedo ni slojev na karti. Preveri iskalni niz.",
+            "minChars": "Vpiši vsaj štiri znake. Dovoljeni znaki so črke a-z, kot tudi  å, ä in ö, številke, vračalke in vezaji."
         },
         "loading": "Nalaganje...",
         "filter": {
-            "text": "Išči sloje karte",
-            "keywordsTitle": "NOT TRANSLATED",
-            "shortDescription": "NOT TRANSLATED",
-            "description": "NOT TRANSLATED",
+            "text": "Poišči sloje karte",
+            "keywordsTitle": "Ključne besede:",
+            "shortDescription": "Iskanje slojev s pomočjo imena sloja, ponudnika podatkov, ali ključne besede, ki opisuje sloj.",
+            "description": "Vpiši del imena sloja, ime ponudnika podatkov ali ključno besedo, ki opisuje sloj. Iskanje po ključnih besedah se prične, ko so vpisani najmanj štirje znaki. Dovoljeni znaki so črke a - z, kot tudi črke  å, ä in ö, številke, ter znaka za vezaj in vračalko.",
             "inspire": "Po temi",
             "organization": "Po ponudniku podatkov",
             "published": "Uporabniki",
-            "didYouMean": "NOT TRANSLATED"
+            "didYouMean": "Ali si mislil:"
         },
         "published": {
             "organization": "Objavljen sloj karte",
@@ -30,37 +30,56 @@ Oskari.registerLocalization(
         },
         "tooltip": {
             "type-base": "Karta za ozadje",
-            "type-wms": "Sloj karte",
-            "type-wfs": "Podatkovni poizvod"
+            "type-wms": "Sloj karte (WMS, WMTS)",
+            "type-wfs": "Podatkovni proizvod (WFS)",
+            "type-wfs-manual": "Osveži podatke s klikom na ''Podatki po pojavu'' ali na tipko ''Osveži''."
         },
         "backendStatus": {
             "OK": {
                 "tooltip": "Sloj karte je trenutno na voljo",
-                "iconClass": "NOT TRANSLATED"
+                "iconClass": "zaledni sistem deluje"
             },
             "DOWN": {
                 "tooltip": "Sloj karte trenutno ni na voljo",
-                "iconClass": "NOT TRANSLATED"
+                "iconClass": "zaledni sistem ne deluje"
+            },
+            "ERROR": {
+                "tooltip": "Sloj karte trenutno ni na voljo",
+                "iconClass": "backendstatus-error"
             },
             "MAINTENANCE": {
                 "tooltip": "Sloj karte v naslednjih dneh občasno ne bo na voljo",
-                "iconClass": "NOT TRANSLATED"
+                "iconClass": "status zalednega sistema-vzdrževanje"
             },
             "UNKNOWN": {
                 "tooltip": "",
-                "iconClass": "NOT TRANSLATED"
+                "iconClass": "backendstatus-unknown"
+            },
+            "UNSTABLE": {
+                "tooltip": "",
+                "iconClass": "backendstatus-unstable"
             }
         },
         "buttons": {
-            "ok": "NOT TRANSLATED"
+            "ok": "OK"
         },
         "types": {
-            "syn": "NOT TRANSLATED",
-            "lk": "NOT TRANSLATED",
-            "vk": "NOT TRANSLATED",
-            "ak": "NOT TRANSLATED",
-            "yk": "NOT TRANSLATED"
+            "syn": "Sinonim",
+            "lk": "Relacijski koncept",
+            "vk": "Koordinatni koncept",
+            "ak": "Podrejen koncept",
+            "yk": "Nadrejen koncept"
+        },
+        "layerFilter": {
+            "buttons": {
+                "newest": "Novejši",
+                "stats": "Vektorski sloji"
+            },
+            "tooltips": {
+                "newest": "Prikaži ## novejše sloje karte",
+                "stats": "Prikaži samo vektorske sloje",
+                "remove": "Odstrani filter"
+            }
         }
     }
-}
-);
+});

@@ -6,23 +6,23 @@ Oskari.registerLocalization(
         "title": "Mapové vrstvy",
         "desc": "",
         "errors": {
-            "title": "Chyba!",
-            "generic": "Chyba systému| Skúste neskôr, prosím",
-            "loadFailed": "Chyba pri načítavaní mapových vrstiev| Obnovte stránku Vášho prehliadača a vyberte mapové vrstvy",
-            "noResults": "Nenašli sa požadované výsledky",
-            "noResultsForKeyword": "NOT TRANSLATED",
-            "minChars": "NOT TRANSLATED"
+            "title": "Chyba",
+            "generic": "Vyskytla sa chyba systému.",
+            "loadFailed": "Mapové vrstvy sa nedali načítať. Obnovte stránku vášho prehliadača a znovu vyberte mapové vrstvy.",
+            "noResults": "Nenašli sa výsledky vyhľadávania. Prosím, skontrolujte hľadaný výraz.",
+            "noResultsForKeyword": "Nenašli sa žiadne mapové vrstvy. Prosím, skontrolujte hľadaný výraz.",
+            "minChars": "Hľadaný výraz je príliš krátky. Zadajte aspoň štyri znaky."
         },
-        "loading": "Načítavanie...",
+        "loading": "Vyhľadávanie...",
         "filter": {
             "text": "Hľadať mapové vrstvy",
-            "keywordsTitle": "NOT TRANSLATED",
-            "shortDescription": "NOT TRANSLATED",
-            "description": "NOT TRANSLATED",
+            "keywordsTitle": "Kľúčové slová:",
+            "shortDescription": "Vyhľadávať mapové vrstvy podľa názvu mapovej vrstvy, mena poskytovateľa údajov alebo kľúčového slova.",
+            "description": "Vyhľadávať mapové vrstvy podľa názvu mapovej vrstvy, mena poskytovateľa údajov alebo kľúčového slova. Môžete zadať celý výraz alebo len jeho časť. Hľadaný výraz musí mať aspoň štyri znaky.",
             "inspire": "Podľa motívu",
-            "organization": "Podľa poskytovateľov údajov",
+            "organization": "Podľa poskytovateľa údajov",
             "published": "Používatelia",
-            "didYouMean": "NOT TRANSLATED"
+            "didYouMean": "Mali ste na mysli:"
         },
         "published": {
             "organization": "Zverejnená mapová vrstva",
@@ -30,37 +30,56 @@ Oskari.registerLocalization(
         },
         "tooltip": {
             "type-base": "Podkladová mapa",
-            "type-wms": "Mapová vrstva",
-            "type-wfs": "Údaje o produkte"
+            "type-wms": "Mapová vrstva (WMS, WMTS)",
+            "type-wfs": "Produktový údaj (WFS)",
+            "type-wfs-manual": "Obnovte údaje o objekte kliknutím na ikonu \"Objektové údaje\" alebo \"Obnoviť\" v mapovom okne"
         },
         "backendStatus": {
             "OK": {
                 "tooltip": "Mapová vrstva je momentálne dostupná",
-                "iconClass": "NOT TRANSLATED"
+                "iconClass": "backendstatus-ok"
             },
             "DOWN": {
                 "tooltip": "Mapová vrstva je momentálne nedostupná",
-                "iconClass": "NOT TRANSLATED"
+                "iconClass": "backendstatus-dolu"
+            },
+            "ERROR": {
+                "tooltip": "Mapová vrstva je momentálne nedostupná",
+                "iconClass": "backendstatus-error"
             },
             "MAINTENANCE": {
                 "tooltip": "V nasledujúcich dňoch môže byť mapová vrstva pravidelne nedostupná",
-                "iconClass": "NOT TRANSLATED"
+                "iconClass": "backendstatus-údržba"
             },
             "UNKNOWN": {
                 "tooltip": "",
-                "iconClass": "NOT TRANSLATED"
+                "iconClass": "backendstatus-neznámy"
+            },
+            "UNSTABLE": {
+                "tooltip": "",
+                "iconClass": "backendstatus-nestabilný"
             }
         },
         "buttons": {
-            "ok": "NOT TRANSLATED"
+            "ok": "OK"
         },
         "types": {
-            "syn": "NOT TRANSLATED",
-            "lk": "NOT TRANSLATED",
-            "vk": "NOT TRANSLATED",
-            "ak": "NOT TRANSLATED",
-            "yk": "NOT TRANSLATED"
+            "syn": "Synonymá",
+            "lk": "Súvisiaca koncepcia",
+            "vk": "Súradnicová koncepcia",
+            "ak": "Podriadený koncept",
+            "yk": "Nadradený koncept"
+        },
+        "layerFilter": {
+            "buttons": {
+                "newest": "Najnovší",
+                "stats": "Vrstvy vektorov"
+            },
+            "tooltips": {
+                "newest": "Zobraz ## najnovšie mapové vrstvy",
+                "stats": "Zobraz iba vrstvy vektorov",
+                "remove": "Odstrániť filter"
+            }
         }
     }
-}
-);
+});

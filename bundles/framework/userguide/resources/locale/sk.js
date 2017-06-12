@@ -6,19 +6,48 @@ Oskari.registerLocalization(
         "title": "Pomocník",
         "desc": "",
         "flyout": {
-            "title": "Návod na obsluhu pre Oskari"
+            "title": "Užívateľská príručka",
+            "loadingtxt": "<p>Načítava sa užívateľská príručka...</p>"
         },
         "tile": {
-            "title": "Návod na obsluhu pre mapu"
+            "title": "Užívateľská príručka"
         },
         "error": {
-            "title": "Chyba!",
-            "generic": "Načítavanie návodu na obsluhu zlyhalo. Skúste neskôr, prosím."
+            "title": "Chyba",
+            "generic": "Užívateľská príručka sa nedá načítať."
         },
+        "tabs": [
+            {
+                "title": "Mapové okno",
+                "tags": "sprievodca_vitajte"
+            },
+            {
+                "title": "Mapové nástroje",
+                "tags": "sprievodca_nástrojmi"
+            },
+            {
+                "title": "Vyhľadať",
+                "tags": "sprievodca_vyhľadávaním"
+            },
+            {
+                "title": "Mapové Vrstvy",
+                "tags": "sprievodca_mapovými vrstvami"
+            },
+            {
+                "title": "Publikovanie mapy",
+                "tags": "sprievodca_publikovaním"
+            },
+            {
+                "title": "Tematické mapy",
+                "tags": "sprievodca_tematikami"
+            },
+            {
+                "title": "Analýza",
+                "tags": "sprievodca_analýzou"
+            }
+        ],
         "help": {
-            "tags": "NOT TRANSLATED",
-            "contentPart": "NOT TRANSLATED"
+            "tags": "Mapové okno, používateľská príručka"
         }
     }
-}
-);
+});

@@ -1,33 +1,34 @@
-Oskari.registerLocalization({
+Oskari.registerLocalization(
+{
     "lang": "en",
     "key": "Publisher",
     "value": {
-        "title": "Create map",
-        "flyouttitle": "Create map",
+        "title": "Map publishing",
+        "flyouttitle": "Create Embedded Map",
         "desc": "",
         "published": {
-            "title": "Your map has been created",
-            "desc": "Embed the map by adding the HTML code below to your website."
+            "title": "Embedded Map Saved",
+            "desc": "The embedded map has been saved. Publish it on your website by copying this code to the html code on your website:"
         },
         "edit": {
             "popup": {
-                "title": "Editing embedded map",
-                "msg": "The map data of a previously embedded map is being updated"
+                "title": "Opening embedded map…",
+                "msg": "Updating embedded map…"
             }
         },
         "BasicView": {
-            "title": "Embed map",
-            "titleEdit": "Edit embedded map",
+            "title": "Create Embedded Map",
+            "titleEdit": "Update Embedded Map",
             "domain": {
-                "title": "Webpage where the map will be embedded",
-                "label": "Website where the map will be embedded",
-                "placeholder": "without the prefixes http or www",
-                "tooltip": "Write the name of your website's index page, e.g. its domain name without the prefixes http or www, or the address of a subpage. Example: myhomepage.com"
+                "title": "Basic settings",
+                "label": "Website address (without http and www prefixes)",
+                "placeholder": "Website address",
+                "tooltip": "Type a website URL-address without prefixes or a subpage address. For example: homepage.com."
             },
             "name": {
-                "label": "The name of the map",
-                "placeholder": "required",
-                "tooltip": "Give your map a descriptive name. Please note the language of the user interface."
+                "label": "Map name (required)",
+                "placeholder": "Map name",
+                "tooltip": "Type a map name. Please note the language used on the map."
             },
             "language": {
                 "label": "Language",
@@ -36,173 +37,175 @@ Oskari.registerLocalization({
                     "sv": "Swedish",
                     "en": "English"
                 },
-                "tooltip": "Select the language of the map interface and map data."
+                "tooltip": "Select a languge to be used on the map. It affects the user interface and text on the map."
             },
             "size": {
-                "label": "Size",
-                "tooltip": "Select or define the size of the map to be embedded on your website. The map preview is displayed in the selected size."
+                "label": "Map size",
+                "tooltip": "Select a map size. The width must be at least 30 pixels and the height at least 20 pixels. Use a dot as a decimal separator. Check updates in the map preview."
             },
             "tools": {
                 "label": "Tools",
-                "tooltip": "Select the tools to be shown on the map. Their placement is displayed in the map preview.",
-                "ScaleBarPlugin": "Scale line",
+                "tooltip": "Select available map tools. Check a placement in the map preview.",
+                "ScaleBarPlugin": "Scale bar",
                 "IndexMapPlugin": "Index map",
-                "PanButtons": "Panning tool",
-                "Portti2Zoombar": "Scale scrollbar",
-                "ControlsPlugin": "Panning on",
-                "SearchPlugin": "Address and place name search",
+                "PanButtons": "Pan tool",
+                "Portti2Zoombar": "Zoom bar",
+                "MyLocationPlugin": "Center to location",
+                "ControlsPlugin": "Pan by mouse",
+                "SearchPlugin": "Place search",
                 "FeaturedataPlugin": "Feature data",
-                "GetInfoPlugin": "Query tool for place data",
+                "GetInfoPlugin": "Feature query tool",
                 "PublisherToolbarPlugin": "Map tools",
-                "selectDrawLayer" : "Select draw layer"
+                "selectDrawLayer": "Select map layer"
             },
             "toolbarToolNames": {
-                "history_back": "Move backward",
-                "history_forward": "Move forward",
+                "history_back": "Move to previous view",
+                "history_forward": "Move to next view",
                 "measureline": "Measure distance",
                 "measurearea": "Measure area",
-                "point" : "Allow points",
-                "line" : "Allow lines",
-                "area" : "Allow areas"
+                "drawTools": "Adding own places",
+                "point": "Allow point features",
+                "line": "Allow line features",
+                "area": "Allow area features"
             },
             "toollayout": {
-                "label": "Tool layout",
-                "tooltip": "Choose a layout for the tools shown on the map",
+                "label": "Tool Placement",
+                "tooltip": "Select a placement for map tools.",
                 "lefthanded": "Lefthanded",
                 "righthanded": "Righthanded",
-                "userlayout": "Custom layout",
-                "usereditmode": "Switch edit mode on",
-                "usereditmodeoff": "Switch edit mode off"
+                "userlayout": "Custom placement",
+                "usereditmode": "Start editing",
+                "usereditmodeoff": "Finish editing"
             },
             "data": {
-                "label": "Statistics",
-                "tooltip": "Show the data related to map.",
-                "grid": "Show statistic grid",
+                "label": "Thematic maps",
+                "tooltip": "Show thematic maps on the map.",
+                "grid": "Show thematic data in table",
                 "allowClassification": "Allow classification"
             },
             "layout": {
-                "label": "Layout",
+                "label": "Graphic Layout",
                 "fields": {
                     "colours": {
-                        "label": "Colour scheme",
-                        "placeholder": "Select colour scheme",
-                        "buttonLabel": "Change",
-                        "light_grey": "Light grey",
-                        "dark_grey": "Dark grey",
+                        "label": "Color scheme",
+                        "placeholder": "Color scheme",
+                        "buttonLabel": "Select",
+                        "light_grey": "Light gray",
+                        "dark_grey": "Dark gray",
                         "blue": "Blue",
                         "red": "Red",
                         "green": "Green",
                         "yellow": "Yellow",
-                        "custom": "Custom colours",
+                        "custom": "My colour scheme",
                         "customLabels": {
                             "bgLabel": "Identifier background",
                             "titleLabel": "Identifier text",
-                            "headerLabel": "Header text",
+                            "headerLabel": "Placename",
                             "iconLabel": "Icon",
                             "iconCloseLabel": "Dark",
                             "iconCloseWhiteLabel": "Light"
                         }
                     },
                     "fonts": {
-                        "label": "Select font"
+                        "label": "Font style"
                     },
                     "toolStyles": {
                         "label": "Tool style",
                         "default": "Default style",
                         "rounded-dark": "Rounded (dark)",
                         "rounded-light": "Rounded (light)",
-                        "sharp-dark": "Polygon (dark)",
-                        "sharp-light": "Polygon (light)",
-                        "3d-dark": "3D (dark)",
-                        "3d-light": "3D (light)"
+                        "sharp-dark": "Angular (dark)",
+                        "sharp-light": "Angular (light)",
+                        "3d-dark": "Three-dimensional (dark)",
+                        "3d-light": "Three-dimensional (light)"
                     }
                 },
                 "popup": {
-                    "title": "Select colour scheme",
+                    "title": "Select Color Scheme",
                     "close": "Close",
                     "gfiDialog": {
-                        "title": "Preview",
+                        "title": "Feature Info",
                         "featureName": "Preview",
-                        "featureDesc": "The selected colour scheme only affects the colours of the feature info and layer selection popups"
+                        "featureDesc": "The selected color scheme affects a graphic layout of feature and map layer popup info wimdows."
                     }
                 }
             },
             "layers": {
-                "add": "Add layer",
-                "label": "Map layers",
-                "defaultLayer": "(Default layer)",
-                "useAsDefaultLayer": "Use as default layer"
+                "add": "Create new layer",
+                "label": "Map Layers",
+                "addselect": "Add a drawing layer to map layers.",
+                "defaultLayer": "(Default map layer)",
+                "useAsDefaultLayer": "Use as default"
             },
             "myplaces": {
-                "label": "My layers"
+                "label": "My map layers"
             },
             "sizes": {
                 "small": "Small",
                 "medium": "Medium",
                 "large": "Large",
+                "fill": "Space filling",
                 "custom": "Custom size",
                 "width": "width",
-                "height": "height"
+                "height": "height",
+                "separator": "x"
             },
             "buttons": {
                 "save": "Save",
-                "saveNew": "Save new",
+                "saveNew": "Create new map",
                 "ok": "OK",
-                "replace": "Replace",
+                "replace": "Update map",
                 "cancel": "Cancel",
-                "add": "add map layer"
+                "add": "Add map layer"
             },
             "confirm": {
                 "replace": {
-                    "title": "Do you wish to replace the embedded map?",
-                    "msg": "Use replace to show changes on the embedded map without delay. It is not necessary to add the html-code to your webpage again."
+                    "title": "Do you want to update this map?",
+                    "msg": "Updates are shown immediately on the map. You do not need to update the html code on your website."
                 }
             },
             "layerselection": {
-                "label": "Show map layers in menu",
-                "info": "Select background maps. You can set the default background map in the map preview window.",
-                "tooltip": "The background map is shown as the bottom layer of the map. When you select map layers to be used as the bottom layer, only one layer is visible at a time and you can switch between them. You can set the default background map in the map preview.",
-                "promote": "Show aerial images?"
+                "label": "Show map layer menu on the map",
+                "info": "Select map layers to be shown as background layers. You can select a default backgound map layer in the map preview.",
+                "tooltip": "The background layer is shown at the bottom layer on the map. If you select several background maps, only one of them can be visible at a time. User can select a background layer in the user interface. Please select a default background map in the map preview."
             },
-            "preview": "Preview of the map to be embedded.",
+            "preview": "Map preview",
             "location": "Location and zoom level",
             "zoomlevel": "Zoom level",
             "help": "Help",
             "error": {
-                "title": "Error!",
-                "size": "Error in size definitions",
-                "domain": "Website is required information",
-                "domainStart": "Omit prefixes http or www from the website name",
-                "name": "Name is required information",
-                "nohelp": "No help is available",
-                "saveFailed": "Map publishing failed. Try again later.",
-                "nameIllegalCharacters": "The name contains disallowed characters. Allowed characters are the letters a-z as well as å, ä and ö, numbers, backspaces and hyphens.",
-                "domainIllegalCharacters": "The web site name contains disallowed characters. Allowed characters are the letters a-z as well as å, ä and ö, numbers, backspaces and hyphens."
+                "title": "Error",
+                "size": "The map size is invalid. Width must be at least 30 pixels and height at least 20 pixels. Use a point as a decimal separator.",
+                "domain": "The website is required. Please type an address and try again.",
+                "domainStart": "The website is invalid. Please type an address without http or www prefixes and try again.",
+                "name": "The map name is required. Plese type a name and try again.",
+                "nohelp": "The user guide is not available.",
+                "saveFailed": "The map couldn't be saved. Please try again later.",
+                "nameIllegalCharacters": "The map name contains illegal characters. Allowed characters are letters (a-z, A-Z, å, ä, ö, Å, Ä, Ö), numbers (0-9), spaces and hyphens (-). Please correct the name and try again.",
+                "domainIllegalCharacters": "The website address contains illegal characters. Allowed characters are letters (a-z, A-Z, å, ä, ö, Å, Ä, Ö), numbers (0-9) and special characters (-, _, ., !, ~, *, ' and ()). Please correct the address and try again."
             }
         },
         "NotLoggedView": {
-            "text": "You need to log in before using the embedding function.",
+            "text": "Welcome to publish embedded map on your website. Please log in or register first.",
             "signup": "Log in",
-            "signupUrl": "/web/en/login",
-            "register": "Register",
-            "registerUrl": "/web/en/login?p_p_id=58&p_p_lifecycle=1&p_p_state=maximized&p_p_mode=view&p_p_col_id=column-1&p_p_col_count=1&saveLastPath=0&_58_struts_action=%2Flogin%2Fcreate_account"
+            "register": "Register"
         },
         "StartView": {
-            "text": "You can embed the map view you just created on your own or your employer's website.",
-            "touLink": "Show Terms of use for Embedded maps",
-            "layerlist_title": "Embeddable map layers",
-            "layerlist_empty": "The map layers you selected cannot be embedded. The menu Selected map layers shows whether or not a map layer can be embedded.",
-            "layerlist_denied": "Cannot be embedded",
-            "denied_tooltip": "The providers of this map data have not granted permission to publish these materials on other websites. Check rights to publish in the menu Selected map layers before embedding.",
-            "myPlacesDisclaimer": "NB. you are going to publish your own map layer.",
+            "text": "Welcome to publish embedded map on your website.",
+            "touLink": "Show Terms of Use",
+            "layerlist_title": "Publishable map layers open in map window:",
+            "layerlist_empty": "No publishable map layers are open in the map window. Please check publishable map layers in the Selected Layers menu.",
+            "layerlist_denied": "Unpublishable map layers open in map window:",
+            "denied_tooltip": "These map layers are not publishable in embedded maps. Data producers have not granted permissions for publishing. Please check publishable map layers in the Selected Layers menu.",
+            "myPlacesDisclaimer": "NOTE! If you are using this map layer in an embedded map, the map layer will be published.",
             "buttons": {
                 "continue": "Continue",
-                "continueAndAccept": "Accept Terms of use and continue",
+                "continueAndAccept": "Accept and continue",
                 "cancel": "Cancel",
                 "close": "Close"
             },
             "tou": {
-                "notfound": "Can not find Terms of Use",
+                "notfound": "Terms of Use could not be found.",
                 "reject": "Reject",
                 "accept": "Accept"
             }
@@ -210,12 +213,15 @@ Oskari.registerLocalization({
         "layer": {
             "show": "Show",
             "hide": "Hide",
-            "hidden": "The map has been temporarily hidden.",
-            "rights": {
-                "can_be_published_map_user": {
-                    "label": "Publication permitted",
-                    "tooltip": "The map layer can be published in an embedded map window and the number of users per week may be limited."
-                }
+            "hidden": "The map layer is temporarily hidden.",
+            "selectAsBaselayer": "Background map layer"
+        },
+        "layerFilter": {
+            "buttons": {
+                "publishable": "Publishable"
+            },
+            "tooltips": {
+                "publishable": "Show only publishable map layers."
             }
         }
     }

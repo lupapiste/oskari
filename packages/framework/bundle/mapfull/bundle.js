@@ -61,6 +61,7 @@ function() {
             "src" : "../../../../bundles/framework/mapfull/instance.js"
         }, {
             "type" : "text/javascript",
+<<<<<<< HEAD
             "src" : "../../../../bundles/framework/mapfull/enhancement/start-map-with-link-enhancement.js"
         }, {
             "type" : "text/javascript",
@@ -77,19 +78,87 @@ function() {
         }, {
             "type" : "text/css",
             "src" : "../../../../bundles/framework/resources/mapfull/css/style.css"
+=======
+            "src" : "../../../../bundles/framework/mapfull/request/MapResizeEnabledRequest.js"
+        }, {
+            "type" : "text/javascript",
+            "src" : "../../../../bundles/framework/mapfull/request/MapResizeEnabledRequestHandler.js"
+        }, {
+            "type" : "text/javascript",
+            "src" : "../../../../bundles/framework/mapfull/request/MapWindowFullScreenRequest.js"
+        }, {
+            "type" : "text/javascript",
+            "src" : "../../../../bundles/framework/mapfull/request/MapWindowFullScreenRequestHandler.js"
+        }, {
+            "type" : "text/javascript",
+            "src" : "../../../../bundles/framework/mapfull/request/MapSizeUpdateRequest.js"
+        }, {
+            "type" : "text/javascript",
+            "src" : "../../../../bundles/framework/mapfull/request/MapSizeUpdateRequestHandler.js"
+        }, {
+            "type" : "text/css",
+            "src" : "../../../../bundles/framework/mapfull/resources/css/style.css"
+>>>>>>> master
         }],
         "locales": [{
+            "lang": "en",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/mapfull/resources/locale/en.js"
+        }, {
+            "lang": "es",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/mapfull/resources/locale/es.js"
+        }, {
+            "lang": "et",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/mapfull/resources/locale/et.js"
+        }, {
             "lang": "fi",
             "type": "text/javascript",
             "src": "../../../../bundles/framework/mapfull/resources/locale/fi.js"
+<<<<<<< HEAD
+=======
+        }, {
+            "lang": "is",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/mapfull/resources/locale/is.js"
+        }, {
+            "lang": "it",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/mapfull/resources/locale/it.js"
+        }, {
+            "lang": "nb",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/mapfull/resources/locale/nb.js"
+        }, {
+            "lang": "nl",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/mapfull/resources/locale/nl.js"
+        }, {
+            "lang": "nn",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/mapfull/resources/locale/nn.js"
+        }, {
+            "lang": "sl",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/mapfull/resources/locale/sl.js"
+        }, {
+            "lang": "sk",
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/mapfull/resources/locale/sk.js"
+>>>>>>> master
         }, {
             "lang": "sv",
             "type": "text/javascript",
             "src": "../../../../bundles/framework/mapfull/resources/locale/sv.js"
         }, {
-            "lang": "en",
+            "lang": "fr",
             "type": "text/javascript",
+<<<<<<< HEAD
             "src": "../../../../bundles/framework/mapfull/resources/locale/en.js"
+=======
+            "src": "../../../../bundles/framework/mapfull/resources/locale/fr.js"
+>>>>>>> master
         }]
     },
     "bundle" : {

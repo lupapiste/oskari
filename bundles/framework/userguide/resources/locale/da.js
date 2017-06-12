@@ -6,7 +6,8 @@ Oskari.registerLocalization(
         "title": "Hjælp",
         "desc": "",
         "flyout": {
-            "title": "Oskari brugervejledning"
+            "title": "Oskari brugervejledning",
+            "loadingtxt": ""
         },
         "tile": {
             "title": "Kortbrugervejledning"
@@ -16,9 +17,7 @@ Oskari.registerLocalization(
             "generic": "Fejl ved indlæsning af brugervejledning. Prøv venligst igen senere."
         },
         "help": {
-            "tags": "NOT TRANSLATED",
-            "contentPart": "NOT TRANSLATED"
+            "tags": ""
         }
     }
-}
-);
+});

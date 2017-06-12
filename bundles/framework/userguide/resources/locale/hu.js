@@ -6,7 +6,8 @@ Oskari.registerLocalization(
         "title": "Segítség",
         "desc": "",
         "flyout": {
-            "title": "Oskari használati útmutató"
+            "title": "Oskari használati útmutató",
+            "loadingtxt": ""
         },
         "tile": {
             "title": "Térképkezelési útmutató"
@@ -16,9 +17,7 @@ Oskari.registerLocalization(
             "generic": "Használati útmutató betöltése sikertelen. Kérem próbálja később."
         },
         "help": {
-            "tags": "NOT TRANSLATED",
-            "contentPart": "NOT TRANSLATED"
+            "tags": ""
         }
     }
-}
-);
+});

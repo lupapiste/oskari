@@ -33,7 +33,7 @@ function() {
             "src" : "../../../../bundles/statistics/statsgrid/plugin/ManageStatsPlugin.js"
         }, {
             "type" : "text/javascript",
-            "src" : "../../../../bundles/statistics/statsgrid/event/SotkadataChangedEvent.js"
+            "src" : "../../../../bundles/statistics/statsgrid/event/StatsDataChangedEvent.js"
         }, {
             "type" : "text/javascript",
             "src" : "../../../../bundles/statistics/statsgrid/event/IndicatorsEvent.js"
@@ -52,6 +52,9 @@ function() {
         }, {
             "type" : "text/javascript",
             "src" : "../../../../bundles/statistics/statsgrid/request/IndicatorsRequestHandler.js"
+        },{
+            "type": "text/javascript",
+            "src": "../../../../bundles/framework/divmanazer/component/buttons/CloseButton.js"
         }, {
             "type" : "text/css",
             "src" : "../../../../bundles/statistics/statsgrid/resources/css/style.css"
@@ -59,7 +62,7 @@ function() {
             "type" : "text/css",
             "src" : "../../../../bundles/statistics/statsgrid/resources/css/classifyplugin.css"
         }, {
-            "src" : "../../../../bundles/statistics/bundle/publishedgrid/resources/css/publishedgrid.css",
+            "src" : "../../../../bundles/statistics/publishedgrid/resources/css/publishedgrid.css",
             "type" : "text/css"
         }, {
             "type" : "text/css",
@@ -125,24 +128,24 @@ function() {
             "src" : "../../../../libraries/slickgrid/controls/slick.columnpicker.js",
             "type" : "text/javascript"
         }, {
-            "src" : "../../../../libraries/chosen/chosen.jquery.js",
+            "src" : "../../../../libraries/chosen/1.5.1/chosen.jquery.js",
             "type" : "text/javascript"
         }, {
-            "src" : "../../../../libraries/chosen/chosen.css",
+            "src" : "../../../../libraries/chosen/1.5.1/chosen.css",
             "type" : "text/css"
         }],
         "locales" : [{
             "lang" : "fi",
             "type" : "text/javascript",
-            "src" : "../../../../bundles/statistics/statsgrid/locale/fi.js"
+            "src" : "../../../../bundles/statistics/statsgrid/resources/locale/fi.js"
         }, {
             "lang" : "sv",
             "type" : "text/javascript",
-            "src" : "../../../../bundles/statistics/statsgrid/locale/sv.js"
+            "src" : "../../../../bundles/statistics/statsgrid/resources/locale/sv.js"
         }, {
             "lang" : "en",
             "type" : "text/javascript",
-            "src" : "../../../../bundles/statistics/statsgrid/locale/en.js"
+            "src" : "../../../../bundles/statistics/statsgrid/resources/locale/en.js"
         }]
     },
     "bundle" : {

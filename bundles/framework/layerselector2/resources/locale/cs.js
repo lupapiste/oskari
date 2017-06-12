@@ -1,4 +1,5 @@
-Oskari.registerLocalization({
+Oskari.registerLocalization(
+{
     "lang": "cs",
     "key": "LayerSelector",
     "value": {
@@ -41,13 +42,21 @@ Oskari.registerLocalization({
                 "tooltip": "V současnosti není mapová vrstva dostupná.",
                 "iconClass": "backendstatus-down"
             },
+            "ERROR": {
+                "tooltip": "V současnosti není mapová vrstva dostupná.",
+                "iconClass": "backendstatus-error"
+            },
             "MAINTENANCE": {
                 "tooltip": "V následujících dnech může být mapová vrstva nedostupná.",
                 "iconClass": "backendstatus-maintenance"
             },
             "UNKNOWN": {
-                "tooltip": "Informace o stavu mapové vrstvy je nedostupná",
-                "iconClass": "backendstatus-ok"
+                "tooltip": "",
+                "iconClass": "backendstatus-unknown"
+            },
+            "UNSTABLE": {
+                "tooltip": "",
+                "iconClass": "backendstatus-unstable"
             }
         },
         "buttons": {
@@ -59,6 +68,17 @@ Oskari.registerLocalization({
             "vk": "Koordinovat koncept",
             "ak": "Podřízený pojem",
             "yk": "Nadřazené koncepce"
+        },
+        "layerFilter": {
+            "buttons": {
+                "newest": "Newest",
+                "stats": "Vector layers"
+            },
+            "tooltips": {
+                "newest": "Show ## newest map layers",
+                "stats": "Show only vector layers",
+                "remove": "Remove filter"
+            }
         }
     }
 });

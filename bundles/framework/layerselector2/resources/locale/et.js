@@ -1,4 +1,5 @@
-Oskari.registerLocalization({
+Oskari.registerLocalization(
+{
     "lang": "et",
     "key": "LayerSelector",
     "value": {
@@ -8,20 +9,20 @@ Oskari.registerLocalization({
             "title": "Viga!",
             "generic": "Süsteemi viga! Palun proovi hiljem uuesti.",
             "loadFailed": "Viga kaardikihtide laadimisel. Laadi lehekülg oma brauseris uuesti ning vali kaardikihid.",
-            "noResults": "Otsingutulemusi ei leitud.",
-            "noResultsForKeyword": "NOT TRANSLATED",
-            "minChars": "NOT TRANSLATED"
+            "noResults": "Otsingutulemusi ei leitud. Kontrollige otsisõnu.",
+            "noResultsForKeyword": "Antud otsisõnale vastavat kaarti ei leitud.  Muutke otsisõna.",
+            "minChars": "Otsisõna on liiga lühike, nõutav vähemalt 4 tähemärki."
         },
-        "loading": "NOT TRANSLATED",
+        "loading": "Otsin…",
         "filter": {
             "text": "Otsi kaardikihte",
-            "keywordsTitle": "NOT TRANSLATED",
-            "shortDescription": "NOT TRANSLATED",
-            "description": "NOT TRANSLATED",
+            "keywordsTitle": "Märksõnad",
+            "shortDescription": "Otsi kaardikihte kihi nime, andmevaldaja või märksõna järgi.",
+            "description": "Otsi kaardikihte kihi nime, andmevaldaja või märksõna järgi. Märksõna võib olla osaline, kuid vähemalt 4 tähemärgiline.",
             "inspire": "Teemade järgi",
-            "organization": "Andmete tarnijate järgi",
+            "organization": "Andmevaldaja järgi",
             "published": "Kasutajad",
-            "didYouMean": "NOT TRANSLATED"
+            "didYouMean": "Kas mõtlesid:"
         },
         "published": {
             "organization": "Avaldatud kaardikiht",
@@ -29,8 +30,9 @@ Oskari.registerLocalization({
         },
         "tooltip": {
             "type-base": "Aluskaart",
-            "type-wms": "Kaardikiht",
-            "type-wfs": "Andmetoode"
+            "type-wms": "Kaardikiht(WMS, WMTS)",
+            "type-wfs": "Atribuutandmetega kaardikiht(WFS)",
+            "type-wfs-manual": "Värskenda WFS kaardikiht, vajutades nupule \"Objekti info\" või \"Värskenda\"."
         },
         "backendStatus": {
             "OK": {
@@ -41,24 +43,43 @@ Oskari.registerLocalization({
                 "tooltip": "Kaardikiht pole hetkel kättesaadav.",
                 "iconClass": "backendstatus-down"
             },
+            "ERROR": {
+                "tooltip": "Kaardikiht pole hetkel kättesaadav.",
+                "iconClass": "backendstatus-error"
+            },
             "MAINTENANCE": {
                 "tooltip": "Lähipäevadel võib kaardikiht olla aegajalt kättesaamatu.",
                 "iconClass": "backendstatus-maintenance"
             },
             "UNKNOWN": {
-                "tooltip": "Kaardikihi oleku info pole kättesaadav.",
-                "iconClass": "backendstatus-ok"
+                "tooltip": "",
+                "iconClass": "backendstatus-unknown"
+            },
+            "UNSTABLE": {
+                "tooltip": "",
+                "iconClass": "backendstatus-unstable"
             }
         },
         "buttons": {
             "ok": "OK"
         },
         "types": {
-            "syn": "NOT TRANSLATED",
-            "lk": "NOT TRANSLATED",
-            "vk": "NOT TRANSLATED",
-            "ak": "NOT TRANSLATED",
-            "yk": "NOT TRANSLATED"
+            "syn": "Sünonüüm",
+            "lk": "Seotud kontseptsioon",
+            "vk": "Koordinaatide kontseptsioon",
+            "ak": "Alamkontseptsioon",
+            "yk": "Ülemkontseptsioon"
+        },
+        "layerFilter": {
+            "buttons": {
+                "newest": "Uusim",
+                "stats": "Vektorkihid"
+            },
+            "tooltips": {
+                "newest": "Näita ## uusimaid kaardikihte",
+                "stats": "Näita ainult vektorkihte",
+                "remove": "Eemalda filter"
+            }
         }
     }
 });

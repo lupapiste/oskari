@@ -1,4 +1,5 @@
-Oskari.registerLocalization({
+Oskari.registerLocalization(
+{
     "lang": "pt",
     "key": "FeatureData2",
     "value": {
@@ -11,7 +12,7 @@ Oskari.registerLocalization({
         "errorscale": "Dados não podem ser apresentados para esta escala. Por favor, mude de escala.",
         "errordata": "Os dados do servidor têm erros. Por favor desloque ligeiramente a carta para atualizar.",
         "columnSelectorTooltip": "Mostrar colunas",
-        "popup": {
+        "selectionTools": {
             "title": "Selecionar elementos na carta",
             "instructions": " ",
             "link": {
@@ -19,7 +20,7 @@ Oskari.registerLocalization({
             },
             "button": {
                 "cancel": "Cancelar",
-                "empty": "NOT TRANSLATED",
+                "empty": "",
                 "show": "Ver lugares",
                 "close": "Fechar",
                 "edit": "Editar"
@@ -41,7 +42,7 @@ Oskari.registerLocalization({
                     "tooltip": "Adicionar círculo"
                 },
                 "select": {
-                    "tooltip": "NOT TRANSLATED"
+                    "tooltip": ""
                 }
             }
         }

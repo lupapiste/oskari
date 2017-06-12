@@ -30,7 +30,22 @@ Oskari.clazz.define("Oskari.userinterface.bundle.ui.ComponentsBundle", function(
          * @property source.scripts
          *
          */
-        "scripts" : [{
+        "scripts" : [
+        {
+            "type" : "text/javascript",
+            "src" : "../../../../libraries/chosen/1.5.1/chosen.jquery.js"
+        },
+        {
+            "type" : "text/css",
+            "src" : "../../../../libraries/chosen/1.5.1/chosen.css"
+        },
+        {
+            "type" : "text/javascript",
+            "src" : "../../../../bundles/framework/divmanazer/component/Component.js"
+        }, {
+            "type" : "text/javascript",
+            "src" : "../../../../bundles/framework/divmanazer/component/FormComponent.js"
+        }, {
             "type" : "text/javascript",
             "src" : "../../../../bundles/framework/divmanazer/component/Accordion.js"
         }, {
@@ -54,6 +69,9 @@ Oskari.clazz.define("Oskari.userinterface.bundle.ui.ComponentsBundle", function(
         }, {
             "type" : "text/javascript",
             "src" : "../../../../bundles/framework/divmanazer/component/Popup.js"
+        }, {
+            "type" : "text/javascript",
+            "src" : "../../../../bundles/framework/divmanazer/component/PopupService.js"
         }, {
             "type" : "text/javascript",
             "src" : "../../../../bundles/framework/divmanazer/component/Overlay.js"
@@ -83,6 +101,13 @@ Oskari.clazz.define("Oskari.userinterface.bundle.ui.ComponentsBundle", function(
             "src" : "../../../../bundles/framework/divmanazer/component/ProgressSpinner.js"
         }, {
             "type" : "text/javascript",
+            "src" : "../../../../bundles/framework/divmanazer/component/SelectList.js"
+        },
+        {
+            "type" : "text/javascript",
+            "src" : "../../../../bundles/framework/divmanazer/component/ProgressBar.js"
+        }, {
+            "type" : "text/javascript",
             "src" : "../../../../bundles/framework/divmanazer/component/VisualizationForm.js"
         }, {
             "type" : "text/javascript",
@@ -98,43 +123,43 @@ Oskari.clazz.define("Oskari.userinterface.bundle.ui.ComponentsBundle", function(
             "src" : "../../../../libraries/jquery/plugins/jquery-placeholder/jquery.placeholder.js"
         }, {
             "type" : "text/css",
-            "src" : "../../../../bundles/framework/resources/divmanazer/css/visualizationform.css"
+            "src" : "../../../../bundles/framework/divmanazer/resources/css/visualizationform.css"
         }, {
             "type" : "text/css",
-            "src" : "../../../../bundles/framework/resources/divmanazer/css/divman.css"
+            "src" : "../../../../bundles/framework/divmanazer/resources/css/divman.css"
         }, {
             "type" : "text/css",
-            "src" : "../../../../bundles/framework/resources/divmanazer/css/accordion.css"
+            "src" : "../../../../bundles/framework/divmanazer/resources/css/accordion.css"
         }, {
             "type" : "text/css",
-            "src" : "../../../../bundles/framework/resources/divmanazer/css/tab.css"
+            "src" : "../../../../bundles/framework/divmanazer/resources/css/tab.css"
         }, {
             "type" : "text/css",
-            "src" : "../../../../bundles/framework/resources/divmanazer/css/modal.css"
+            "src" : "../../../../bundles/framework/divmanazer/resources/css/modal.css"
         }, {
             "type" : "text/css",
-            "src" : "../../../../bundles/framework/resources/divmanazer/css/badge.css"
+            "src" : "../../../../bundles/framework/divmanazer/resources/css/badge.css"
         }, {
             "type" : "text/css",
-            "src" : "../../../../bundles/framework/resources/divmanazer/css/alert.css"
+            "src" : "../../../../bundles/framework/divmanazer/resources/css/alert.css"
         }, {
             "type" : "text/css",
-            "src" : "../../../../bundles/framework/resources/divmanazer/css/forminput.css"
+            "src" : "../../../../bundles/framework/divmanazer/resources/css/forminput.css"
         }, {
             "type" : "text/css",
-            "src" : "../../../../bundles/framework/resources/divmanazer/css/grid.css"
+            "src" : "../../../../bundles/framework/divmanazer/resources/css/grid.css"
         }, {
             "type" : "text/css",
-            "src" : "../../../../bundles/framework/resources/divmanazer/css/popup.css"
+            "src" : "../../../../bundles/framework/divmanazer/resources/css/popup.css"
         }, {
             "type" : "text/css",
-            "src" : "../../../../bundles/framework/resources/divmanazer/css/button.css"
+            "src" : "../../../../bundles/framework/divmanazer/resources/css/button.css"
         }, {
             "type" : "text/css",
-            "src" : "../../../../bundles/framework/resources/divmanazer/css/overlay.css"
+            "src" : "../../../../bundles/framework/divmanazer/resources/css/overlay.css"
         }, {
             "type" : "text/css",
-            "src" : "../../../../bundles/framework/resources/divmanazer/css/popover.css"
+            "src" : "../../../../bundles/framework/divmanazer/resources/css/popover.css"
         }],
         "locales" : [{
             "lang" : "fi",
@@ -199,7 +224,8 @@ Oskari.clazz.define("Oskari.userinterface.bundle.ui.ComponentsBundle", function(
             "Import-Namespace" : ["Oskari"],
             "Import-Bundle" : {}
         }
-    }
+    },
+
 });
 
 Oskari.bundle_manager.installBundleClass("ui-components", "Oskari.userinterface.bundle.ui.ComponentsBundle");

@@ -24,6 +24,12 @@ Oskari.clazz.define("Oskari.mapframework.bundle.backendstatus.BackendStatusBundl
 		"scripts" : [{
 			"type" : "text/javascript",
 			"src" : "../../../../bundles/framework/backendstatus/instance.js"
+		}, {
+			"type" : "text/javascript",
+			"src" : "../../../../bundles/framework/backendstatus/request/show-map-layer-info-request.js"
+		}, {
+			"type" : "text/javascript",
+			"src" : "../../../../bundles/framework/backendstatus/event/BackendStatusChangedEvent.js"
 		}],
 		"locales" : [{
 			"lang" : "fi",
@@ -37,7 +43,47 @@ Oskari.clazz.define("Oskari.mapframework.bundle.backendstatus.BackendStatusBundl
 			"lang" : "en",
 			"type" : "text/javascript",
 			"src" : "../../../../bundles/framework/backendstatus/resources/locale/en.js"
-		}]
+		}, {
+			"lang" : "es",
+			"type" : "text/javascript",
+			"src" : "../../../../bundles/framework/backendstatus/resources/locale/es.js"
+        }, {
+            "lang" : "et",
+            "type" : "text/javascript",
+            "src" : "../../../../bundles/framework/backendstatus/resources/locale/et.js"
+        }, {
+            "lang" : "is",
+            "type" : "text/javascript",
+            "src" : "../../../../bundles/framework/backendstatus/resources/locale/is.js"
+        }, {
+            "lang" : "it",
+            "type" : "text/javascript",
+            "src" : "../../../../bundles/framework/backendstatus/resources/locale/it.js"
+        }, {
+            "lang" : "nl",
+            "type" : "text/javascript",
+            "src" : "../../../../bundles/framework/backendstatus/resources/locale/nl.js"
+        }, {
+            "lang" : "sk",
+            "type" : "text/javascript",
+            "src" : "../../../../bundles/framework/backendstatus/resources/locale/sk.js"
+        }, {
+            "lang" : "sl",
+            "type" : "text/javascript",
+            "src" : "../../../../bundles/framework/backendstatus/resources/locale/sl.js"
+        }, {
+            "lang" : "nb",
+            "type" : "text/javascript",
+            "src" : "../../../../bundles/framework/backendstatus/resources/locale/nb.js"
+        }, {
+            "lang" : "fr",
+            "type" : "text/javascript",
+            "src" : "../../../../bundles/framework/backendstatus/resources/locale/fr.js"
+				}, {
+	            "lang" : "nn",
+	            "type" : "text/javascript",
+	            "src" : "../../../../bundles/framework/backendstatus/resources/locale/nn.js"
+       }]
 	},
 	"bundle" : {
 		"manifest" : {

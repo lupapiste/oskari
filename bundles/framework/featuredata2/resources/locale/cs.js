@@ -1,4 +1,5 @@
-Oskari.registerLocalization({
+Oskari.registerLocalization(
+{
     "lang": "cs",
     "key": "FeatureData2",
     "value": {
@@ -11,7 +12,7 @@ Oskari.registerLocalization({
         "errorscale": "Data nemohou být zobrazena v této úrovni měřítka. Změňte, prosím, úroveň přiblížení.",
         "errordata": "Data poskytovaná serverem obsahují chyby. Prosím, posuňte trochu mapu, abyste ji aktualizovali.",
         "columnSelectorTooltip": "Ukázat sloupce",
-        "popup": {
+        "selectionTools": {
             "title": "Vybrat objekty v mapě",
             "instructions": " ",
             "link": {

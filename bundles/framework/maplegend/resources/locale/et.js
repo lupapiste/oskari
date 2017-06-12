@@ -1,8 +1,11 @@
-Oskari.registerLocalization({
+Oskari.registerLocalization(
+{
     "lang": "et",
     "key": "maplegend",
     "value": {
-        "title": "Legendid",
-        "desc": ""
+        "title": "Kaardilegendid",
+        "desc": "",
+        "noLegendsText": "Nähtaval kaardil legend puudub",
+        "invalidLegendUrl": "Kaardilegendi ei ole"
     }
 });
