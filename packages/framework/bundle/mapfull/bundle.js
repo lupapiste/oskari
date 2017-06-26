@@ -61,24 +61,6 @@ function() {
             "src" : "../../../../bundles/framework/mapfull/instance.js"
         }, {
             "type" : "text/javascript",
-<<<<<<< HEAD
-            "src" : "../../../../bundles/framework/mapfull/enhancement/start-map-with-link-enhancement.js"
-        }, {
-            "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/mapfull/request/MapResizeEnabledRequest.js"
-        }, {
-            "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/mapfull/request/MapResizeEnabledRequestHandler.js"
-        }, {
-            "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/mapfull/request/MapWindowFullScreenRequest.js"
-        }, {
-            "type" : "text/javascript",
-            "src" : "../../../../bundles/framework/mapfull/request/MapWindowFullScreenRequestHandler.js"
-        }, {
-            "type" : "text/css",
-            "src" : "../../../../bundles/framework/resources/mapfull/css/style.css"
-=======
             "src" : "../../../../bundles/framework/mapfull/request/MapResizeEnabledRequest.js"
         }, {
             "type" : "text/javascript",
@@ -98,7 +80,6 @@ function() {
         }, {
             "type" : "text/css",
             "src" : "../../../../bundles/framework/mapfull/resources/css/style.css"
->>>>>>> master
         }],
         "locales": [{
             "lang": "en",
@@ -116,8 +97,6 @@ function() {
             "lang": "fi",
             "type": "text/javascript",
             "src": "../../../../bundles/framework/mapfull/resources/locale/fi.js"
-<<<<<<< HEAD
-=======
         }, {
             "lang": "is",
             "type": "text/javascript",
@@ -146,7 +125,6 @@ function() {
             "lang": "sk",
             "type": "text/javascript",
             "src": "../../../../bundles/framework/mapfull/resources/locale/sk.js"
->>>>>>> master
         }, {
             "lang": "sv",
             "type": "text/javascript",
@@ -154,11 +132,7 @@ function() {
         }, {
             "lang": "fr",
             "type": "text/javascript",
-<<<<<<< HEAD
-            "src": "../../../../bundles/framework/mapfull/resources/locale/en.js"
-=======
             "src": "../../../../bundles/framework/mapfull/resources/locale/fr.js"
->>>>>>> master
         }]
     },
     "bundle" : {
