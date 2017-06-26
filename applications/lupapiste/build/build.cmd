@@ -689,9 +689,9 @@ type "..\..\..\bundles\lupapiste\lupakartta\event\PlaceSaved.js" >> oskarimap.js
 echo ; >> oskarimap.js
 type "..\..\..\bundles\lupapiste\lupakartta\event\FeaturesAdded.js" >> oskarimap.js
 echo ; >> oskarimap.js
-rem type "..\..\..\libraries\jsts\javascript.util.js" >> oskarimap.js
-rem echo ; >> oskarimap.js
-type "..\..\..\libraries\jsts\jsts.js" >> oskarimap.js
+type "..\..\..\libraries\jsts\javascript.util.min.js" >> oskarimap.js
+echo ; >> oskarimap.js
+type "..\..\..\libraries\jsts\jsts-1.16.0.min.js" >> oskarimap.js
 echo ; >> oskarimap.js
 type "..\..\..\packages\lupapiste\bundle\lupapiste-shpimport\bundle.js" >> oskarimap.js
 echo ; >> oskarimap.js
@@ -881,7 +881,7 @@ type "..\..\..\bundles\mapping\mapmodule\resources\css\layersselection.css" >> o
 type "..\..\..\bundles\mapping\mapmodule\resources\css\backgroundlayerselection.css" >> oskarimap.css
 type "..\..\..\bundles\mapping\mapmodule\resources\css\porttizoombar.css" >> oskarimap.css
 type "..\..\..\bundles\mapping\mapmodule\resources\css\panbuttons.css" >> oskarimap.css
-rem type "..\..\..\bundles\framework\mapmodule-plugin\resources\css\mapmodule.css" >> oskarimap.css
+type "..\..\..\bundles\mapping\mapmodule\resources\css\mapmodule.css" >> oskarimap.css
 type "..\..\..\bundles\framework\divmanazer\resources\css\divman.css" >> oskarimap.css
 type "..\..\..\bundles\framework\divmanazer\resources\css\accordion.css" >> oskarimap.css
 type "..\..\..\bundles\framework\divmanazer\resources\css\tab.css" >> oskarimap.css
@@ -903,7 +903,8 @@ type "..\..\..\bundles\lupapiste\resources\lupakartta\resources\css\lupakartta.c
 type "..\..\..\bundles\framework\printout\resources\css\style.css" >> oskarimap.css
 type "..\..\..\bundles\framework\userguide\resources\css\style.css" >> oskarimap.css
 
- "C:\Program Files (x86)\Microsoft\Microsoft Ajax Minifier\ajaxmin" -evals:safeall -rename:none -fnames:lock -clobber:true oskarimap.js -o package\resources\public\oskari\js\oskarimap.js
+ rem "C:\Program Files (x86)\Microsoft\Microsoft Ajax Minifier\ajaxmin" -evals:safeall -rename:none -fnames:lock -clobber:true oskarimap.js -o package\resources\public\oskari\js\oskarimap.js
+ copy /y oskarimap.js package\resources\public\oskari\js\oskarimap.js
  copy /y oskarimap.css package\resources\public\oskari\css\
 
 cd package
