@@ -30,7 +30,7 @@
     "fs-extra": "^0.26.7",
     "gm": "^1.21.1",
     "grunt": "^1.0",
-    "grunt-cli": "^0.1.13",
+    "grunt-cli": "^1.2.0",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-concat": "^1.0.0",
     "grunt-contrib-copy": "^1.0.0",
