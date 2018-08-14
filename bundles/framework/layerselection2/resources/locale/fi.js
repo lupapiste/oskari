@@ -9,7 +9,7 @@ Oskari.registerLocalization(
 			"style": "Tyyli",
 			"show": "Näytä karttataso",
 			"hide": "Piilota karttataso",
-			"hidden": "",
+			"hidden": "Karttataso on tilapäisesti piilotettu.",
             "out-of-scale": "Karttatasoa ei voida näyttää valitulla mittakaavatasolla.",
             "move-to-scale": "Siirry sopivalle mittakaavatasolle.",
             "out-of-content-area": "Karttatasolla ei ole kohteita karttanäkymän alueella.",
