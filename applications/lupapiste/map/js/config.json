@@ -156,7 +156,7 @@
           "name": {
             "fi": "Taustakartta",
             "sv": "Bakgrundskarta",
-            "en": "???"
+            "en": "Basemap"
           },
           "permissions": {
             "publish": "no_publication_permission"
@@ -490,7 +490,7 @@
           "name": {
             "fi": "Maastokartta",
             "sv": "Terrängkarta",
-            "en": "Base map"
+            "en": "Topographic map"
           },
           "permissions": {
             "publish": "no_publication_permission"
@@ -519,7 +519,7 @@
           "name": {
             "fi": "Kiinteistöjaotus",
             "sv": "Fastighetsindelning",
-            "en": "???"
+            "en": "Property borders"
           },
           "permissions": {
             "publish": "no_publication_permission"
@@ -548,7 +548,7 @@
           "name": {
             "fi": "Kiinteistötunnukset",
             "sv": "Fastighetsbeteckningar",
-            "en": "???"
+            "en": "Property IDs"
           },
           "permissions": {
             "publish": "no_publication_permission"
@@ -576,7 +576,8 @@
           "orderNumber": 1001,
           "name": {
             "fi": "Luonnonsuojelualueet",
-            "sv": "Naturskyddsområden"
+            "sv": "Naturskyddsområden",
+            "en": "Nature conservation areas"
           },
           "permissions": {
             "publish": "no_publication_permission"
@@ -604,7 +605,8 @@
           "orderNumber": 1001,
           "name": {
             "fi": "Pohjavesialueet",
-            "sv": "Grundvattenområden"
+            "sv": "Grundvattenområden",
+            "en": "Groundwater areas"
           },
           "permissions": {
             "publish": "no_publication_permission"
@@ -632,7 +634,8 @@
           "orderNumber": 1001,
           "name": {
             "fi": "Rantaviiva",
-            "sv": "Strandlinje"
+            "sv": "Strandlinje",
+            "en": "Shore lines"
           },
           "permissions": {
             "publish": "no_publication_permission"
@@ -654,7 +657,8 @@
           "dataUrl": "",
           "name": {
             "fi": "Maaperä",
-            "sv": "Jordart"
+            "sv": "Jordart",
+            "en": "Soil"
           },
           "permissions": {
             "publish": "no_publication_permission"
@@ -726,7 +730,8 @@
           "dataUrl": "",
           "name": {
             "fi": "Kallioperä",
-            "sv": "Berggrund"
+            "sv": "Berggrund",
+            "en": "Bedrock"
           },
           "permissions": {
             "publish": "no_publication_permission"
@@ -804,7 +809,8 @@
           "orderNumber": 1001,
           "name": {
             "fi": "Yleiskaavat",
-            "sv": "Generalplaner"
+            "sv": "Generalplaner",
+            "en": "General plan"
           },
           "permissions": {
             "publish": "no_publication_permission"
@@ -832,7 +838,8 @@
           "orderNumber": 1001,
           "name": {
             "fi": "Teemayleiskaavat",
-            "sv": "Temageneralplaner"
+            "sv": "Temageneralplaner",
+            "en": "General theme plans"
           },
           "permissions": {
             "publish": "no_publication_permission"
@@ -861,12 +868,12 @@
           "name": {
             "fi": "Asemakaava",
             "sv": "Detaljplan",
-            "en": "???"
+            "en": "City plan"
           },
           "subtitle": {
             "fi": "Aineisto tuotetaan yhdistämällä kuntien avoimissa rajapinnoissa olevat ajantasa-asemakaavat. Alkuperäisen ajantasa-asemakaava-aineiston tuottaja on kyseinen kunta.",
             "sv": "Detaljplan",
-            "en": "???"
+            "en": ""
           },
           "permissions": {
             "publish": "no_publication_permission"
