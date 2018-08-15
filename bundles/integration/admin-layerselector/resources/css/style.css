@@ -173,6 +173,9 @@ div.admin-layerselector {
     div.admin-layerselector div.layer .add-layer-forced-proj-inputgroup,
     div.admin-layerselector div.create-layer .add-layer-forced-proj-inputgroup {
       white-space: nowrap; }
+    div.admin-layerselector div.layer .add-layer-capabilities-update-rate,
+    div.admin-layerselector div.create-layer .add-layer-capabilities-update-rate {
+      width: 200px; }
   div.admin-layerselector div.create-layer {
     min-height: 35px; }
   div.admin-layerselector div.layer:nth-child(even) {
@@ -197,8 +200,6 @@ div.admin-layerselector {
   div.admin-layerselector .admin-edit-grouping-btn {
     float: right;
     margin: 5px 10px; }
-  div.admin-layerselector .add-layer-recheck {
-    margin-left: 25px; }
   div.admin-layerselector button.admin-arrange-layers {
     background-color: #eee;
     background-image: url("arrange-icon.png");
@@ -370,9 +371,10 @@ div.admin-layerselector {
   div.admin-layerselector .fetch-ws-button {
     margin-top: 2px;
     margin-bottom: 5px; }
+
 div.admin-layerselector .accordion .accordion_panel .header {
-  display: block;
-}
+  display: block; }
+
 div.divmanazerpopup div.content div.admin-layerselector {
   margin-right: 20px; }
   div.divmanazerpopup div.content div.admin-layerselector div.layer {
@@ -385,5 +387,3 @@ div.divmanazerpopup div.content div.admin-layerselector {
         margin-right: 20px; }
       div.divmanazerpopup div.content div.admin-layerselector div.layer div.admin-add-layer div.add-layer-send {
         display: none; }
-
-/*# sourceMappingURL=style.css.map */

@@ -89,8 +89,8 @@ div.basic_printout div.printout_settings_cont input {
   margin-right: 10px; }
 
 div.basic_printout div.preview img {
-    width: 100%;
-}
+  width: 100%; }
+
 div.basic_printout div.preview-portrait {
   margin: 8px;
   padding: 5px;

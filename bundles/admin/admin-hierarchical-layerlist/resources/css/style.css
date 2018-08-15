@@ -1,5 +1,6 @@
 .divmanazerpopup.admin-hierarchical-layerlist-group .popup-body .content .group-names label input.error {
   background-color: #ff6666; }
+
 .divmanazerpopup.admin-hierarchical-layerlist-group .popup-body .actions .oskari-button {
   text-shadow: none; }
   .divmanazerpopup.admin-hierarchical-layerlist-group .popup-body .actions .oskari-button.delete {
@@ -21,7 +22,7 @@
       background-image: -ms-linear-gradient(top, #f85c5c, #e40a0a);
       background-image: -o-linear-gradient(top, #f85c5c, #e40a0a);
       background-image: linear-gradient(to bottom, #f85c5c, #e40a0a);
-      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=lighten($startColor, 10%), endColorstr=lighten($endColor, 10%)); }
+      filter: progid:DXImageTransform.Microsoft.gradient GradientType=0, startColorstr=#f85c5c, endColorstr=#e40a0a; }
   .divmanazerpopup.admin-hierarchical-layerlist-group .popup-body .actions .oskari-button.add {
     background-color: #217ad4;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#217ad4), to(#13477c));
@@ -41,7 +42,7 @@
       background-image: -ms-linear-gradient(top, #4694e2, #1a61a8);
       background-image: -o-linear-gradient(top, #4694e2, #1a61a8);
       background-image: linear-gradient(to bottom, #4694e2, #1a61a8);
-      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=lighten($startColor, 10%), endColorstr=lighten($endColor, 10%)); }
+      filter: progid:DXImageTransform.Microsoft.gradient GradientType=0, startColorstr=#4694e2, endColorstr=#1a61a8; }
   .divmanazerpopup.admin-hierarchical-layerlist-group .popup-body .actions .oskari-button.cancel {
     background-color: #e6e6e6;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#e6e6e6), to(#b3b3b3));
@@ -52,23 +53,25 @@
     background-image: linear-gradient(to bottom, #e6e6e6, #b3b3b3);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=$startColor, endColorstr=$endColor);
     color: #000;
-    border-color: #cdcdcd white white #cdcdcd; }
+    border-color: #cdcccc white white #cdcccc; }
     .divmanazerpopup.admin-hierarchical-layerlist-group .popup-body .actions .oskari-button.cancel:hover {
       background-color: white;
-      background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#cdcdcd));
-      background-image: -webkit-linear-gradient(top, white, #cdcdcd);
-      background-image: -moz-linear-gradient(top, white, #cdcdcd);
-      background-image: -ms-linear-gradient(top, white, #cdcdcd);
-      background-image: -o-linear-gradient(top, white, #cdcdcd);
-      background-image: linear-gradient(to bottom, white, #cdcdcd);
-      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=lighten($startColor, 10%), endColorstr=lighten($endColor, 10%)); }
+      background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#cdcccc));
+      background-image: -webkit-linear-gradient(top, white, #cdcccc);
+      background-image: -moz-linear-gradient(top, white, #cdcccc);
+      background-image: -ms-linear-gradient(top, white, #cdcccc);
+      background-image: -o-linear-gradient(top, white, #cdcccc);
+      background-image: linear-gradient(to bottom, white, #cdcccc);
+      filter: progid:DXImageTransform.Microsoft.gradient GradientType=0, startColorstr=white, endColorstr=#cdcccc; }
 
 @media only screen and (max-height: 999px) and (min-height: 800px) {
   .oskari-flyout.admin-hierarchical-layerlist-add-layer div.oskari-flyoutcontentcontainer {
     max-height: 650px; } }
+
 @media only screen and (max-height: 1199px) and (min-height: 1000px) {
   .oskari-flyout.admin-hierarchical-layerlist-add-layer div.oskari-flyoutcontentcontainer {
     max-height: 700px; } }
+
 .oskari-flyout.admin-hierarchical-layerlist-add-layer {
   max-height: 80%; }
   .oskari-flyout.admin-hierarchical-layerlist-add-layer div.oskari-flyoutcontentcontainer .spinner {
@@ -126,7 +129,7 @@
               background-image: -ms-linear-gradient(top, #4694e2, #1a61a8);
               background-image: -o-linear-gradient(top, #4694e2, #1a61a8);
               background-image: linear-gradient(to bottom, #4694e2, #1a61a8);
-              filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=lighten($startColor, 10%), endColorstr=lighten($endColor, 10%)); }
+              filter: progid:DXImageTransform.Microsoft.gradient GradientType=0, startColorstr=#4694e2, endColorstr=#1a61a8; }
           .oskari-flyout.admin-hierarchical-layerlist-add-layer div.oskari-flyoutcontentcontainer div.admin-add-layer .input-controls.buttons button.admin-remove-layer, .oskari-flyout.admin-hierarchical-layerlist-add-layer div.oskari-flyoutcontentcontainer div.admin-add-layer .input-controls.buttons button.admin-remove-group {
             background-color: #f62b2b;
             background-image: -webkit-gradient(linear, left top, left bottom, from(#f62b2b), to(#b30808));
@@ -146,7 +149,7 @@
               background-image: -ms-linear-gradient(top, #f85c5c, #e40a0a);
               background-image: -o-linear-gradient(top, #f85c5c, #e40a0a);
               background-image: linear-gradient(to bottom, #f85c5c, #e40a0a);
-              filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=lighten($startColor, 10%), endColorstr=lighten($endColor, 10%)); }
+              filter: progid:DXImageTransform.Microsoft.gradient GradientType=0, startColorstr=#f85c5c, endColorstr=#e40a0a; }
           .oskari-flyout.admin-hierarchical-layerlist-add-layer div.oskari-flyoutcontentcontainer div.admin-add-layer .input-controls.buttons button.admin-add-layer-cancel, .oskari-flyout.admin-hierarchical-layerlist-add-layer div.oskari-flyoutcontentcontainer div.admin-add-layer .input-controls.buttons button.admin-add-group-cancel {
             background-color: #e6e6e6;
             background-image: -webkit-gradient(linear, left top, left bottom, from(#e6e6e6), to(#b3b3b3));
@@ -157,16 +160,16 @@
             background-image: linear-gradient(to bottom, #e6e6e6, #b3b3b3);
             filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=$startColor, endColorstr=$endColor);
             color: #000;
-            border-color: #cdcdcd white white #cdcdcd; }
+            border-color: #cdcccc white white #cdcccc; }
             .oskari-flyout.admin-hierarchical-layerlist-add-layer div.oskari-flyoutcontentcontainer div.admin-add-layer .input-controls.buttons button.admin-add-layer-cancel:hover, .oskari-flyout.admin-hierarchical-layerlist-add-layer div.oskari-flyoutcontentcontainer div.admin-add-layer .input-controls.buttons button.admin-add-group-cancel:hover {
               background-color: white;
-              background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#cdcdcd));
-              background-image: -webkit-linear-gradient(top, white, #cdcdcd);
-              background-image: -moz-linear-gradient(top, white, #cdcdcd);
-              background-image: -ms-linear-gradient(top, white, #cdcdcd);
-              background-image: -o-linear-gradient(top, white, #cdcdcd);
-              background-image: linear-gradient(to bottom, white, #cdcdcd);
-              filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=lighten($startColor, 10%), endColorstr=lighten($endColor, 10%)); }
+              background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#cdcccc));
+              background-image: -webkit-linear-gradient(top, white, #cdcccc);
+              background-image: -moz-linear-gradient(top, white, #cdcccc);
+              background-image: -ms-linear-gradient(top, white, #cdcccc);
+              background-image: -o-linear-gradient(top, white, #cdcccc);
+              background-image: linear-gradient(to bottom, white, #cdcccc);
+              filter: progid:DXImageTransform.Microsoft.gradient GradientType=0, startColorstr=white, endColorstr=#cdcccc; }
     .oskari-flyout.admin-hierarchical-layerlist-add-layer div.oskari-flyoutcontentcontainer div.admin-add-layer .opacity-slider-tool {
       width: 215px; }
     .oskari-flyout.admin-hierarchical-layerlist-add-layer div.oskari-flyoutcontentcontainer div.admin-add-layer .layout-slider {
@@ -271,12 +274,14 @@
   width: 25px;
   margin-right: 8px;
   color: #555; }
+
 .divmanazerpopup.admin-layerlist-group label.subgroup::before {
   content: "\25B6";
   width: 25px;
   margin-left: 32px;
   margin-right: 8px;
   color: #555; }
+
 .divmanazerpopup.admin-layerlist-group label.subgroupsubgroup::before {
   content: "\25B6";
   width: 25px;
@@ -289,25 +294,33 @@
  */
 div.hierarchical-layerlist .main-tools .main-tool.update-capabilities {
   background-image: url("../images/glyphicons-82-refresh.png"); }
+
 div.hierarchical-layerlist .main-tools .main-tool.add-group {
   background-image: url("../images/glyphicons-433-plus.png"); }
+
 div.hierarchical-layerlist .hierarchical-layerlist-tree .jstree-anchor .group-tools .group-tool.add-subgroup {
   background-image: url("../images/glyphicons-433-plus.png"); }
+
 div.hierarchical-layerlist .hierarchical-layerlist-tree .jstree-anchor .group-tools .group-tool.edit-group {
   background-image: url("../images/glyphicons-151-edit.png"); }
+
 div.hierarchical-layerlist .hierarchical-layerlist-tree .jstree-anchor .group-tools .group-tool.add-layer {
   background-image: url("../images/glyphicons-191-plus-sign.png"); }
+
 div.hierarchical-layerlist .hierarchical-layerlist-tree .jstree-anchor .subgroup-tools .subgroup-tool.add-subgroup-subgroup {
   background-image: url("../images/glyphicons-433-plus.png"); }
+
 div.hierarchical-layerlist .hierarchical-layerlist-tree .jstree-anchor .subgroup-tools .subgroup-tool.edit-subgroup {
   background-image: url("../images/glyphicons-151-edit.png"); }
+
 div.hierarchical-layerlist .hierarchical-layerlist-tree .jstree-anchor .subgroup-tools .subgroup-tool.add-layer {
   background-image: url("../images/glyphicons-191-plus-sign.png"); }
+
 div.hierarchical-layerlist .hierarchical-layerlist-tree .jstree-anchor .subgroup-subgroup-tools .subgroup-subgroup-tool.edit-subgroup-subgroup {
   background-image: url("../images/glyphicons-151-edit.png"); }
+
 div.hierarchical-layerlist .hierarchical-layerlist-tree .jstree-anchor .subgroup-subgroup-tools .subgroup-subgroup-tool.add-layer {
   background-image: url("../images/glyphicons-191-plus-sign.png"); }
+
 div.hierarchical-layerlist .hierarchical-layerlist-tree .jstree-anchor .layer-tools .layer-tool.edit-layer {
   background-image: url("../images/glyphicons-151-edit.png"); }
-
-/*# sourceMappingURL=style.css.map */
