@@ -308,14 +308,14 @@ Oskari.clazz.define('Oskari.mapframework.bundle.myplacesimport.Flyout',
                     shape: formValues.dot.shape
                 };
                 values.line = {
-                    size: formValues.line.width,
+                    width: formValues.line.width,
                     color: '#' + formValues.line.color,
                     cap: formValues.line.cap,
                     corner: formValues.line.corner,
                     style: formValues.line.style
                 };
                 values.area = {
-                    size: formValues.area.lineWidth,
+                    lineWidth: formValues.area.lineWidth,
                     lineColor: formValues.area.lineColor === null ? null : '#' + formValues.area.lineColor,
                     fillColor: formValues.area.fillColor === null ? null : '#' + formValues.area.fillColor,
                     lineStyle: formValues.area.lineStyle,
@@ -356,29 +356,23 @@ Oskari.clazz.define('Oskari.mapframework.bundle.myplacesimport.Flyout',
          *
          * @method __finish
          * @private
-         * @param {jQuery} iframe
+         * @param {Object} json
          * @param {Object} locale
          */
-        __finish: function(response, locale){
+        __finish: function(json, locale){
             var title = locale.finish.success.title,
                 msg = locale.finish.success.message,
-                json,
                 me=this,
                 fadeout = true;
-             try {
-                json = JSON.parse(response);
-                if (json.warning !== undefined && json.warning.featuresSkipped){
-                    msg = msg + " " + locale.warning.features_skipped.replace(/<xx>/g, json.warning.featuresSkipped);
-                    fadeout = false;
-                }
-                this.instance.addUserLayer(json);
-                msg = msg.replace(/<xx>/g, json.featuresCount);
-                this.__showMessage(title, msg, fadeout);
-                this.refresh();
-            } catch(error) {
-                Oskari.log(me.getName())
-                    .warn('Error whilst parsing user layer json', error);
+
+            if (json.warning !== undefined && json.warning.featuresSkipped){
+                msg = msg + " " + locale.warning.features_skipped.replace(/<xx>/g, json.warning.featuresSkipped);
+                fadeout = false;
             }
+            this.instance.addUserLayer(json);
+            msg = msg.replace(/<xx>/g, json.featuresCount);
+            this.__showMessage(title, msg, fadeout);
+            this.refresh();
         },
 
         /**

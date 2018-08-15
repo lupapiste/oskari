@@ -7,6 +7,13 @@ Oskari.registerLocalization(
         "desc": "My Data",
         "notLoggedIn": "As a logged-in user you can see here your account information and all your saved places, map views, embedded maps, indicators, analysis and datasets.",
         "notLoggedInText": "Log in",
+        "register": "Register",
+        "projectionError": {
+            "title" : "Projections are incompatible",
+            "msg": "The page reloads to change the projection",
+            "ok": "OK",
+            "cancel": "Cancel"
+        },
         "tabs": {
             "myviews": {
                 "title": "My Map Views",
@@ -114,7 +121,8 @@ Oskari.registerLocalization(
                     "notsaved": "The embedded map could not be updated.",
                     "notdeleted": "The embedded map could not be deleted.",
                     "makePublic": "The embedded map could not be published.",
-                    "makePrivate": "The embedded map could not be unpublished."
+                    "makePrivate": "The embedded map could not be unpublished.",
+                    "loadfailed": "The embedded maps could not be retrieved."
                 }
             },
             "account": {

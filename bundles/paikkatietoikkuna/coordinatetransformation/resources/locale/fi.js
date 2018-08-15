@@ -3,83 +3,185 @@ Oskari.registerLocalization(
     "lang": "fi",
     "key": "coordinatetransformation",
     "value": {
+        "title": "Koordinaattimuunnos",
         "tile": {
             "title": "Koordinaattimuunnos"
         },
         "flyout": {
-        "title": {
-            "input": "Lähtötiedot",
-            "result": "Tulostiedot"
-        },
-            "coordinatesystem": {
+            "title":"Koordinaattimuunnos",
+            "coordinateSystem": {
                 "title": "Koordinaattijärjestelmän tiedot",
-                "geodetic_datum": "Geodeettinen datumi",
-                "coordinate_system": "Koordinaatisto",
-                "map_projection": "Karttaprojektiojärjestelmä",
-                "geodetic_coordinatesystem": "Geodeettinen koordinaattijärjestelmä",
-                "heigth_system":"Korkeusjärjestelmä"
+                "input": "Lähtötiedot",
+                "output": "Tulostiedot",
+                "noFilter": "Mikä tahansa",
+                "geodeticDatum": {
+                    "label": "Geodeettinen datumi",
+                    "infoTitle": "Geodeettinen datumi",
+                    "infoContent": ""
+                },
+                "coordinateSystem":{
+                    "label": "Koordinaatisto",
+                    "infoTitle": "Koordinaatisto",
+                    "infoContent": "",
+                    "proj2D": "Suorakulmainen 2D (Taso)",
+                    "proj3D": "Suorakulmainen 3D",
+                    "geo2D": "Maantieteellinen 2D",
+                    "geo3D": "Maantieteellinen 3D"
+                },
+                "mapProjection":{
+                    "label": "Karttaprojektiojärjestelmä",
+                    "infoTitle": "Karttaprojektiojärjestelmä",
+                    "infoContent": ""
+                },
+                "geodeticCoordinateSystem":{
+                    "label": "Geodeettinen koordinaattijärjestelmä",
+                    "infoTitle": "Geodeettinen koordinaattijärjestelmä",
+                    "infoContent":"",
+                    "choose": "Valitse",
+                    "kkj": "KKJ kaista {zone, number}",
+                    "ykj": "KKJ kaista 3 / YKJ"
+                },
+                "heightSystem":{
+                    "label": "Korkeusjärjestelmä",
+                    "infoTitle":"",
+                    "infoContent": "",
+                    "none": "Ei mitään"
+                }
             },
-            "datasource": {
+            "dataSource": {
                 "title": "Koordinaattitietojen lähde",
-                "file": "Tiedostosta",
-                "clipboard": "Näppäimistö/leikepöytä",
-                "map": "Valitse sijainnit kartalta",
-                "choose":"Valitse sijainti kartalta"
+                "confirmChange": "Muunnettavat koordinaatit tyhjennetään ja koordinaattijärjestelmän tiedot poistetaan. Haluatko jatkaa?",
+                "file": {
+                    "label": "Tiedostosta",
+                    "info":  "Raahaa lähtöaineiston sisältävä tiedosto tähän tai",
+                    "link": "valitse selaamalla",
+                    "uploading": "Ladataan",
+                    "error": "Virhe!",
+                    "success": "Valmis"
+                },
+                "keyboard": {
+                    "label": "Näppäimistöltä",
+                    "info": "Kopioi lähtötiedot taulukkoon Muunnettavat koordinaatit ja valitse sen jälkeen Muunna."
+                },
+                "map": {
+                    "label": "Valitse sijainnit kartalta",
+                    "info": "Valitse yksi tai useampia pisteitä kartalta klikkaamalla."
+                }
             },
-            "datasourceinfo": {
-                "fileupload": "Raahaa lähtöaineiston sisältävä tiedosto tähän tai",
-                "link":"valitse selaamalla",
-                "clipboardupload":"Kopioi lähtötiedot taulukkoon Muunnettavat koordinaatit ja valitse sen jälkeen Muunna.",
-                "mapinfo":"Valitse yksi tai useampia pisteitä kartalta klikkaamalla.",
-                "uploading":"Ladataan",
-                "success":"Valmis",
-                "error":"Virhe!",
-                "cancel":"Peruuta",
-                "mapmarkers": "Tarkastele muunnettuja koordinaatteja kartalla."
-            },
-            "coordinatefield": {
+            "coordinateTable": {
                 "input": "Muunnettavat koordinaatit",
-                "result": "Tuloskoordinaatit",
-                "convert": "Muunna",
-                "north":"N",
-                "east":"E",
-                "kkjnorth":"Pohjois-koordinaatti [m]",
-                "kkjeast":"Itä-koordinaatti [m]",
+                "output": "Tuloskoordinaatit",
+                "north":"Pohjois-koordinaatti [m]",
+                "east":"Itä-koordinaatti [m]",
                 "lat":"Leveysaste",
                 "lon":"Pituusaste",
-                "geox":"Geosentrinen X [m]",
-                "geoy":"Geosentrinen Y [m]",
-                "geoz":"Geosentrinen Z [m]",
-                "ellipse_height":"Ellipsoidinen korkeus [m]"
+                "elevation": "Korkeus [m]",
+                "geoX":"Geosentrinen X [m]",
+                "geoY":"Geosentrinen Y [m]",
+                "geoZ":"Geosentrinen Z [m]",
+                "ellipseElevation":"Ellipsoidinen korkeus [m]",
+                "rows": "Riviä",
+                "clearTables": "Tyhjennä taulukot",
+                "confirmClear": "Haluatko tyhjentää taulukot?"
             },
-            "utils": {
-                "clear": "Tyhjennä taulukot",
-                "show": "Näytä sijainnit kartalla",
-                "export": "Vie tulokset tiedostoon",
-                "done": "Valmis",
-                "cancel": "Peruuta",
-                "rows": "Riviä"
+            "transform": {
+                "warnings": {
+                    "title": "Huomio!",
+                    "3DTo2D": "Valitsemissasi lähtötiedoissa on mukana korkeusarvoja, mutta tulostiedoissa ei. Tuloskoordinaatteihin ei siis tule korkeusarvoja mukaan. Haluatko jatkaa?",
+                    "2DTo3D": "Valitsemissasi lähtötiedoissa ei ole korkeusarvoja, mutta tulostiedoissa on. Lähtöaineiston korkeusarvoiksi lisätään 0 ja korkeusjärjestelmäksi N2000. Haluatko jatkaa?"
+                },
+                "validateErrors": {
+                    "title": "Virhe!",
+                    "crs": "Geodeettinen koordinaattijärjestelmä pitää olla valittuna sekä lähtö- että tulostiedoissa.",
+                    "sourceHeight": "Lähtötietojen korkeusjärjestelmää ei ole valittu.",
+                    "targetHeight": "Tulostietojen korkeusjärjestelmää ei ole valittu.",
+                    "noInputData": "Ei muunnettavia koordinaatteja.",
+                    "noInputFile": "Lähtöaineiston sisältävää tiedostoa ei ole valittu.",
+                    "noFileName": "Anna tiedostonimi.",
+                    "doubleComma": "Desimaali- ja koordinaattierotin eivät voi molemmat olla pilkkuja."
+                },
+                "responseErrors": {
+                    "title": "Virhe muunnoksessa!",
+                    "generic": "Koordinaattimuunnos epäonnistui...",
+                    "invalid_coord": "Koordinaatti virheellinen. Tarkasta, että muunnettavat koordinaatit on oikeassa muodossa sekä geodeettinen koordinaatti- ja kokeusjärjestelmä ovat oikein.",
+                    "invalid_number": "Koordinaatti virheellinen. Tarkasta..", //can we get row number from file
+                    "no_coordinates": "Ei koordinaatteja (pitäisi tulla käytännössä vain tiedostojen kanssa).",
+                    "invalid_file_settings": "Tiedoston asetukset virheelliset.", //can't be user's fault
+                    "no_file": "Lähetetystä pyynnöstä ei löytynyt tiedostoa.", //can't be user's fault
+                    "invalid_coord_length": "Tiedostosta ei saatu muodostettua koordinaattia annetuilla asetuksilla. Tarkasta, että koordinaatti erotin, otsakerivien määrä, käytä tunnistetta sekä geoodeettinen koordinaatti- ja korkeusjärjestelmä (dimensio) valinnat vastaavat tiedoston sisältöä.",
+                    "invalid_coord_in_row": "Tiedostossa virheellinen koordinaatti rivillä xx."
+                },
+                "responseFile": {
+                    "title": "Huomio!",
+                    "hasMoreCoordinates": "Lähtöaineistosta ei voida muuntaa taulukkoon yli {maxCoordsToArray, number} koordinaattia. Jos haluat muuntaa kaikki koordinaatit, käytä Vie tulokset tiedostoon -toimintoa."
+                }
+            }
+        },
+        "mapMarkers":{
+            "show":{
+                "title": "Näytä sijainnit kartalla",
+                "info": "Tarkastele muunnettuja koordinaatteja kartalla.",
+                "errorTitle": "Virhe sijaintien näyttämisessä",
+                "transformError": "Muunna koordinaatit ennen sijaintien näyttämistä kartalla.",
+                "lon": "Lon",
+                "lat": "Lat",
+                "north": "N",
+                "east": "E"
             },
-            "filesetting": {
-                "general": {
+            "select":{
+                "title": "Valitse sijainnit kartalta",
+                "info": "Valitse yksi tai useampia pisteitä kartalta klikkaamalla."
+            }
+        },
+        "actions": {
+            "convert": "Muunna",
+            "clearTable": "Tyhjennä taulukot",
+            "showMarkers": "Näytä sijainnit kartalla",
+            "export": "Vie tulokset tiedostoon",
+            "select": "Valitse",
+            "selectFromMap": "Siirry valitsemaan.",
+            "cancel": "Peruuta",
+            "done": "Valmis",
+            "ok": "Ok",
+            "close": "Sulje"
+        },
+        "fileSettings": {
+            "options": {
+                "decimalSeparator": "Desimaalierotin",
+                "coordinateSeparator": "Koordinaattierotin",
+                "headerCount": "Otsakerivien määrä",
+                "decimalCount": "Desimaalien tarkkuus",
+                "reverseCoords": "Koordinaatit käänteisesti",
+                "useId": "Käytä tunnistetta",
+                "writeHeader": "Kirjoita otsakerivi tiedostoon",
+                "useCardinals": "Käytä kardinaaleja (N,E,W,S)",
+                "lineEnds": "Tulosteeseen rivin loput",
+                "degreeFormat":{
+                    "label": "Kulman muoto/yksikkö",
                     "degree": "Aste",
                     "gradian": "Gooni (graadi)",
-                    "radian": "Radiaani",
+                    "radian": "Radiaani"
+                },
+                "lineSeparator": {
+                    "label": "Rivin erotin",
+                    "win": "Windows / DOS",
+                    "unix": "Unix",
+                    "mac": "MacOS"
+                },
+                "delimeters":{
                     "point": "Piste",
                     "comma": "Pilkku",
-                    "format": "Kulman muoto/yksikkö",
-                    "decimalseparator": "Desimaalierotin",
-                    "headercount": "Otsakerivien määrä",
-                    "reversecoords": "Koordinaatit käänteisesti",
-                    "id": "Käytä tunnistetta"   
-                },
-                "export": {
-                    "title": "Aineiston muodostaminen",
-                    "filename": "Tiedoston nimi",
-                },
-                "import": {
-                    "title": "Lähtöaineiston ominaisuudet",
+                    "tab": "Tabulaattori",
+                    "space": "Välilyönti",
+                    "semicolon": "Puolipiste"
                 }
+            },
+            "export": {
+                "title": "Aineiston muodostaminen",
+                "fileName": "Tiedoston nimi"
+            },
+            "import": {
+                "title": "Lähtöaineiston ominaisuudet"
             }
         }
     }

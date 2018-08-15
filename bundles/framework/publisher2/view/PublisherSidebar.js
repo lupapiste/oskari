@@ -324,7 +324,7 @@ Oskari.clazz.define('Oskari.mapframework.bundle.publisher2.view.PublisherSidebar
         * @method gatherSelections
         * @private
         */
-        gatherSelections: function(){
+        gatherSelections: function () {
             var me = this,
                 sandbox = this.instance.getSandbox(),
                 selections = {
@@ -360,13 +360,13 @@ Oskari.clazz.define('Oskari.mapframework.bundle.publisher2.view.PublisherSidebar
          *
          */
         _editToolLayoutOff: function () {
-            var me = this,
-                sandbox = Oskari.getSandbox('sandbox');
+            var me = this;
+            var sandbox = Oskari.getSandbox();
 
-            me.panels.forEach(function(panel) {
-               if(typeof panel.stop === 'function') {
+            me.panels.forEach(function (panel) {
+                if (typeof panel.stop === 'function') {
                     panel.stop();
-               }
+                }
             });
 
             jQuery('#editModeBtn').val(me.loc.toollayout.usereditmode);
@@ -384,7 +384,7 @@ Oskari.clazz.define('Oskari.mapframework.bundle.publisher2.view.PublisherSidebar
          * @method cancel
          * Closes publisher without saving
          */
-        cancel: function() {
+        cancel: function () {
             this._editToolLayoutOff();
             this.instance.setPublishMode(false);
         },
@@ -542,13 +542,6 @@ Oskari.clazz.define('Oskari.mapframework.bundle.publisher2.view.PublisherSidebar
                     me.normalMapPlugins.push(plugin);
                 }
             });
-
-            //hide timeseries as well in case it was visible. (not yet supported in published maps)
-            var timeSeriesBundle = me.instance.sandbox.findRegisteredModuleInstance('timeseries');
-            if (timeSeriesBundle && timeSeriesBundle.started) {
-                timeSeriesBundle.stop();
-                me.stoppedBundles.push(timeSeriesBundle);
-            }
         },
 
         /**
@@ -557,26 +550,25 @@ Oskari.clazz.define('Oskari.mapframework.bundle.publisher2.view.PublisherSidebar
          *
          */
         _disablePreview: function () {
-            var me = this,
-                mapElement,
-                mapModule = me.instance.sandbox.findRegisteredModuleInstance('MainMapModule'),
-                plugin,
-                i;
+            var me = this;
+            var mapModule = me.instance.sandbox.findRegisteredModuleInstance('MainMapModule');
+            var plugin;
+
+            // Remove plugins added during publishing session
+            _.each(mapModule.getPluginInstances(), function (plugin) {
+                if (plugin.hasUI && plugin.hasUI()) {
+                    plugin.stopPlugin(me.instance.sandbox);
+                    mapModule.unregisterPlugin(plugin);
+                }
+            });
 
             // resume normal plugins
-            for (i = 0; i < me.normalMapPlugins.length; i += 1) {
+            for (var i = 0; i < me.normalMapPlugins.length; i += 1) {
                 plugin = me.normalMapPlugins[i];
                 mapModule.registerPlugin(plugin);
                 plugin.startPlugin(me.instance.sandbox);
-                if(plugin.refresh) {
+                if (plugin.refresh) {
                     plugin.refresh();
-                }
-            }
-
-            //restart the stopped bundles that are not map plugins
-            for (var j = 0; j < me.stoppedBundles.length; j++) {
-                if (me.stoppedBundles[j].start && typeof me.stoppedBundles[j].start === 'function') {
-                    me.stoppedBundles[j].start();
                 }
             }
             // reset listing

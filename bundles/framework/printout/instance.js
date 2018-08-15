@@ -105,19 +105,14 @@ Oskari.clazz.define("Oskari.mapframework.bundle.printout.PrintoutBundleInstance"
                 }
             }
 
-            //Determining the backend address dynamically - if 'localBackend' property is true, then get backend from local server 
-            if (conf) {
-                var serverPrefix = '';
-                if (conf.backendConfiguration.localBackend) {
-                    serverPrefix = location.protocol + "//" + location.hostname + "/";
-                }
+            me.backendConfiguration.formatProducers["application/pdf"] = (conf && !jQuery.isEmptyObject(conf.backendConfiguration) ? conf.backendConfiguration.formatProducers["application/pdf"] : null) || '';
+            me.backendConfiguration.formatProducers["image/png"] = (conf && !jQuery.isEmptyObject(conf.backendConfiguration) ? conf.backendConfiguration.formatProducers["image/png"] : null) || '';
 
-                me.backendConfiguration.formatProducers["application/pdf"] = serverPrefix + conf.backendConfiguration.formatProducers["application/pdf"] || '';
-                me.backendConfiguration.formatProducers["image/png"] = serverPrefix + conf.backendConfiguration.formatProducers["image/png"] || '';
-
-            } else {
-                me.backendConfiguration.formatProducers["application/pdf"] = null || '';
-                me.backendConfiguration.formatProducers["image/png"] = null || '';
+            if (!me.backendConfiguration.formatProducers["application/pdf"]){
+                me.backendConfiguration.formatProducers["application/pdf"] = sandbox.getAjaxUrl() + 'action_route=GetPrint&format=application/pdf&';
+            }
+            if (!me.backendConfiguration.formatProducers["image/png"]){
+                me.backendConfiguration.formatProducers["image/png"] = sandbox.getAjaxUrl() + 'action_route=GetPrint&format=image/png&';
             }
             // requesthandler
             this.printoutHandler = Oskari.clazz.create('Oskari.mapframework.bundle.printout.request.PrintMapRequestHandler', sandbox, function () {
@@ -166,14 +161,6 @@ Oskari.clazz.define("Oskari.mapframework.bundle.printout.PrintoutBundleInstance"
             sandbox.registerAsStateful(this.mediator.bundleId, this);
 
             this.tileData = {};
-
-            var map = sandbox.findRegisteredModuleInstance('MainMapModule').getMap();
-            var layers = map.getLayersByName("LupapisteVectors");
-            if(typeof layers !== 'undefined' && layers !== null && layers.length > 0) {
-                var jsonFormat = new OpenLayers.Format.GeoJSON();
-                this.geoJson = jsonFormat.write(layers[0].features);
-            }
-
         },
         /**
          * @method init

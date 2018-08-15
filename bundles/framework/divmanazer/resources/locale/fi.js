@@ -238,6 +238,7 @@ Oskari.registerLocalization(
             }
         },
         "Grid": {
+            "cellValue": "{value, number}",
             "columnSelector": {
                 "title": "Ominaisuudet",
                 "tooltip": "Näytä sarakkeet"
@@ -331,6 +332,17 @@ Oskari.registerLocalization(
                 "noAggregateAnalysisPopupTitle": "Tunnuslukuja ei löytynyt",
                 "noAggregateAnalysisPopupContent": "Kyseiselle tasolle ei ole laskettu tunnuslukuja. Voit laskea tunnusluvut haluamallesi aineistolle Analyysi-toiminnon avulla.."
             }
+        },
+        "fileInput": {
+            "fileUpload": "Raahaa {files, plural, one {tiedosto} other {tiedostot}} tähän tai",
+            "link":"valitse selaamalla.",
+            "uploading":"Ladataan",
+            "success":"Valmis",
+            "error":"Virhe!",
+            "invalidType": "Tiedostomuoto ei ole sallittu.",
+            "multipleNotAllowed": "Anna vain yksi tiedosto.",
+            "fileSize": "Tiedoston koko on liian suuri. Suurin sallittu koko yksittäiselle tiedostolle on {size, number} Mt.",
+            "noFiles": "Ei tiedostoja."
         }
     }
 });

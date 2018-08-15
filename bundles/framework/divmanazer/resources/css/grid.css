@@ -1,10 +1,10 @@
 div.grid-tools {
-  height: 34px;
-  position: static;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 6px; }
-  div.grid-tools div.column-selector-placeholder {
+    position: static;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 6px;
+}
+div.grid-tools div.column-selector-placeholder {
     border-style: none;
     float: right;
     opacity: 1.0;

@@ -318,6 +318,17 @@ Oskari.registerLocalization(
                 "value_missing": "Värdet saknas.",
                 "boolean_operator_missing": "Den logiska operatören saknas."
             }
+        },
+        "fileInput": {
+            "fileUpload": "Dra {files, plural, one {fil} other {filerna}} hit, eller",
+            "link":"välj genom att bläddra.",
+            "uploading":"Laddar",
+            "success":"Lyckades",
+            "error":"Fel!",
+            "invalidType": "Filformatet är inte tillåtet.",
+            "multipleNotAllowed": "Endast en fil kan laddas upp.",
+            "fileSize": "Den valda filen är för stor. Den högsta tillåtna storleken är {size, number} Mb.",
+            "noFiles": "Ingen fil vald."
         }
     }
 });

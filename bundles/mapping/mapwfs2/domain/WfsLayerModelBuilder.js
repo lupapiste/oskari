@@ -5,27 +5,50 @@
 Oskari.clazz.define(
     'Oskari.mapframework.bundle.mapwfs2.domain.WfsLayerModelBuilder',
 
-    function (sandbox) {
+    function(sandbox) {
         this.localization = Oskari.getLocalization('MapWfs2');
         this.sandbox = sandbox;
+        this.service = null;
+        this._registerForLayerFiltering();
     }, {
+        /**
+         * Add featuredata filter.
+         * @method  @public _registerForLayerFiltering
+         */
+        _registerForLayerFiltering: function() {
+            var me = this;
+            Oskari.on('app.start', function (details) {
+                var layerlistService = Oskari.getSandbox().getService('Oskari.mapframework.service.LayerlistService');
+
+                if ( !layerlistService ) {
+                    return;
+                }
+                
+                layerlistService.registerLayerlistFilterButton(me.localization.layerFilter.featuredata,
+                    me.localization.layerFilter.tooltip, {
+                        active: 'layer-stats',
+                        deactive: 'layer-stats-disabled'
+                    },
+                    'featuredata');
+            });
+        },
         /**
          * parses any additional fields to model
          * @param {Oskari.mapframework.domain.WfsLayer} layer partially populated layer
          * @param {Object} mapLayerJson JSON presentation of the layer
          * @param {Oskari.mapframework.service.MapLayerService} maplayerService not really needed here
          */
-        parseLayerData: function (layer, mapLayerJson, maplayerService) {
-            var me = this,
-                toolBuilder = Oskari.clazz.builder('Oskari.mapframework.domain.Tool');
+        parseLayerData: function(layer, mapLayerJson, maplayerService) {
+            var me = this;
 
             if (layer.isLayerOfType("WFS")) {
-                var locOwnStyle = this.localization['own-style'],
-                    toolOwnStyle = toolBuilder();
+                var locOwnStyle = me.localization['own-style'];
+                var toolOwnStyle = Oskari.clazz.create('Oskari.mapframework.domain.Tool');
                 toolOwnStyle.setName("ownStyle");
                 toolOwnStyle.setTitle(locOwnStyle);
+                toolOwnStyle.setIconCls('show-own-style-tool');
                 toolOwnStyle.setTooltip(locOwnStyle);
-                toolOwnStyle.setCallback(function () {
+                toolOwnStyle.setCallback(function() {
                     me.sandbox.postRequestByName('ShowOwnStyleRequest', [layer.getId()]);
                 });
                 layer.addTool(toolOwnStyle);
@@ -57,11 +80,8 @@ Oskari.clazz.define(
                 layer.selectStyle(mapLayerJson.style);
             }
 
-            // Wps Params
-            layer.setWpsLayerParams(mapLayerJson.wps_params);
-
             // WMS link layer id for wfs rendering option
-            if(mapLayerJson.WMSLayerId){
+            if (mapLayerJson.WMSLayerId) {
                 layer.setWMSLayerId(mapLayerJson.WMSLayerId);
             }
 

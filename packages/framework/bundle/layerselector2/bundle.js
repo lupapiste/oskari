@@ -25,6 +25,9 @@ Oskari.clazz.define("Oskari.mapframework.bundle.layerselector2.LayerSelectorBund
             "type": "text/javascript",
             "src": "../../../../bundles/framework/layerselector2/instance.js"
         }, {
+                "type": "text/javascript",
+                "src": "../../../../bundles/framework/layerselector2/service/layerlist.js"
+        },{
             "type": "text/javascript",
             "src": "../../../../bundles/framework/layerselector2/Flyout.js"
         }, {
@@ -38,11 +41,15 @@ Oskari.clazz.define("Oskari.mapframework.bundle.layerselector2.LayerSelectorBund
             "src": "../../../../bundles/framework/layerselector2/view/Layer.js"
         }, {
             "type": "text/javascript",
+            "src": "../../../../bundles/framework/layerselector2/view/FilterButtons.js"
+        },  {
+            "type": "text/javascript",
             "src": "../../../../bundles/framework/layerselector2/view/LayersTab.js"
         }, {
             "type": "text/javascript",
             "src": "../../../../bundles/framework/layerselector2/view/PublishedLayersTab.js"
-        }, {
+        },
+        {
             "type": "text/javascript",
             "src": "../../../../bundles/framework/layerselector2/request/ShowFilteredLayerListRequest.js"
         }, {

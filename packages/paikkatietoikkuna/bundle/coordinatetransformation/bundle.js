@@ -42,10 +42,16 @@ Oskari.clazz.define("Oskari.coordinatetransformation.bundle", function () {
             "src": "../../../../bundles/paikkatietoikkuna/coordinatetransformation/instance.js"
         }, {
             "type": "text/javascript",
-            "src": "../../../../bundles/paikkatietoikkuna/coordinatetransformation/components/table.js"
+            "src": "../../../../bundles/paikkatietoikkuna/coordinatetransformation/components/CoordinateTable.js"
         }, {
             "type": "text/javascript",
             "src": "../../../../bundles/paikkatietoikkuna/coordinatetransformation/components/select.js"
+        }, {
+            "type": "text/javascript",
+            "src": "../../../../bundles/paikkatietoikkuna/coordinatetransformation/components/SourceSelect.js"
+        }, {
+            "type": "text/javascript",
+            "src": "../../../../bundles/paikkatietoikkuna/coordinatetransformation/components/CoordinateSystemSelection.js"
         }, {
             "type": "text/javascript",
             "src": "../../../../bundles/paikkatietoikkuna/coordinatetransformation/Flyout.js"
@@ -54,22 +60,25 @@ Oskari.clazz.define("Oskari.coordinatetransformation.bundle", function () {
             "src": "../../../../bundles/paikkatietoikkuna/coordinatetransformation/util/helper.js"
         }, {
             "type": "text/javascript",
-            "src": "../../../../bundles/paikkatietoikkuna/coordinatetransformation/view/conversion.js"
+            "src": "../../../../bundles/paikkatietoikkuna/coordinatetransformation/util/CoordinateDataHandler.js"
         }, {
             "type": "text/javascript",
-            "src": "../../../../bundles/paikkatietoikkuna/coordinatetransformation/view/mapselect.js"
+            "src": "../../../../bundles/paikkatietoikkuna/coordinatetransformation/view/transformation.js"
+        }, {
+            "type": "text/javascript",
+            "src": "../../../../bundles/paikkatietoikkuna/coordinatetransformation/view/CoordinateMapSelection.js"
+        }, {
+            "type": "text/javascript",
+            "src": "../../../../bundles/paikkatietoikkuna/coordinatetransformation/view/CoordinateSystemInformation.js"
         }, {
             "type": "text/javascript",
             "src": "../../../../bundles/paikkatietoikkuna/coordinatetransformation/view/mapmarkers.js"
         }, {
             "type": "text/javascript",
-            "src": "../../../../bundles/paikkatietoikkuna/coordinatetransformation/view/filesettings.js"
+            "src": "../../../../bundles/paikkatietoikkuna/coordinatetransformation/view/FileHandler.js"
         }, {
             "type": "text/javascript",
             "src": "../../../../bundles/paikkatietoikkuna/coordinatetransformation/service/TransformationService.js"
-        }, {
-            "type": "text/css",
-            "src": "../../../../bundles/paikkatietoikkuna/coordinatetransformation/resources/css/filesettings.css"
         }, {
             "type": "text/css",
             "src": "../../../../bundles/paikkatietoikkuna/coordinatetransformation/resources/css/coordinatetransformation.css"

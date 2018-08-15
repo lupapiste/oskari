@@ -75,7 +75,6 @@ Oskari.clazz.define('Oskari.mapframework.bundle.mapmodule.plugin.Portti2Zoombar'
                 css: {}
             }
         };
-
         this.toolStyles = {
             'default': {
                 val: null
@@ -157,16 +156,16 @@ Oskari.clazz.define('Oskari.mapframework.bundle.mapmodule.plugin.Portti2Zoombar'
          * Plugin jQuery element
          */
         _createControlElement: function () {
-            var me = this,
-                el = jQuery(
-                    '<div class="oskariui mapplugin pzbDiv zoombar">' +
-                    '  <div class="pzbDiv-plus"></div>' +
-                    '  <div class="slider"></div>' +
-                    '  <div class="pzbDiv-minus"></div>' +
-                    '</div>'
-                ),
-                mapModule = me.getMapModule(),
-                sliderEl = el.find('div.slider');
+            var me = this;
+            var el = jQuery(
+                '<div class="oskariui mapplugin pzbDiv zoombar">' +
+                '  <div class="pzbDiv-plus"></div>' +
+                '  <div class="slider"></div>' +
+                '  <div class="pzbDiv-minus"></div>' +
+                '</div>'
+            );
+            var mapModule = me.getMapModule();
+            var sliderEl = el.find('div.slider');
 
             sliderEl.attr('id', 'pzb-slider-' + me.getName());
 
@@ -303,25 +302,23 @@ Oskari.clazz.define('Oskari.mapframework.bundle.mapmodule.plugin.Portti2Zoombar'
             } else if (!style.hasOwnProperty("widthCenter")) {
                 style = this.toolStyles[style] ? this.toolStyles[style] : this.toolStyles["default"];
             }
-
-            var imgUrl = this.getImagePath(),
-                styleName = style.val,
-                zoombarImg = imgUrl + 'zoombar-' + styleName + '.png',
-                zoombarCursorImg = imgUrl + 'zoombar-cursor-' + styleName + '.png',
-                zoombarMinusImg = imgUrl + 'zoombar_minus-' + styleName + '.png',
-                zoombarPlusImg = imgUrl + 'zoombar_plus-' + styleName + '.png',
-                bar = div.find('.ui-slider-vertical'),
-                cursor = div.find('.ui-slider-handle'),
-                plus = div.find('.pzbDiv-plus'),
-                minus = div.find('.pzbDiv-minus'),
-                slider = div.find('div.slider'),
-                mapModule = me.getMapModule();
+            var imgUrl = this.getImagePath();
+            var styleName = style.val;
+            var zoombarImg = imgUrl + 'zoombar-' + styleName + '.png';
+            var zoombarCursorImg = imgUrl + 'zoombar-cursor-' + styleName + '.png';
+            var zoombarMinusImg = imgUrl + 'zoombar_minus-' + styleName + '.png';
+            var zoombarPlusImg = imgUrl + 'zoombar_plus-' + styleName + '.png';
+            var bar = div.find('.ui-slider-vertical');
+            var cursor = div.find('.ui-slider-handle');
+            var plus = div.find('.pzbDiv-plus');
+            var minus = div.find('.pzbDiv-minus');
+            var slider = div.find('div.slider');
 
             // FIXME get rid of this, rounded style should be fixed instead
             // Used to get the cursor to the right position since
             // it's off by 2 pixels with the 'rounded' style.
-            var isRounded = styleName && styleName.match(/^rounded/),
-                sliderHeight = this.getMapModule().getMaxZoomLevel() * style.heightCenter;
+            var isRounded = styleName && styleName.match(/^rounded/);
+            var sliderHeight = this.getMapModule().getMaxZoomLevel() * style.heightCenter;
 
             if (style.val === null) {
                 bar.css({
@@ -333,7 +330,7 @@ Oskari.clazz.define('Oskari.mapframework.bundle.mapmodule.plugin.Portti2Zoombar'
                     'background-image': '',
                     'width': '',
                     'height': '',
-                    'margin-left': ''
+                    'margin-left': '2px'
                 });
 
                 me._desktopStyles = {
@@ -395,13 +392,14 @@ Oskari.clazz.define('Oskari.mapframework.bundle.mapmodule.plugin.Portti2Zoombar'
                 });
             }
         },
-        teardownUI : function() {
-            //remove old element
+        teardownUI: function () {
             this.removeFromPluginContainer(this.getElement());
-            if(this._slider) {
+            if (this._slider) {
                 this._slider.remove();
                 delete this._slider;
             }
+            var mobileDefs = this.getMobileDefs();
+            this.removeToolbarButtons(mobileDefs.buttons, mobileDefs.buttonGroup);
         },
         /**
          * Handle plugin UI and change it when desktop / mobile mode
@@ -409,19 +407,18 @@ Oskari.clazz.define('Oskari.mapframework.bundle.mapmodule.plugin.Portti2Zoombar'
          * @param  {Boolean} mapInMobileMode is map in mobile mode
          * @param {Boolean} forced application has started and ui should be rendered with assets that are available
          */
-        redrawUI: function(mapInMobileMode, forced) {
-            if(!this.isVisible()) {
+        redrawUI: function (mapInMobileMode, forced) {
+            if (!this.isVisible()) {
                 // no point in drawing the ui if we are not visible
                 return;
             }
             var me = this;
-            var sandbox = me.getSandbox();
             var mobileDefs = this.getMobileDefs();
 
             // don't do anything now if request is not available.
             // When returning false, this will be called again when the request is available
             var toolbarNotReady = this.removeToolbarButtons(mobileDefs.buttons, mobileDefs.buttonGroup);
-            if(!forced && toolbarNotReady) {
+            if (!forced && toolbarNotReady) {
                 return true;
             }
             this.teardownUI();
@@ -433,6 +430,13 @@ Oskari.clazz.define('Oskari.mapframework.bundle.mapmodule.plugin.Portti2Zoombar'
                 me.refresh();
                 this.addToPluginContainer(me._element);
             }
+        },
+        /**
+         * @method _stopPluginImpl BasicMapModulePlugin method override
+         * @param {Oskari.Sandbox} sandbox
+         */
+        _stopPluginImpl: function (sandbox) {
+            this.teardownUI();
         }
     }, {
         'extend': ['Oskari.mapping.mapmodule.plugin.BasicMapModulePlugin'],

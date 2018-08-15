@@ -1,5 +1,118 @@
 # Release Notes
 
+## 1.47.1
+
+For a full list of changes see:
+https://github.com/oskariorg/oskari-frontend/milestone/13?closed=1
+
+- Fix for user generated statistical indicator removal.
+- Fix for loading progressbar for layers using single tile loading.
+- Fix for coordinatetool localization handling.
+
+## 1.47.0
+
+For a full list of changes see:
+https://github.com/oskariorg/oskari-frontend/milestone/9?closed=1
+
+- Statistical maps now allow for filtering listings based on regionsets and adding more than one indicator at a time
+- Users can now use and save custom indicators for statistical maps
+- Fixes for statistical maps UI in geoportal
+- Layer filters in layer selector are now hidden when selecting the filter would result in empty layer listing
+- Geoportal map style is now properly reset after exiting publisher functionality (previously always reset to default style)
+- More plugins now support styling in publisher functionality
+- Timeseries functionality can now be included in embedded maps (when there's a layer providing timeseries data)
+- Publisher can now be opened automatically on startup (Usability improvement when having embedded maps in multiple projections)
+- Checking "Don't show this again" in guided tour now works again
+- Bugfixes on publisher, hierarchical layerselector and feature data table
+
+## 1.46.3
+
+- Fixed JS errors when saving myplaces features.
+- Fixed an issue where featuredata button was shown on the UI when is should have stayed hidden after browser window resize.
+
+## 1.46.2
+
+For a full list of changes see:
+https://github.com/oskariorg/oskari-frontend/milestone/11?closed=1
+
+- publisher now remembers the original tool style and no longer resets to default style on exit
+- fixed layer/group sorting issues on the hierarchichal layerselector
+- fixed a JS error on layer removal
+- fixed an issue where adding imported datasets/userlayers to the map zoomed to the extent of the layer always. Now it just zooms on initial import and when clicking the layer on personaldata listing. This fixes an issue where embedded maps could start from the dataset extent instead of the original saved center point.
+
+## 1.46.1
+
+For a full list of changes see:
+https://github.com/oskariorg/oskari-frontend/milestone/10?closed=1
+
+- Layer loading API has been changed from having the layers inside group structure (and possibly multiple times/layer) to a flat array beside the group structure. The groups will still have layers array in the internal runtime data structure, but instead of the JSON presentation the array items are instances of Oskari.mapframework.domain.AbstractLayer like any other layer references returned by the service.
+- Iframe snippet in publisher now includes 'allow="geolocation"' because: https://sites.google.com/a/chromium.org/dev/Home/chromium-security/deprecating-permissions-in-cross-origin-iframes
+- Line width style setting for userlayer/dataset import works properly now on import
+- Statistical map now resets when the regionset layer is removed from selected layers
+- Statistical map now resets properly when the reset button is hit
+- UI fixes for statistical map legend and classification form
+- Reverse colors control in statistical map classification form now works instead of doing nothing
+- Sandbox.removeMapLayer() was deprecated as unused and Sandbox.getMap().removeLayer() is the drop-in replacement for it.
+- Some variable leaking (to global scope) issues fixed.
+- Timeseries UI is no longer shown if the layer with timeseries isn't shown to the user (due to being hidden or incompatible CRS)
+- Group and organization is now properly removed from the admin UI when deleted from the database.
+- Oskari.urls.getRoute() default value changed from 'N/A' to '/action?' as it's the default for Oskari-server
+- Oskari.urls.getLocation() default value changed from 'N/A' to undefined so  developers don't need to know the default value for checking if it's configured
+- Personaldata, analyse and publisher2 bundles now support Oskari.urls.getLocation('login') and Oskari.urls.getLocation('register') for url configuration. Bundle-specific config is still available and used as priority.
+
+## 1.46.0
+
+For a full list of changes see: https://github.com/oskariorg/oskari-frontend/milestone/7?closed=1
+
+### Core changes
+
+- Oskari.app.getSystemDefaultViews() has been added. It returns an array of basic appsetup information that can be used to detect alternative default apps.
+For example if the server instance has different appsetups for different projection setups the options can be found with this function although it can be used to just provide different apps that are available in the system.
+- Bundles have been updated to work with jQuery 1.10.x (previously 1.7.x)
+- Lots of unused code/libraries have been removed.
+- Added some polyfills
+
+### Projection support
+
+- Maplayer listing and selected layers now indicate if a layer does not support the current map projection (requires the information from server).
+- Admin functionality now shows information about projections layers support (based on layer capabilities response).
+- Admin functionality now has a new button to trigger capabilities update for a layer (previously triggered on layer information save).
+- The map publishing functionality now supports multiprojection setups.
+- Lists for saved views and embedded map edit links can now handle items that are not in the current map projection. Opening such view or editing a map will trigger a page reload.
+- Links now include an uuid that matches a system default appsetup that supports the current map projection. Basically meaning that links are no longer always pointing to the system default view.
+
+### Thematic maps
+
+- Lots of fine-tuning on the user interface
+- Tuning the dot presentation on thematic maps
+- It is now possible to include a diagram presentation in published thematic maps
+
+### Hierarchical layerselector
+
+- Layer handling have been changed to accommodate a hierarchical group setting for layers.
+- A new bundle 'framework/hierarchical-layerlist' has been added. Can be used as a drop-in replacement for current layerselector and layerselection bundles.
+- A new admin bundle 'admin/admin-hierarchical-layerlist' has been added. Can be used as a drop-in replacement for current layer admin bundle, but is only compatible with the new hierarchical-layerlist.
+
+### Misc
+
+- Users can now edit the name and style of an imported dataset (userlayer).
+- The map popup (infobox) now tries harder to handle the async nature of kinectic scrolling of OpenLayers 3+ based map. Basically sending a MapMoveRequest and ShowInfoBoxRequest next to each other should no longer move to map to entirely different location that was requested.
+- Performance improvements on layer handling for systems that have loads of layers
+- Fixes for download basket functionality.
+- The printing functionality has been changed to use the new server implementation.
+- Small glitches throughout the user interface has been squashed.
+- Fixed an issue where layer opacity was not handled properly on OpenLayers 3+ based mapmodule (published maps).
+- Layer metadata display has been improved
+
+## 1.45.1
+
+For a full list of changes see: https://github.com/oskariorg/oskari-frontend/milestone/8?closed=1
+
+- Myplaces drawing fixes to improve usability and interaction with GFI.
+- Doubleclicking the map while drawing to finish the sketch no longer zooms in.
+- WFS-highlights for layers that are not on the map can now be done as before.
+- Heatmap reacted to layer events for non-heatmap layers. This has been fixed.
+
 ## 1.45.0
 
 For a full list of changes see: https://github.com/oskariorg/oskari-frontend/milestone/4?closed=1

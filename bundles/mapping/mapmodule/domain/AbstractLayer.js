@@ -64,10 +64,8 @@ Oskari.clazz.define(
         /* is linked layer ('sublayer') - no UI in layer selection */
         me._isLinkedLayer = null;
 
-        me._inspireName = null;
         me._organizationName = null;
         me._dataUrl = null;
-        me._orderNumber = null;
 
         /*
          * Array of sublayers. Notice that only type BASE_LAYER can
@@ -128,6 +126,8 @@ Oskari.clazz.define(
         // Spatial reference system
         me._srs_name = null;
 
+        me._srsList = null;
+
         // Admin params, applicable only for admin users
         me._admin = null;
 
@@ -139,6 +139,10 @@ Oskari.clazz.define(
         me.loaded = 0;
         me.tilesToLoad = 0;
         me.errors = 0;
+
+        me._groups = [];
+
+        me._orderNumber = 1000000;
     }, {
         /**
          * Populates name, description, inspire and organization fields with a localization JSON object
@@ -185,12 +189,7 @@ Oskari.clazz.define(
                     break;
                 }
             }
-            for (lang in inspire) {
-                if (inspire.hasOwnProperty(lang)) {
-                    this.setInspireName(inspire);
-                    break;
-                }
-            }
+
             for (lang in organization) {
                 if (organization.hasOwnProperty(lang)) {
                     this.setOrganizationName(organization);
@@ -262,7 +261,7 @@ Oskari.clazz.define(
         setName: function (name) {
             if (name && typeof name === 'object') {
                 var values = {};
-                Object.keys(name).forEach(function(key) {
+                Object.keys(name).forEach(function (key) {
                     values[key] = Oskari.util.sanitize(name[key]);
                 });
                 this._name = values;
@@ -285,7 +284,7 @@ Oskari.clazz.define(
                     lang = Oskari.getLang();
                 }
                 var value = this._name[lang];
-                if(!value) {
+                if (!value) {
                     value = this._name[Oskari.getDefaultLanguage()];
                 }
                 return value;
@@ -333,7 +332,7 @@ Oskari.clazz.define(
         setOrganizationName: function (param) {
             if (param && typeof param === 'object') {
                 var values = {};
-                Object.keys(param).forEach(function(key) {
+                Object.keys(param).forEach(function (key) {
                     values[key] = Oskari.util.sanitize(param[key]);
                 });
                 this._organizationName = values;
@@ -341,6 +340,7 @@ Oskari.clazz.define(
                 this._organizationName = Oskari.util.sanitize(param);
             }
         },
+
         /**
          * Returns a organization name for the layer.
          * If the name is populated with a string, always returns it.
@@ -356,50 +356,24 @@ Oskari.clazz.define(
                     lang = Oskari.getLang();
                 }
                 var value = this._organizationName[lang];
-                if(!value) {
+                if (!value) {
                     value = this._organizationName[Oskari.getDefaultLanguage()];
                 }
                 return value;
             }
             return this._organizationName;
         },
-        /**
-         * @method setInspireName
-         * @param {String} param
-         *          inspire theme name under which the layer is listed in UI
-         */
-        setInspireName: function (param) {
-            if (param && typeof param === 'object') {
-                var values = {};
-                Object.keys(param).forEach(function(key) {
-                    values[key] = Oskari.util.sanitize(param[key]);
-                });
-                this._inspireName = values;
-            } else {
-                this._inspireName = Oskari.util.sanitize(param);
-            }
-        },
+
         /**
          * Returns an inspire name for the layer.
          * If the name is populated with a string, always returns it.
          * With populated object assumes that the object keys are language codes.
          * If language param is not given, uses Oskari.getLang()
          * @method getInspireName
-         * @param {String} lang language id like 'en' or 'fi' (optional)
          * @return {String} inspire theme name under which the layer is listed in UI
          */
-        getInspireName: function (lang) {
-            if (this._inspireName && typeof this._inspireName === 'object') {
-                if (!lang) {
-                    lang = Oskari.getLang();
-                }
-                var value = this._inspireName[lang];
-                if(!value) {
-                    value = this._inspireName[Oskari.getDefaultLanguage()];
-                }
-                return value;
-            }
-            return this._inspireName;
+        getInspireName: function () {
+            return (this._groups[0]) ? this._groups[0].name : '';
         },
         /**
          * @method setFeatureInfoEnabled
@@ -441,7 +415,7 @@ Oskari.clazz.define(
                     lang = Oskari.getLang();
                 }
                 var value = this._description[lang];
-                if(!value) {
+                if (!value) {
                     value = this._description[Oskari.getDefaultLanguage()];
                 }
                 return Oskari.util.sanitize(value);
@@ -454,16 +428,15 @@ Oskari.clazz.define(
          * @param {Number} {optional} remaining
          * @return {Number} number of currently loading items
          */
-        loadingStarted: function(remaining) {
+        loadingStarted: function (remaining) {
+            if (typeof remaining === 'undefined') {
+                this.loading += 1;
+            } else {
+                this.loading = remaining;
+            }
+            this.tilesToLoad = this.loading;
 
-          if(typeof remaining === 'undefined'){
-            this.loading +=1;
-          } else {
-            this.loading = remaining;
-          }
-          this.tilesToLoad = this.loading;
-
-          return this.loading === 1;
+            return this.loading === 1;
         },
         /**
          * Called when openlayers 2/3 tileloadend event fires
@@ -471,47 +444,46 @@ Oskari.clazz.define(
          * @param {Number} {optional} remaining
          * @return {Number} number of not yet loaded
          */
-        loadingDone: function(remaining) {
-
-          if(typeof remaining === 'undefined'){
-            this.loading -=1;
-          } else {
-            this.loading = remaining;
-          }
-          this.loaded += 1;
-          return this.loading === 0;
+        loadingDone: function (remaining) {
+            if (typeof remaining === 'undefined') {
+                this.loading -= 1;
+            } else {
+                this.loading = remaining;
+            }
+            this.loaded += 1;
+            return this.loading === 0;
         },
         /**
          * Called when openlayers 2/3 tileloaderror event fires
          * @method loadingError
          * Increments the amount of errors for the layers
          */
-        loadingError: function(errors) {
-
-          if(typeof errors === 'undefined'){
-            this.errors += 1;
-          } else {
-            this.errors = errors;
-          }
-          return this.errors;
+        loadingError: function (errors) {
+            if (typeof errors === 'undefined') {
+                this.errors += 1;
+            } else {
+                this.errors = errors;
+            }
+            return this.errors;
         },
         /**
          * Check if all the tiles/features have been loaded
          * @method checkIfAllLoaded
          * @return {boolean} true if this.loading === 0, else false
          */
-        getLoadingState: function() {
-          var state = {
-            'loading': this.loading,
-            'loaded': this.loaded,
-            'errors': this.errors
-          };
-          return state;
+        getLoadingState: function () {
+            var state = {
+                'loading': this.loading,
+                'loaded': this.loaded,
+                'errors': this.errors
+            };
+            return state;
         },
-        resetLoadingState: function(){
-          this.loaded = 0;
-          this.errors = 0;
-          this.tilesToLoad = 0;
+        resetLoadingState: function (tilesToLoad) {
+            var toBeLoaded = tilesToLoad || 0;
+            this.loaded = 0;
+            this.errors = 0;
+            this.tilesToLoad = toBeLoaded;
         },
         /**
          * @method addSubLayer
@@ -523,15 +495,13 @@ Oskari.clazz.define(
          * purposes and actual map images to show are done with sublayers
          */
         addSubLayer: function (layer) {
-            var sublayers = this.getSubLayers(),
-                i,
-                len;
-
-            for (i = 0, len = sublayers.length; i < len; i += 1) {
-                if (sublayers[i].getId() === layer.getId()) {
-                    // already added, don't add again
-                    return false;
-                }
+            var sublayers = this.getSubLayers();
+            var sublayer = sublayers.find(function (sublayer) {
+                return sublayer.getId() === layer.getId();
+            });
+            if (sublayer) {
+                // already added, don't add again
+                return false;
             }
             sublayers.push(layer);
             return true;
@@ -744,22 +714,15 @@ Oskari.clazz.define(
          * adds style to layer
          */
         addStyle: function (style) {
-            if (!style || !style.getName || typeof style.getName !== 'function') {
+            if (!style || typeof style.getName !== 'function') {
                 // invalid style
                 return;
             }
-            var foundExisting = false,
-                i,
-                curStyle;
 
-            for (i = 0; i < this.getStyles().length; i += 1) {
-                curStyle = this.getStyles()[i];
-                if (curStyle.getName() === style.getName()) {
-                    foundExisting = true;
-                    break;
-                }
-            }
-            if (!foundExisting) {
+            var existingStyle = this.getStyles().find(function (existingStyle) {
+                return existingStyle.getName() === style.getName();
+            });
+            if (!existingStyle) {
                 // only add if one with same name isn't added yet
                 this.getStyles().push(style);
             }
@@ -782,27 +745,26 @@ Oskari.clazz.define(
          * If style is not found, assigns an empty #Oskari.mapframework.domain.Style to #getCurrentStyle
          */
         selectStyle: function (styleName) {
-            var me = this,
-                i,
-                style;
+            var existingStyle = this.getStyles().find(function (existingStyle) {
+                return existingStyle.getName() === styleName;
+            });
 
-            for (i = 0; i < me.getStyles().length; i += 1) {
-                style = me.getStyles()[i];
-                if (style.getName() === styleName) {
-                    me._currentStyle = style;
-                    return;
+            if (existingStyle) {
+                this._currentStyle = existingStyle;
+            } else {
+                Oskari.log('AbstractLayer').debug('selectStyle(' + styleName + ') didn\'t match any style for layer:', this.getId());
+                // if layer has only one style - always use it
+                if (this.getStyles().length === 1) {
+                    this._currentStyle = this.getStyles()[0];
+                    Oskari.log('AbstractLayer').debug('selectStyle() defaulting to only available style for layer:', this.getId());
                 }
-            }
-            // if layer has only one style - always use it
-            if(me.getStyles().length === 1) {
-                this._currentStyle = me.getStyles()[0];
-                return;
             }
 
             // didn't match anything select the first one
-            if (!me._currentStyle) {
+            if (!this._currentStyle) {
                 // Style not found, use an empty one!
                 this._currentStyle = this._createEmptyStyle();
+                Oskari.log('AbstractLayer').debug('selectStyle() created an empty style for layer:', this.getId());
             }
         },
         /**
@@ -835,7 +797,7 @@ Oskari.clazz.define(
          * Get layer tools
          */
         getTools: function () {
-            return this._tools;
+            return this._tools || [];
         },
         /**
          * @method setTools
@@ -851,7 +813,7 @@ Oskari.clazz.define(
          * adds layer tool to tools
          */
         addTool: function (tool) {
-            if(!tool || this.getTool(tool.getName())) {
+            if (!tool || this.getTool(tool.getName())) {
                 // check for duplicates and invalid param
                 return;
             }
@@ -864,22 +826,9 @@ Oskari.clazz.define(
          * adds layer tool to tools
          */
         getTool: function (toolName) {
-            var tool = null,
-                i;
-
-            // Layer have tools
-            if (this._tools.length > 0) {
-                //
-                if (toolName !== '') {
-                    for (i = 0; i < this._tools.length; i += 1) {
-                        tool = this._tools[i];
-                        if (tool.getName() === toolName) {
-                            return tool;
-                        }
-                    }
-                }
-            }
-            return null;
+            return this.getTools().find(function (tool) {
+                return tool.getName() === toolName;
+            });
         },
         /**
          * @method setLegendImage
@@ -894,7 +843,7 @@ Oskari.clazz.define(
          */
         getLegendImage: function () {
             var style = this.getCurrentStyle();
-            if(style && style.getLegend()) {
+            if (style && style.getLegend()) {
                 return style.getLegend();
             }
             return this._legendImage;
@@ -904,20 +853,15 @@ Oskari.clazz.define(
          * @return {Boolean} true if layer has a legendimage or its styles have legend images
          */
         hasLegendImage: function () {
-            var i,
-                ret = false;
-
             if (this._legendImage) {
-                ret = true;
-            } else {
-                for (i = 0; i < this.getStyles().length; i += 1) {
-                    if (this.getStyles()[i].getLegend()) {
-                        ret = true;
-                        break;
-                    }
-                }
+                return true;
             }
-            return ret;
+            // find a style with legend
+            var styleLegend = this.getStyles().find(function (style) {
+                return !!style.getLegend();
+            });
+            // cast result to boolean response
+            return !!styleLegend;
         },
         /**
          * @method setSticky
@@ -1007,24 +951,19 @@ Oskari.clazz.define(
          * @return {Boolean} true if given scale is between this layer's or its sublayers' min/max scales.
          */
         isInScale: function (scale) {
-            var _inScale = false,
-                _subLayers = this.getSubLayers();
-
+            var _subLayers = this.getSubLayers() || [];
             scale = scale || Oskari.getSandbox().getMap().getScale();
 
-            if (_subLayers && _subLayers.length) {
+            if (_subLayers.length) {
                 // Check if any of the sublayers is in scale
-                _inScale = _.any(_subLayers, function (subLayer) {
+                return !!_subLayers.find(function (subLayer) {
                     return subLayer.isInScale(scale);
                 });
-            } else {
-                // Otherwise just check if the scale falls between min/max scales
-                if ((scale > this.getMaxScale() || !this.getMaxScale()) &&
-                    (scale < this.getMinScale() || !this.getMinScale())) {
-                    _inScale = true;
-                }
             }
-            return _inScale;
+
+            // Otherwise just check if the scale falls between min/max scales
+            return ((scale > this.getMaxScale() || !this.getMaxScale()) &&
+                (scale < this.getMinScale() || !this.getMinScale()));
         },
         /**
          * @method getLayerType
@@ -1085,7 +1024,7 @@ Oskari.clazz.define(
          */
         getAttributes: function (key) {
             var attr = this._attributes || {};
-            if(key) {
+            if (key) {
                 return attr[key];
             }
             return attr;
@@ -1110,8 +1049,8 @@ Oskari.clazz.define(
          * @return {Boolean} true/false
          */
         isManualRefresh: function () {
-            if (this.getAttributes().manualRefresh){
-                return this.getAttributes().manualRefresh
+            if (this.getAttributes().manualRefresh) {
+                return this.getAttributes().manualRefresh;
             } else {
                 return false;
             }
@@ -1121,8 +1060,8 @@ Oskari.clazz.define(
          * @return {Boolean} true/false
          */
         isResolveDepth: function () {
-            if (this.getAttributes().resolveDepth){
-                return this.getAttributes().resolveDepth
+            if (this.getAttributes().resolveDepth) {
+                return this.getAttributes().resolveDepth;
             } else {
                 return false;
             }
@@ -1147,20 +1086,11 @@ Oskari.clazz.define(
          * Apppends the url to layer array of image urls
          */
         addLayerUrl: function (layerUrl) {
-            var list = this.getLayerUrls(),
-                listLen = list.length,
-                foundExisting = false,
-                i,
-                url;
-
-            for (i = 0; i < listLen; i += 1) {
-                url = list[i];
-                if (url === layerUrl) {
-                    foundExisting = true;
-                    break;
-                }
-            }
-            if (!foundExisting) {
+            var list = this.getLayerUrls();
+            var existingUrl = list.find(function (url) {
+                return url === layerUrl;
+            });
+            if (!existingUrl) {
                 // only add if isn't added yet
                 list.push(layerUrl);
             }
@@ -1173,9 +1103,8 @@ Oskari.clazz.define(
         setLayerUrls: function (urlList) {
             if (Object.prototype.toString.call(urlList) === '[object Array]') {
                 this._layerUrls = urlList;
-            }
-            // if url is single url, wrap it as list
-            else if (typeof someVar === 'string') {
+            } else if (typeof someVar === 'string') {
+                // if url is single url, wrap it as list
                 this._layerUrls = [urlList];
             }
         },
@@ -1260,8 +1189,8 @@ Oskari.clazz.define(
          * @method setSrs_name
          * @param {String} Spatial reference system
          */
-        setSrs_name: function (srs_name) {
-            this._srs_name = srs_name;
+        setSrs_name: function (srsName) {
+            this._srs_name = srsName;
         },
         /**
          * @method getSrs_name
@@ -1269,6 +1198,32 @@ Oskari.clazz.define(
          */
         getSrs_name: function () {
             return this._srs_name;
+        },
+        /**
+         * @method isSupported does the layer support given projection?
+         * @param {String} projection
+         * @return {Boolean} true if no data about support or param found in supported
+         */
+        isSupported: function (projection) {
+            if (!this._srsList || !this._srsList.length) {
+                // if list is not provided, treat as supported
+                return true;
+            }
+            return this._srsList.indexOf(projection) !== -1;
+        },
+        /**
+         * @method setSrsList
+         * @param {String[]} list of projections
+         */
+        setSrsList: function (list) {
+            this._srsList = list;
+        },
+        /**
+         * @method setSrsList
+         * @return {String[]} list of projections
+         */
+        getSrsList: function () {
+            return this._srsList;
         },
         /**
          * @method setGfiContent
@@ -1305,7 +1260,7 @@ Oskari.clazz.define(
          * Sets an created block
          * @param {Date} created
          */
-        setCreated: function(created){
+        setCreated: function (created) {
             this._created = created;
         },
 
@@ -1313,8 +1268,42 @@ Oskari.clazz.define(
          * Returns an created block
          * @return {Date} created
          */
-        getCreated: function(){
+        getCreated: function () {
             return this._created;
+        },
+        /**
+         * @method @public setGroups
+         * @param {Array} groups groups array [{id:1,name:name"}]
+         */
+        setGroups: function (groups) {
+            this._groups = groups || [{id: -1, name: ''}];
+        },
+        /**
+         * @method @public getGroups get groups
+         * @param {String/Integer} groupId group id
+         */
+        getGroups: function (groupId) {
+            if (groupId) {
+                var group = this._groups.filter(function (g) {
+                    return (g.id === groupId);
+                });
+                if (group.length === 1) {
+                    return group;
+                }
+            }
+
+            return this._groups;
+        },
+        /**
+         * Is filter supported
+         * @method isFilterSupported
+         * @return {Boolean}         is filter supported
+         */
+        isFilterSupported: function () {
+            if (this.isLayerOfType('WFS') || this.isLayerOfType('ANALYSIS')) {
+                return true;
+            }
+            return false;
         }
 
     }

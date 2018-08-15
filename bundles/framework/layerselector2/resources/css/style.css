@@ -34,6 +34,8 @@ div.layerselector2 div.layer {
   div.layerselector2 div.layer label.layer-title {
     /* Let's just imagine this is tabular data... */
     font-size: 12px; }
+  div.layerselector2 div.layer .layer-title.not-supported {
+    color: #888; }
   div.layerselector2 div.layer div.layer-tools {
     float: right; }
   div.layerselector2 div.layer div.layer-icon {
@@ -52,6 +54,11 @@ div.layerselector2 div.layer {
     height: 16px;
     margin-right: 4px;
     background-repeat: no-repeat; }
+  div.layerselector2 div.layer div.layer-not-supported {
+    float: left;
+    margin-right: 4px;
+    background-repeat: no-repeat;
+    margin-top: -2px; }
   div.layerselector2 div.layer div.backendstatus-down {
     height: 20px !important;
     margin-bottom: 2px;

@@ -72,3 +72,12 @@ div.mapplugins .mappluginsContainer .mappluginsContent div.mapwfs2plugin.mapplug
     -o-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); }
     div.mapplugins .mappluginsContainer .mappluginsContent div.mapwfs2plugin.mapplugin.toolstyle-3d-light a {
       color: rgba(20, 20, 20, 0.8); }
+
+/* layer tool icon */
+div.layer-tools div.right-tools div.object-data div.show-filter-tool {
+  width: 18px;
+  height: 18px;
+  background-image: url("../images/icon-funnel.png");
+  background-repeat: no-repeat; }
+
+/*# sourceMappingURL=style.css.map */

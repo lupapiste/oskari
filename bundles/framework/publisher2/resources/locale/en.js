@@ -16,7 +16,15 @@ Oskari.registerLocalization(
         "edit": {
             "popup": {
                 "title": "Opening embedded map…",
-                "msg": "Updating embedded map…"
+                "msg": "Updating embedded map…",
+                "published": {
+                    "msg": "Opening embedded map for editing. Please wait a moment!",
+                    "error": {
+                        "title": "Error",
+                        "common": "Opening embedded map failed.",
+                        "login": "Please log in to edit embedded map."
+                    }
+                }
             }
         },
         "BasicView": {
@@ -55,6 +63,7 @@ Oskari.registerLocalization(
                 "label": "Tools",
                 "tooltip": "Select available map tools. Check a placement in the map preview.",
                 "ScaleBarPlugin": "Scale bar",
+                "TimeseriesControlPlugin": "Time series player",
                 "IndexMapPlugin": "Index map",
                 "PanButtons": "Pan tool",
                 "Portti2Zoombar": "Zoom bar",
@@ -110,7 +119,9 @@ Oskari.registerLocalization(
                 "label": "Thematic maps",
                 "tooltip": "Show thematic maps on the map.",
                 "grid": "Show thematic data in table",
-                "allowClassification": "Allow classification"
+                "allowClassification": "Allow classification",
+                "transparent": "Set classification background transparent",
+                "displayDiagram" : "Display charts"
             },
             "layout": {
                 "label": "Graphic Layout",

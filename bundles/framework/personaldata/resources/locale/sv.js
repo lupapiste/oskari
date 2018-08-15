@@ -7,6 +7,13 @@ Oskari.registerLocalization(
         "desc": "Mina uppgifter",
         "notLoggedIn": "Mina uppgifter innehåller din användarprofil och alla dina sparade funktioner, kartvyer, inbäddade kartor, indikatorer, analys och dataset.  <a href='/web/sv/login'>Logga in</a>.",
         "notLoggedInText": "Logga in.",
+        "register": "Registrera dig",
+        "projectionError": {
+            "title" : "Projektionerna är inkompatibla",
+            "msg": "Sidan laddas om för att ändra projektionen",
+            "ok": "OK",
+            "cancel": "Avbryt"
+        },
         "tabs": {
             "myviews": {
                 "title": "Mina kartvyer",
@@ -112,7 +119,8 @@ Oskari.registerLocalization(
                     "notsaved": "Den inbäddade kartan kunde inte sparas. Försök på nytt senare.",
                     "notdeleted": "Den inbäddade kartan kunde inte tas bort. Försök på nytt senare.",
                     "makePublic": "Den inbäddade kartan kunde inte publiceras. Försök på nytt senare.",
-                    "makePrivate": "Den inbäddade kartan kunde inte avpubliceras. Försök på nytt senare."
+                    "makePrivate": "Den inbäddade kartan kunde inte avpubliceras. Försök på nytt senare.",
+                    "loadfailed": "De inbäddade kartor kunde inte laddas ned. Försök på nytt senare."
                 }
             },
             "account": {

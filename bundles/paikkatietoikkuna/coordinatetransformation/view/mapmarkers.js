@@ -2,7 +2,7 @@ Oskari.clazz.define('Oskari.coordinatetransformation.view.mapmarkers',
     function (instance) {
         var me = this;
         me.instance = instance;
-        me.loc = me.instance.getLocalization("flyout");
+        me.loc = Oskari.getMsg.bind(null, 'coordinatetransformation');
         me.dialog = null;
     }, {
         getName: function() {
@@ -20,18 +20,19 @@ Oskari.clazz.define('Oskari.coordinatetransformation.view.mapmarkers',
         },
         show: function() {
             var me = this;
+            var helper = me.instance.getHelper();
             var dialog = Oskari.clazz.create('Oskari.userinterface.component.Popup'),
-            btn = dialog.createCloseButton(this.loc.datasourceinfo.success);
+            btn = dialog.createCloseButton(this.loc('actions.done'));
             me.dialog = dialog;
 
             btn.addClass('primary');
 
-
             btn.setHandler(function() {
-                me.instance.toggleViews("conversion");
+                helper.removeMarkers();
+                me.instance.toggleViews("transformation");
             });
 
-            dialog.show('View', this.loc.datasourceinfo.mapmarkers, [btn]);
+            dialog.show(this.loc('mapMarkers.show.title'), this.loc('mapMarkers.show.info'), [btn]);
             dialog.moveTo( jQuery('.coordinatetransformation'), 'right', true);
         }
     }

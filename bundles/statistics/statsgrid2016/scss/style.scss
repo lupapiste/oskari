@@ -103,7 +103,7 @@ $flyoutPadding: 16px;
     font-weight: normal;
 
     .header {
-        width: 90%;
+        width: 85%;
         position: absolute;
         top: 5px;
         .title {
@@ -167,6 +167,7 @@ div.oskari-flyout {
         }
         /* TODO: limits the table from blowing up the flyout, but this needs to be handled in some other way */
         max-width: 700px;
+        min-width: 400px;
 
         label span {
             /* Indicator selection form */
@@ -349,7 +350,7 @@ div.oskari-flyout {
             }
 
             td {
-                text-align: left;
+                text-align: right;
             }
         }
 
@@ -508,6 +509,7 @@ div.oskari-flyout {
         }
 
         .oskari-datacharts {
+
             #graphic {
                 .bar {
                     fill: #5f89ad;
@@ -544,7 +546,20 @@ div.oskari-flyout {
     * ********************************************/
      &.statsgrid-diagram-flyout {
         .oskari-datacharts {
+            position: relative;
+            height: 700px;
             padding: $flyoutPadding;
+        }
+        .chart-controls {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 2%;
+           
+           .dropdown {
+                display: flex;
+                max-width: 100%;
+           }
         }
     }
 }
@@ -559,11 +574,77 @@ div.oskari-flyout {
     /* Float right to not overlap with other plugins */
     float: right;
 }
+.statsgrid-legend-plugin-transparent {
+    color:#FFFFFF;
+    text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+    pointer-events: auto;
+    text-align: left;
+    /* Float right to not overlap with other plugins */
+    float: right; }
+    .statsgrid-legend-plugin-transparent .geostats-legend-counter {
+      color: #ffffff;
+    }
+    .statsgrid-legend-plugin-transparent .accordion .accordion_panel {
+      background-color: transparent;
+    }
+    .statsgrid-legend-plugin-transparent .accordion .accordion_panel.open {
+      background-color: transparent;
+    }
+    .statsgrid-legend-plugin-transparent .dropdown {
+        text-shadow: none;
+        color: #000;
+    }
+    .statsgrid-legend-plugin-transparent .statsgrid-svg-legend {
+        text-shadow: none;
+        color: #000;
+    }
+.active-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+.active-header > .title {
+    width: 90%;
+    font-weight: bold;
+}
+.active-legend {
+    height:100%;
+}
 
+.edit-legend {
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    margin-left: 2px;
+    margin-right: -2px;
+    right: 0 !important;
+    background-image: url(../images/edit-dark.png);
+}
+.edit-active {
+    height: 16px;
+    width: 16px;
+    right: 0 !important;
+    background-image: url(../images/edit-hover.png);
+}
 .statsgrid-legend-container {
     background-color: #FFFFFF;
     width: 300px;
     font-size: 12px;
+
+    .classification-colors.value {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .visible-map-style-choropleth.flip-colors {
+        margin-left: 10px;
+        line-height: 27px;
+    }
 
     >div.header {
         background-color: #fdf8d9;
@@ -604,7 +685,7 @@ div.oskari-flyout {
         }
     }
 
-    >.accordion .accordion_panel {
+    > .classification .accordion .accordion_panel {
         border: 0px;
         overflow: visible;
 
@@ -638,13 +719,6 @@ div.oskari-flyout {
                 padding: 1px 2px;
             }
 
-            button.reverse-colors {
-                margin-top: 5px;
-                margin-left: 0;
-                width: 95%;
-                padding: 4px 5px;
-            }
-
             .point-size {
                 .minmaxlabels {
                     .min {
@@ -674,6 +748,10 @@ div.oskari-flyout {
     .statsgrid-svg {
         float: left;
     }
+    .statsgrid-svg-legend {
+        margin: 0 auto;
+        width:50%;
+    }
     .statsgrid-range {
         float: left;
     }
@@ -684,7 +762,9 @@ div.oskari-flyout {
         clear: both;
     }
 }
-
+.legend-transparent {
+   background-color: transparent;
+}
 /* Mobile popup tuning */
 .divmanazerpopup.statsgrid-mobile-legend {
     .popup-body {
@@ -735,6 +815,21 @@ div.mapplugins .mappluginsContainer .mappluginsContent .mapplugin.statsgrid-publ
         &.active {
             background-color: $lightColor;
             background-image: url('../images/table_light.png');
+        }
+    }
+     .diagram {
+        background-color: $darkColor;
+        float: left;
+        height: 36px;
+        width: 36px;
+        background-image: url("../images/tile-diagram-dark.png");
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-position: center;    
+        &.active {
+            background-color: $lightColor;
+            background-image: url("../images/tile-diagram-light.png");
+            background-repeat: no-repeat;
         }
     }
 
@@ -910,4 +1005,109 @@ div.tab-material-controls div.title {
     .tabsHeader {
         padding-top:2em !important;
     }
+}
+.chart {
+    display: flex;
+    justify-content: center;
+}
+.axisLabel {
+    margin-top: -5px;
+    position: absolute;
+    opacity: 0.8;
+}
+.sticky {
+    font-weight: bold;
+    color:#F6F6F6;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    overflow: hidden;
+    z-index: 3; 
+    max-height: 100%;
+}
+
+.statsgrid-diagram-flyout .oskari-flyoutcontentcontainer {
+    max-width:700px;
+  }
+  .statsgrid-user-indicator-flyout {
+    height:auto;
+    min-width: 365px;
+  }
+  .statsgrid-user-indicator-flyout .oskari-flyoutcontentcontainer {
+    overflow:unset;
+    max-height:100%;
+  }
+  // user indicator form
+
+.stats-indicator-form {
+min-height: 18.75em;
+padding: 0.9375em;
+}
+.stats-indicator-form-item {
+width: 96%;
+margin-bottom: 0.3125em;
+}
+.stats-ind-selector {
+    display: flex;
+    align-items: baseline;
+}
+.stats-not-logged-in {
+width: 100%;
+min-height: 2.5em;
+margin-bottom: 0.5em;
+padding: 0.3125em;
+max-width: 31.25em; // 500px
+}
+.stats-user-indicator-form div.accordion div.accordion_panel {
+border:none;
+}
+.stats-user-indicator-form div.accordion div.accordion_panel.open {
+border:none;
+}
+.user-indicator-main {
+    padding: 0.3125em;
+    max-width: 31.25em;
+}
+.user-indicator-main > table {
+    display: table;
+ }
+ .user-indicator-main > table > tbody {
+    overflow: auto;
+    max-height: 33em;
+    display: block;
+}
+.user-indicator-table td {
+text-align: center;
+}
+.user-indicator-table td:first-child {
+text-align: center;
+width: 17%;
+}
+.user-indicator-specification {
+padding: 0.3125em;
+color:white;
+background-color: #888888; 
+}
+.new-indicator-dataset-params {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.user-indicator-import > textarea {
+    width: 300px;
+    height: 150px;
+  }
+  .regionset-container {
+    display:flex;
+    flex-direction:column;
+    margin-top: -8px
+  }
+  .userchoice-container {
+    display:flex;
+    justify-content: space-evenly;
+  }
+.user-dataset {
+    text-align: center;
+    padding: 1px; 
+}
+.user-dataset-edit, .user-dataset-delete {
+    text-align: center;
 }

@@ -5,8 +5,15 @@ Oskari.registerLocalization(
     "value": {
         "title": "Omat tiedot",
         "desc": "Omat tiedot",
-        "notLoggedIn": "Kirjautuneena käyttäjävä voit tarkistaa täällä käyttäjätietosi sekä omat kohteesi, karttanäkymäsi, upotetut karttasi, indikaattorisi, analyysisi ja aineistosi.",
+        "notLoggedIn": "Kirjautuneena käyttäjänä voit tarkistaa täällä käyttäjätietosi sekä omat kohteesi, karttanäkymäsi, upotetut karttasi, indikaattorisi, analyysisi ja aineistosi.",
         "notLoggedInText": "Kirjaudu sisään",
+        "register": "Rekisteröidy",
+        "projectionError": {
+            "title" : "Projektiot eivät ole yhteensopivia",
+            "msg": "Sivu ladataan uudelleen projektion vaihtamiseksi.",
+            "ok": "OK",
+            "cancel": "Peruuta"
+        },
         "tabs": {
             "myviews": {
                 "title": "Karttanäkymät",
@@ -114,7 +121,8 @@ Oskari.registerLocalization(
                     "notsaved": "Kartan julkaisu epäonnistui.",
                     "notdeleted": "Kartan poisto epäonnistui.",
                     "makePublic": "Kartan muuttaminen julkiseksi epäonnistui.",
-                    "makePrivate": "Kartan muuttaminen yksityiseksi epäonnistui."
+                    "makePrivate": "Kartan muuttaminen yksityiseksi epäonnistui.",
+                    "loadfailed": "Julkaistujen karttojen haku epäonnistui."
                 }
             },
             "account": {

@@ -45,6 +45,8 @@ Oskari.registerLocalization(
         "admin": {
             "capabilitiesLabel": "Capabilities",
             "capabilitiesRemarks": "(*)  Current map CRS is not supported in the service capabilities",
+            "capabilitiesUpdateRateLabel": "Capabilities update rate",
+            "capabilitiesUpdateRateInfo": "Update rate in seconds",
             "confirmResourceKeyChange": "You have changed the unique name or  the interface address for this map layer. For security reasons the user rights for this map layer will be removed and you must set them again. Do you want to continue?",
             "confirmDeleteLayerGroup": "The map layer group will be removed. Do you want to continue?",
             "confirmDeleteLayer": "The map layer will be removed. Do you want to continue?",
@@ -90,6 +92,13 @@ Oskari.registerLocalization(
             "wmsServiceMetaId": "Service metadata identifier",
             "wmsServiceMetaIdDesc": "Give a file identifier for the metadata describing the interface.",
             "layerNameAndDesc": "Map Layer Name and Description",
+            "layerProps": "Map Layer Properties",
+            "forcedSRS": "Forced SRS",
+            "forcedSRSInfo": "View projections override compared to capabilities",
+            "forcedSRSAdd": "Add",
+            "supportedSRS": "Supported SRS",
+            "missingSRS": "Missing SRS",
+            "missingInfo": "App default view projections not supported by layer",
             "metaInfoIdDesc": "The metadata file identifier is an XML file identifier. It is fetched automatically from the GetCapabilities response.",
             "metaInfoId": "Metadata file identifier",
             "wmsName": "Unique name",
@@ -191,12 +200,41 @@ Oskari.registerLocalization(
             "errorTitle": "Error",
             "warningTitle": "Warning",
             "successTitle": "Saving Succeeded",
-            "warning_some_of_the_layers_could_not_be_parsed": "Some of the map layers could not be parsed."
+            "warning_some_of_the_layers_could_not_be_parsed": "Some of the map layers could not be parsed.",
+            "addDataprovider": "Dataprovider",
+            "groupTitle": "Map layer group name",
+            "addDataproviderButton": "Add",
+            "maplayerGroups": "Maplayer groups",
+            "selectMaplayerGroupsButton": "Select groups"
         },
         "cancel": "Cancel",
         "add": "Add",
         "save": "Save",
         "delete": "Remove",
-        "ok": "OK"
+        "ok": "OK",
+        "close": "Close",
+        "query": "Query",
+        "recheckTitle": "Re-check now",
+        "recheckAllButton": "Re-check all capabilities",
+        "recheckAll": "Do you want to query getCapabilites for all layers? The operation can take many minutes.",
+        "recheckAllSucceeded": "Capabilites update succeeded for {success, number} layers, failed for {fail, number} layers. Reload page to see updated data.",
+        "recheckSucceeded": "Capabilities re-check succeeded.",
+        "recheckFailReason": "Capablities re-check failed: {reason}",
+        "recheckFail": "Capablities re-check failed.",
+        "recheckFailTimeout": "Capabilites check timeout. Process continues to run on server.",
+        "successMessages": {
+            "dataproviderSave": {
+                "title": "Dataprovider saving was successful",
+                "message": "Dataprovider saving was successful"
+            }
+        },
+        "groupTitles": {
+            "localePrefix": "Name in",
+            "addDataprovider": "Add dataprovider",
+            "selectLayerGroups": "Select layer groups"
+        },
+        "buttons": {
+            "add": "Add"
+        }
     }
 });
