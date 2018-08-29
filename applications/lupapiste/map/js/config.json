@@ -898,8 +898,8 @@
     "conf": {
       "backendConfiguration": {
         "formatProducers": {
-          "application/pdf": "oskari-printout-backend/imaging/service/thumbnail/maplink.pdf?",
-          "image/png": "oskari-printout-backend/imaging/service/thumbnail/maplink.png?"
+          "application/pdf": "/oskari-printout-backend/imaging/service/thumbnail/maplink.pdf?",
+          "image/png": "/oskari-printout-backend/imaging/service/thumbnail/maplink.png?"
         },
         "localBackend": true
       }

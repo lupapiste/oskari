@@ -347,6 +347,19 @@ Oskari.clazz.define('Oskari.mapframework.bundle.printout.view.BasicPrintout',
             this.previewImgDiv.hide();
             this.previewSpan.text(this.loc.preview.pending);
         },
+        _getURLParameter: function (sParam)
+        {
+            var sPageURL = window.location.search.substring(1);
+            var sURLVariables = sPageURL.split('&');
+            for (var i = 0; i < sURLVariables.length; i++)
+            {
+                var sParameterName = sURLVariables[i].split('=');
+                if (sParameterName[0] == sParam)
+                {
+                    return sParameterName[1];
+                }
+            }
+        },
 
         /**
          * @private @method _updateMapPreview
@@ -554,6 +567,13 @@ Oskari.clazz.define('Oskari.mapframework.bundle.printout.view.BasicPrintout',
             var me = this;
             // base url + layers/location
             var url = Oskari.urls.getRoute('GetPrint') + '&' + selections.maplinkArgs;
+
+            // LUPAPISTE OVERRIDE
+            var municipalityCode = "municipalityCode=" + me._getURLParameter('municipality');
+            var url = me.backendConfiguration.formatProducers[selections.format]
+                      + "&" + selections.maplinkArgs 
+                      + municipalityCode;
+
             // page size
             url = url + '&pageSize=' + selections.pageSize;
             // title for PDF
