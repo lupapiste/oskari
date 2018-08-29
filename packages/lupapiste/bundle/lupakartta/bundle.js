@@ -55,7 +55,7 @@ function() {
 			"src" : "../../../../libraries/jsts/javascript.util.min.js"
 		}, {
 			"type" : "text/javascript",
-			"src" : "../../../../libraries/jsts/jsts.js"
+			"src" : "../../../../libraries/jsts/jsts-0.16.0.min.js"
 		}, {
 			"type" : "text/css",
 			"src" : "../../../../bundles/lupapiste/lupakartta/resources/css/lupakartta.css"
@@ -101,4 +101,4 @@ function() {
 
 });
 
-Oskari.bundle_manager.installBundleClass("lupakartta", "Oskari.lupapiste.bundle.lupakartta.lupakarttaBundle"); 
+Oskari.bundle_manager.installBundleClass("lupakartta", "Oskari.lupapiste.bundle.lupakartta.lupakarttaBundle");
