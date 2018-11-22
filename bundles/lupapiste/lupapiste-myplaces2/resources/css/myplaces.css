@@ -71,3 +71,7 @@ div.imagePreview img {
 
 div.drawHelper div.measurementResult {
   margin-top: 5px; }
+
+div#myplacesForm div.popupContent {
+  max-height: none;
+}

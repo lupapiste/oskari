@@ -4,6 +4,9 @@ Builds tested with:
 * node 10.8.0
 * npm 6.4.0
 
+Prerequisites:
+* [GraphicsMagick](http://www.graphicsmagick.org)
+
 Build files
 
 ```
@@ -13,7 +16,7 @@ rm -rf applications/lupapiste/build/package/resources/public/oskari/
 # Prepare for build
 cd tools
 npm install
-npm install grunt-cli
+npm install -g grunt-cli
 grunt release:1.0:../applications/lupapiste/map/minifierAppSetup.json
 ```
 
