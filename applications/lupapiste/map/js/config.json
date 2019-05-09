@@ -49,6 +49,10 @@
           "hidden": true
         },
         {
+          "id": "204",
+          "hidden": true
+        },
+        {
           "id": "base_301",
           "hidden": true
         },
@@ -584,6 +588,35 @@
           },
           "opacity": 100,
           "inspire": "SuojellutAlueet",
+          "maxScale": 1
+        },
+        {
+          "dataUrl_uuid": "472b3e52-5ba8-4967-8785-4fa13955b42e",
+          "wmsName": "Tulva-alueet",
+          "styles": {},
+          "descriptionLink": "",
+          "baseLayerId": 204,
+          "orgName": "Lupapiste",
+          "type": "wmslayer",
+          "legendImage": "",
+          "formats": {},
+          "isQueryable": false,
+          "id": 204,
+          "minScale": 100000,
+          "dataUrl": "/catalogue/ui/metadata.html?uuid=472b3e52-5ba8-4967-8785-4fa13955b42e",
+          "style": "",
+          "wmsUrl": "/proxy/wms",
+          "orderNumber": 1001,
+          "name": {
+            "fi": "Tulva-alueet",
+            "sv": "Översvämningsområden",
+            "en": "Flood risk areas"
+          },
+          "permissions": {
+            "publish": "no_publication_permission"
+          },
+          "opacity": 100,
+          "inspire": "Tulva-alueet",
           "maxScale": 1
         },
         {

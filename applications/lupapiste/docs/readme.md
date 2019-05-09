@@ -37,7 +37,7 @@ To recompile Javascript changes, run `grunt release:1.0:../applications/lupapist
 3. In Jenkins, Run `oskari-frontend-build` to build package with `grunt`.
 4. Run `oskari-clojars-deploy` job to deploy to Clojars.
 5. After a coffee break, check that new version is updated to [Clojars](https://clojars.org/lupapiste/oskari)
-6. Use new versionin Lupapiste repoistory by updating project.clj.
+6. Use new version in Lupapiste repository by updating project.clj.
 
 
 # Updating Oskari
