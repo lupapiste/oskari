@@ -1,4 +1,4 @@
-(defproject lupapiste/oskari "1.47.1.5"
+(defproject lupapiste/oskari "1.47.1.6"
   :description "Oskari map for Lupapiste - fork of http://www.oskari.org/ v1.47.1"
   :url "https://www.lupapiste.fi"
   :license {:name "European Union Public Licence (EUPL v.1.1)"
