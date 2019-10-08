@@ -825,7 +825,7 @@
         },
         {
           "dataUrl_uuid": "",
-          "wmsName": "yleiskaava,yleiskaavaindeksi",
+          "wmsName": "yleiskaava",
           "styles": {},
           "descriptionLink": "",
           "baseLayerId": 102,
@@ -854,7 +854,7 @@
         },
         {
           "dataUrl_uuid": "",
-          "wmsName": "yleiskaava_poikkeavat,yleiskaavaindeksi_poikkeavat",
+          "wmsName": "yleiskaava_poikkeavat",
           "styles": {},
           "descriptionLink": "",
           "baseLayerId": 102,
